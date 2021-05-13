@@ -651,3 +651,117 @@ Received Import Request.
 Start importing Assets/_GameAssets/PPP/FPS.asset using Guid(79d58c482a3e9f0449bfa859307dac24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc91e67c43f1494cb9366542b5bfc6cc') in 0.003368 seconds
   Import took 0.010693 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002883 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.244 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3363 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 4085.
+Total: 3.811700 ms (FindLiveObjects: 0.515400 ms CreateObjectMapping: 0.105200 ms MarkObjects: 2.740300 ms  DeleteObjects: 0.449200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001974 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.222 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.11 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3363 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 4088.
+Total: 3.223900 ms (FindLiveObjects: 0.447500 ms CreateObjectMapping: 0.098600 ms MarkObjects: 2.180100 ms  DeleteObjects: 0.496100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002156 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.374 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3363 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 4091.
+Total: 4.184300 ms (FindLiveObjects: 0.601100 ms CreateObjectMapping: 0.134300 ms MarkObjects: 2.972000 ms  DeleteObjects: 0.475200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002652 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.268 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3363 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 4094.
+Total: 4.145400 ms (FindLiveObjects: 0.652800 ms CreateObjectMapping: 0.130400 ms MarkObjects: 2.890500 ms  DeleteObjects: 0.470100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 6554.405064 seconds.
+  path: Assets/_GameAssets/PPP/FPS.asset
+  artifactKey: Guid(79d58c482a3e9f0449bfa859307dac24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/PPP/FPS.asset using Guid(79d58c482a3e9f0449bfa859307dac24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fdcd4058e9cf094167aa7c5ec85d7c0') in 0.032930 seconds
+  Import took 0.060892 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002486 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.755 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3363 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.8 MB.
+System memory in use after: 180.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 4097.
+Total: 6.651000 ms (FindLiveObjects: 0.448400 ms CreateObjectMapping: 0.112800 ms MarkObjects: 5.395000 ms  DeleteObjects: 0.692200 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
