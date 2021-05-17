@@ -15,11 +15,11 @@ D:/Documentos/Proyectos/Unity/Call_of_Getafe
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-11529
+21276
 Successfully changed project path to: D:/Documentos/Proyectos/Unity/Call_of_Getafe
 D:/Documentos/Proyectos/Unity/Call_of_Getafe
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 65.56 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 67.84 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -35,486 +35,56 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56656
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56516
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003058 seconds.
+Registered in 0.002916 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 61.70 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 73.65 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.026 seconds
+- Completed reload, in  2.392 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002169 seconds.
+Registered in 0.002237 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.504 seconds
+- Completed reload, in  1.230 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.08 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1467 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.1 MB.
-System memory in use after: 202.9 MB.
+Unloading 1836 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 224.7 MB.
+System memory in use after: 224.5 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2069.
-Total: 2.968500 ms (FindLiveObjects: 0.280300 ms CreateObjectMapping: 0.052800 ms MarkObjects: 2.030500 ms  DeleteObjects: 0.603700 ms)
+Unloading 85 unused Assets to reduce memory usage. Loaded Objects now: 2433.
+Total: 3.435400 ms (FindLiveObjects: 0.341400 ms CreateObjectMapping: 0.063400 ms MarkObjects: 2.365700 ms  DeleteObjects: 0.663500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/_GameAssets/3DModels/Bridges/puente.mat
-  artifactKey: Guid(e67e3a9622bfe5549b8040c2f49b677c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/puente.mat using Guid(e67e3a9622bfe5549b8040c2f49b677c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33b2aba18d3fc1d910722ab71a9b6aaa') in 0.131464 seconds
-  Import took 0.167410 seconds .
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(e266fcaaceeb5194bb65f2b5657f338b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(e266fcaaceeb5194bb65f2b5657f338b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380acc32ddb7bda08c654cc6b36f2ef7') in 0.121773 seconds
+  Import took 0.155922 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002591 seconds.
+Registered in 0.002202 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.156 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.11 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 198.8 MB.
-System memory in use after: 198.6 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2112.
-Total: 4.265500 ms (FindLiveObjects: 0.380200 ms CreateObjectMapping: 0.077600 ms MarkObjects: 3.111900 ms  DeleteObjects: 0.694200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 207.288715 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/Wood_02_UV_H_CM_1.jpg
-  artifactKey: Guid(1f5d74468f5e2284cb81b9ac68f2cc4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/Wood_02_UV_H_CM_1.jpg using Guid(1f5d74468f5e2284cb81b9ac68f2cc4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4724c26758bd2bcae46899e7d6a81b47') in 0.119203 seconds
-  Import took 0.155479 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 573.754053 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/Wood_02_UV_H_CM_1 - copia.jpg
-  artifactKey: Guid(c29fdb9571f713846ac91255c11503c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/Wood_02_UV_H_CM_1 - copia.jpg using Guid(c29fdb9571f713846ac91255c11503c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec94b8e1512570eb3df134f0c16c3658') in 0.024812 seconds
-  Import took 0.046847 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 36.073119 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/Old Bridge.fbx
-  artifactKey: Guid(fb1647b167c4c374bb78544517cae0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/Old Bridge.fbx using Guid(fb1647b167c4c374bb78544517cae0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a579f5c91b52d8725110a60d6833bf9d') in 0.137095 seconds
-  Import took 0.150571 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.047041 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.736 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.0 MB.
-System memory in use after: 198.8 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2123.
-Total: 2.855600 ms (FindLiveObjects: 0.333200 ms CreateObjectMapping: 0.075600 ms MarkObjects: 1.881200 ms  DeleteObjects: 0.563800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003043 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.086 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.93 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.0 MB.
-System memory in use after: 198.8 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2126.
-Total: 3.359400 ms (FindLiveObjects: 0.547800 ms CreateObjectMapping: 0.209600 ms MarkObjects: 2.016500 ms  DeleteObjects: 0.584000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1472.579614 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/puenteNormal.png
-  artifactKey: Guid(676cc77d55b8bd1479d9d37b5d76e70f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/puenteNormal.png using Guid(676cc77d55b8bd1479d9d37b5d76e70f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a430d3917e573720c7360b136b2569c1') in 0.059411 seconds
-  Import took 0.109235 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002860 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.300 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.97 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.0 MB.
-System memory in use after: 198.8 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2129.
-Total: 4.909300 ms (FindLiveObjects: 0.339800 ms CreateObjectMapping: 0.062900 ms MarkObjects: 3.656400 ms  DeleteObjects: 0.848300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002714 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.261 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.1 MB.
-System memory in use after: 198.8 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2132.
-Total: 3.626500 ms (FindLiveObjects: 0.278400 ms CreateObjectMapping: 0.044400 ms MarkObjects: 2.588000 ms  DeleteObjects: 0.714000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 3054.656106 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/AmbientOcclusionMap.png
-  artifactKey: Guid(a410de7e5bd86fa48a9d903485d475b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/AmbientOcclusionMap.png using Guid(a410de7e5bd86fa48a9d903485d475b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8132ba9ce779f0bb97d798423026d7a') in 0.204578 seconds
-  Import took 0.297119 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000775 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/DisplacementMap.png
-  artifactKey: Guid(5be7e335635450849b4093ae437c17d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/DisplacementMap.png using Guid(5be7e335635450849b4093ae437c17d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd99ae7113fdccf0016b3a0de45b58a5') in 0.018000 seconds
-  Import took 0.058048 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/NormalMap.png
-  artifactKey: Guid(62329df4788258d47952b88a73d61cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/NormalMap.png using Guid(62329df4788258d47952b88a73d61cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3a681cf1cf895da7bbea7a6780f908') in 0.013324 seconds
-  Import took 0.034035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/SpecularMap.png
-  artifactKey: Guid(64c908689372e4340aebbc9c60e14207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/SpecularMap.png using Guid(64c908689372e4340aebbc9c60e14207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22421a2f9f1e9222b6eda496f057eb84') in 0.027816 seconds
-  Import took 0.059086 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003351 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.421 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.0 MB.
-System memory in use after: 198.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2135.
-Total: 5.107200 ms (FindLiveObjects: 0.421400 ms CreateObjectMapping: 0.063800 ms MarkObjects: 3.928000 ms  DeleteObjects: 0.692200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002403 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.246 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.98 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.1 MB.
-System memory in use after: 198.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2138.
-Total: 4.284200 ms (FindLiveObjects: 0.436000 ms CreateObjectMapping: 0.076700 ms MarkObjects: 3.032400 ms  DeleteObjects: 0.736500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 318.939172 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/Wood_02_UV_H_CM_1 - copia.jpg
-  artifactKey: Guid(c29fdb9571f713846ac91255c11503c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/Wood_02_UV_H_CM_1 - copia.jpg using Guid(c29fdb9571f713846ac91255c11503c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '259684d43dfb060b2379663de0a56236') in 0.111168 seconds
-  Import took 0.156667 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002557 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.237 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.1 MB.
-System memory in use after: 198.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2141.
-Total: 5.025100 ms (FindLiveObjects: 0.354100 ms CreateObjectMapping: 0.058300 ms MarkObjects: 3.797600 ms  DeleteObjects: 0.812200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005290 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.471 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.1 MB.
-System memory in use after: 198.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2144.
-Total: 4.148200 ms (FindLiveObjects: 0.559800 ms CreateObjectMapping: 0.060500 ms MarkObjects: 2.752100 ms  DeleteObjects: 0.773900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004097 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.267 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.16 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.1 MB.
-System memory in use after: 198.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2147.
-Total: 4.168900 ms (FindLiveObjects: 0.346800 ms CreateObjectMapping: 0.054600 ms MarkObjects: 2.681400 ms  DeleteObjects: 1.083100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002466 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.084 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.1 MB.
-System memory in use after: 198.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2150.
-Total: 3.704500 ms (FindLiveObjects: 0.408100 ms CreateObjectMapping: 0.048200 ms MarkObjects: 2.615000 ms  DeleteObjects: 0.630100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002674 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.287 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.99 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.1 MB.
-System memory in use after: 198.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2153.
-Total: 3.142600 ms (FindLiveObjects: 0.373200 ms CreateObjectMapping: 0.056800 ms MarkObjects: 2.117700 ms  DeleteObjects: 0.592800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1101.422650 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Materials/BulletDecalWood.mat
-  artifactKey: Guid(39babc0a61c17df41bca722640cfc289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Materials/BulletDecalWood.mat using Guid(39babc0a61c17df41bca722640cfc289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60a2dfd33bab93b871e0db2d696aceb8') in 2.610804 seconds
-  Import took 2.648542 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000312 seconds.
-  path: Assets/Standard Assets/PhysicsMaterials/Wood.physicmaterial
-  artifactKey: Guid(3aeb7dadc0c69d54d9e5777e9d5631f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Standard Assets/PhysicsMaterials/Wood.physicmaterial using Guid(3aeb7dadc0c69d54d9e5777e9d5631f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79b6036fea7c6630d95a04e1923ecdf4') in 0.010482 seconds
-  Import took 0.025380 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000298 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Materials/WoodSurface.mat
-  artifactKey: Guid(ce4b77858ec6c0f469b07b034c21a85f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Materials/WoodSurface.mat using Guid(ce4b77858ec6c0f469b07b034c21a85f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74c3eeb7d3b8b0e87450f50341adfd2c') in 0.116773 seconds
-  Import took 0.148759 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000383 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Materials/WoodSplintersParticle.mat
-  artifactKey: Guid(fd8ebe3c7242d364bae68f1548ae70bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Materials/WoodSplintersParticle.mat using Guid(fd8ebe3c7242d364bae68f1548ae70bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd754cce7d37056d9da3270d3b12c8ce3') in 0.908052 seconds
-  Import took 0.917011 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000240 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Prefabs/WoodImpacts.prefab
-  artifactKey: Guid(3c0b5f221ea995442b9d11dc526de1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Prefabs/WoodImpacts.prefab using Guid(3c0b5f221ea995442b9d11dc526de1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c057694330ea42eadbf4dfbb32d13799') in 1.377868 seconds
-  Import took 1.457377 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Materials/WoodAlbedo.mat
-  artifactKey: Guid(e9ea84a99754d6e47aec46c11c99d496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Materials/WoodAlbedo.mat using Guid(e9ea84a99754d6e47aec46c11c99d496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b9e7945c8938af33fa92ff0201afdd6') in 0.036056 seconds
-  Import took 0.073109 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Prefabs/WoodImpacts.prefab
-  artifactKey: Guid(3c0b5f221ea995442b9d11dc526de1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Prefabs/WoodImpacts.prefab using Guid(3c0b5f221ea995442b9d11dc526de1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c057694330ea42eadbf4dfbb32d13799') in 0.035665 seconds
-  Import took 0.040384 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/Materials/Wood_02_UV_H_CM_1 - copia.mat
-  artifactKey: Guid(c578170a35739d74c9f4eaae88ab3223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/Materials/Wood_02_UV_H_CM_1 - copia.mat using Guid(c578170a35739d74c9f4eaae88ab3223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4296016e585d67a8f7cd49fa9e117ac8') in 0.012488 seconds
-  Import took 0.036115 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003637 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.95 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.312 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.99 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.2 MB.
-System memory in use after: 199.1 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2158.
-Total: 3.482000 ms (FindLiveObjects: 0.343300 ms CreateObjectMapping: 0.061800 ms MarkObjects: 2.355500 ms  DeleteObjects: 0.719100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003212 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.441 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.43 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 199.3 MB.
-System memory in use after: 199.1 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2161.
-Total: 4.530500 ms (FindLiveObjects: 0.443200 ms CreateObjectMapping: 0.129200 ms MarkObjects: 3.261700 ms  DeleteObjects: 0.694400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.168489 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -526,79 +96,181 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  4.037 seconds
+- Completed reload, in  0.970 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.57 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1746 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 215.7 MB.
-System memory in use after: 213.5 MB.
+Unloading 1724 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.2 MB.
+System memory in use after: 214.0 MB.
 
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2502.
-Total: 6.989900 ms (FindLiveObjects: 0.429000 ms CreateObjectMapping: 0.074500 ms MarkObjects: 3.655700 ms  DeleteObjects: 2.828200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 4833.900365 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/AmbientOcclusionMap.png
-  artifactKey: Guid(a410de7e5bd86fa48a9d903485d475b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/AmbientOcclusionMap.png using Guid(a410de7e5bd86fa48a9d903485d475b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '361c27b477afa4e7c20f1d5f96a7ba09') in 0.277896 seconds
-  Import took 0.371755 seconds .
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2438.
+Total: 2.921200 ms (FindLiveObjects: 0.247900 ms CreateObjectMapping: 0.050400 ms MarkObjects: 2.189700 ms  DeleteObjects: 0.431800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000349 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/DisplacementMap.png
-  artifactKey: Guid(5be7e335635450849b4093ae437c17d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/DisplacementMap.png using Guid(5be7e335635450849b4093ae437c17d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224d5838518aaaf6eb1725459fffa5f5') in 0.026304 seconds
-  Import took 0.031767 seconds .
+  Time since last request: 433.992598 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ff8c5c4ac6c57ed2c03c5497e28bf93') in 0.006578 seconds
+  Import took 0.586757 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002050 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.056 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1724 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.3 MB.
+System memory in use after: 214.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2441.
+Total: 3.206600 ms (FindLiveObjects: 0.256700 ms CreateObjectMapping: 0.049400 ms MarkObjects: 2.393700 ms  DeleteObjects: 0.505300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002047 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.969 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1724 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.3 MB.
+System memory in use after: 214.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2444.
+Total: 3.238200 ms (FindLiveObjects: 0.475700 ms CreateObjectMapping: 0.108600 ms MarkObjects: 2.165200 ms  DeleteObjects: 0.486600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002695 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.061 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1724 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.3 MB.
+System memory in use after: 214.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2447.
+Total: 3.108600 ms (FindLiveObjects: 0.336200 ms CreateObjectMapping: 0.048000 ms MarkObjects: 2.220100 ms  DeleteObjects: 0.502800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000447 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/puente.mat
-  artifactKey: Guid(e67e3a9622bfe5549b8040c2f49b677c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/puente.mat using Guid(e67e3a9622bfe5549b8040c2f49b677c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05bb30788be54bfaaf0b72054ec55221') in 0.245414 seconds
-  Import took 0.250025 seconds .
+  Time since last request: 735.563227 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d3179465ce96f91b203da89f782a85f') in 0.006246 seconds
+  Import took 0.580321 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000378 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/DisplacementMap.png
-  artifactKey: Guid(5be7e335635450849b4093ae437c17d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/DisplacementMap.png using Guid(5be7e335635450849b4093ae437c17d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224d5838518aaaf6eb1725459fffa5f5') in 0.035718 seconds
-  Import took 0.040826 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001929 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.950 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1724 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.3 MB.
+System memory in use after: 214.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2450.
+Total: 2.806300 ms (FindLiveObjects: 0.248600 ms CreateObjectMapping: 0.048200 ms MarkObjects: 2.039700 ms  DeleteObjects: 0.468500 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/Wood_02_UV_H_CM_1 - copia.jpg
-  artifactKey: Guid(c29fdb9571f713846ac91255c11503c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/Wood_02_UV_H_CM_1 - copia.jpg using Guid(c29fdb9571f713846ac91255c11503c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b78baa8bfb66a91d9dfed08df810396c') in 0.013448 seconds
-  Import took 0.018178 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002095 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000345 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/AmbientOcclusionMap.png
-  artifactKey: Guid(a410de7e5bd86fa48a9d903485d475b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/AmbientOcclusionMap.png using Guid(a410de7e5bd86fa48a9d903485d475b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '361c27b477afa4e7c20f1d5f96a7ba09') in 0.011692 seconds
-  Import took 0.016500 seconds .
+[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/NormalMap.png
-  artifactKey: Guid(62329df4788258d47952b88a73d61cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/NormalMap.png using Guid(62329df4788258d47952b88a73d61cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02b73cbf2715e663d91c20129c4ba95b') in 0.110542 seconds
-  Import took 0.115012 seconds .
+Mono: successfully reloaded assembly
+- Completed reload, in  0.941 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1724 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.3 MB.
+System memory in use after: 214.1 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000419 seconds.
-  path: Assets/_GameAssets/3DModels/Bridges/SpecularMap.png
-  artifactKey: Guid(64c908689372e4340aebbc9c60e14207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Bridges/SpecularMap.png using Guid(64c908689372e4340aebbc9c60e14207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5d390419c1a27509cea6df09a3aee76') in 0.055503 seconds
-  Import took 0.060001 seconds .
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2453.
+Total: 3.086600 ms (FindLiveObjects: 0.311100 ms CreateObjectMapping: 0.057000 ms MarkObjects: 2.194900 ms  DeleteObjects: 0.522000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
