@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shootable
   - Fire
+  - Carretera
+  - Madera
   layers:
   - Default
   - TransparentFX

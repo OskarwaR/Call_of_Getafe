@@ -11,6 +11,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        public enum TipoSuelo {Ground, Wood, Asphalt }
+        TipoSuelo tipoSuelo = TipoSuelo.Asphalt;
+
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -25,7 +28,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
-        [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
+        [SerializeField] private AudioClip[] m_FootstepSoundsGround;    // an array of footstep sounds that will be randomly selected from.
+        [SerializeField] private AudioClip[] m_FootstepSoundsAsphalt;    // an array of footstep sounds that will be randomly selected from.
+        [SerializeField] private AudioClip[] m_FootstepSoundsWood;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
@@ -169,12 +174,44 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             // pick & play a random footstep sound from the array,
             // excluding sound at index 0
-            int n = Random.Range(1, m_FootstepSounds.Length);
-            m_AudioSource.clip = m_FootstepSounds[n];
-            m_AudioSource.PlayOneShot(m_AudioSource.clip);
-            // move picked sound to index 0 so it's not picked next time
-            m_FootstepSounds[n] = m_FootstepSounds[0];
-            m_FootstepSounds[0] = m_AudioSource.clip;
+            //int n = Random.Range(1, m_FootstepSounds.Length);
+            int n;
+            switch(tipoSuelo)
+            {
+                case (TipoSuelo.Ground):
+                    m_AudioSource.volume = 0.1f;
+                    n = Random.Range(1, m_FootstepSoundsGround.Length);
+                    m_AudioSource.clip = m_FootstepSoundsGround[n];
+                    m_AudioSource.PlayOneShot(m_AudioSource.clip);
+                    // move picked sound to index 0 so it's not picked next time
+                    m_FootstepSoundsGround[n] = m_FootstepSoundsGround[0];
+                    m_FootstepSoundsGround[0] = m_AudioSource.clip;
+                    break;
+                case (TipoSuelo.Wood):
+                    m_AudioSource.volume = 0.2f;
+                    n = Random.Range(1, m_FootstepSoundsWood.Length);
+                    m_AudioSource.clip = m_FootstepSoundsWood[n];
+                    m_AudioSource.PlayOneShot(m_AudioSource.clip);
+                    // move picked sound to index 0 so it's not picked next time
+                    m_FootstepSoundsWood[n] = m_FootstepSoundsWood[0];
+                    m_FootstepSoundsWood[0] = m_AudioSource.clip;
+                    break;
+                case (TipoSuelo.Asphalt):
+                    m_AudioSource.volume = 0.25f;
+                    n = Random.Range(1, m_FootstepSoundsAsphalt.Length);
+                    m_AudioSource.clip = m_FootstepSoundsAsphalt[n];
+                    m_AudioSource.PlayOneShot(m_AudioSource.clip);
+                    // move picked sound to index 0 so it's not picked next time
+                    m_FootstepSoundsAsphalt[n] = m_FootstepSoundsAsphalt[0];
+                    m_FootstepSoundsAsphalt[0] = m_AudioSource.clip;
+                    break;
+            }
+            
+        }
+
+        public void SetFoodZone(TipoSuelo tipoSuelo)
+        {
+            this.tipoSuelo = tipoSuelo;
         }
 
 
@@ -255,6 +292,34 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
+        }
+
+
+
+        private void OnTriggerStay(Collider other)
+        {
+            Debug.Log("collide (name) : " + other.gameObject.name);
+            Debug.Log("collide (tag) : " + other.gameObject.tag);
+            if(other.gameObject.tag=="Carretera")
+            {
+                this.tipoSuelo = TipoSuelo.Asphalt;
+            }
+            else if (other.gameObject.tag == "Madera")
+            {
+                this.tipoSuelo = TipoSuelo.Wood;
+            }
+            else
+            {
+                //this.tipoSuelo = TipoSuelo.Ground;
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            Debug.Log("collide (name) : " + other.gameObject.name);
+            Debug.Log("collide (tag) : " + other.gameObject.tag);
+            this.tipoSuelo = TipoSuelo.Ground;
+
         }
     }
 }
