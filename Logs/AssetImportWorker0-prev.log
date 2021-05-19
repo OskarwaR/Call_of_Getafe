@@ -15,11 +15,11 @@ D:/Documentos/Proyectos/Unity/Call_of_Getafe
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-25285
+3290
 Successfully changed project path to: D:/Documentos/Proyectos/Unity/Call_of_Getafe
 D:/Documentos/Proyectos/Unity/Call_of_Getafe
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 77.07 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 83.82 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -30,267 +30,141 @@ Direct3D:
     Renderer: Radeon (TM) RX 480 Graphics (ID=0x67df)
     Vendor:   
     VRAM:     4075 MB
-    Driver:   27.20.21003.1028
+    Driver:   27.20.21003.8013
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56752
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003001 seconds.
+Registered in 0.002930 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 71.80 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 73.58 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.327 seconds
+- Completed reload, in  2.271 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002266 seconds.
+Registered in 0.002104 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.152 seconds
+- Completed reload, in  1.172 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.77 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.73 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1839 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 228.3 MB.
-System memory in use after: 228.1 MB.
+Unloading 1840 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 228.8 MB.
+System memory in use after: 228.6 MB.
 
-Unloading 85 unused Assets to reduce memory usage. Loaded Objects now: 2436.
-Total: 3.447200 ms (FindLiveObjects: 0.348300 ms CreateObjectMapping: 0.060000 ms MarkObjects: 2.471500 ms  DeleteObjects: 0.565300 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/_GameAssets/3DModels/Slum Houses/Texture/wooden and metal support _DefaultMaterial_AlbedoTransparency.png
-  artifactKey: Guid(0fcb17bd9acb80a4bb4477418e277c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Slum Houses/Texture/wooden and metal support _DefaultMaterial_AlbedoTransparency.png using Guid(0fcb17bd9acb80a4bb4477418e277c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8619a0cb251467c64289f1c19f4d033') in 0.101688 seconds
-  Import took 0.105575 seconds .
+Unloading 85 unused Assets to reduce memory usage. Loaded Objects now: 2437.
+Total: 3.895000 ms (FindLiveObjects: 0.412300 ms CreateObjectMapping: 0.079400 ms MarkObjects: 2.683900 ms  DeleteObjects: 0.717900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/EffectExamples/Smoke & Steam Effects/Textures/wispySmoke.tif
-  artifactKey: Guid(b96c69e599825d84e985962673d1679c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Smoke & Steam Effects/Textures/wispySmoke.tif using Guid(b96c69e599825d84e985962673d1679c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af8ecc6b8622e95aa3c99569f3e898c8') in 0.043002 seconds
-  Import took 0.072638 seconds .
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(e266fcaaceeb5194bb65f2b5657f338b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(e266fcaaceeb5194bb65f2b5657f338b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c51615933877bfb975879632b75f0980') in 0.117548 seconds
+  Import took 0.123038 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000251 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Textures/WoodNormals.tif
-  artifactKey: Guid(43cfa3b308732c941a0fbb4334ecefcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Textures/WoodNormals.tif using Guid(43cfa3b308732c941a0fbb4334ecefcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00efca011147fb0fc947ebe01b1e3f2c') in 0.044266 seconds
-  Import took 0.063068 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002026 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.989 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1727 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 218.2 MB.
+System memory in use after: 218.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2442.
+Total: 2.896100 ms (FindLiveObjects: 0.249300 ms CreateObjectMapping: 0.050200 ms MarkObjects: 2.147400 ms  DeleteObjects: 0.447400 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_columns_Normal.png
-  artifactKey: Guid(ba12e8adcf5f56f4596ba8467a17731b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_columns_Normal.png using Guid(ba12e8adcf5f56f4596ba8467a17731b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f5f336574f1286eaad11ca7e9f473f5') in 0.007501 seconds
-  Import took 0.019353 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002059 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.966 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1727 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 218.3 MB.
+System memory in use after: 218.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2445.
+Total: 3.277700 ms (FindLiveObjects: 0.385500 ms CreateObjectMapping: 0.063000 ms MarkObjects: 2.284900 ms  DeleteObjects: 0.542700 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Textures/woodSplintersNormal.tif
-  artifactKey: Guid(937ed87ab83404042bb43da3180148b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Textures/woodSplintersNormal.tif using Guid(937ed87ab83404042bb43da3180148b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afaf7e31019e45c42b42fac561b0f80a') in 0.026952 seconds
-  Import took 0.043462 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002089 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000242 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_railings_BaseColor.png
-  artifactKey: Guid(108067148a180204b904d003d145227c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_railings_BaseColor.png using Guid(108067148a180204b904d003d145227c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4769e77cda39061577f63a79a63934af') in 0.016466 seconds
-  Import took 0.020059 seconds .
+[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_balcony_BaseColor.png
-  artifactKey: Guid(58d2ba2ec0af7564796fa17329b4c834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_balcony_BaseColor.png using Guid(58d2ba2ec0af7564796fa17329b4c834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0fbc1785b86911546958e9d5afa51f9') in 0.008658 seconds
-  Import took 0.024062 seconds .
+Mono: successfully reloaded assembly
+- Completed reload, in  1.451 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1727 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 218.3 MB.
+System memory in use after: 218.1 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000202 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_railings_Normal.png
-  artifactKey: Guid(6b98ff7f460069647a5764fd1314af02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_railings_Normal.png using Guid(6b98ff7f460069647a5764fd1314af02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '427c62885d47981df69733a2cc15050e') in 0.008065 seconds
-  Import took 0.019541 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_titles_Normal.png
-  artifactKey: Guid(8da2fa49dfbdbea4baa468ce82dd5100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_titles_Normal.png using Guid(8da2fa49dfbdbea4baa468ce82dd5100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d9876dc9e5325e739b0d9b60cdc14dd') in 0.010009 seconds
-  Import took 0.027492 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Textures/WoodOcclusion.tif
-  artifactKey: Guid(3f61242b237377e4590f4e6d1c869079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Textures/WoodOcclusion.tif using Guid(3f61242b237377e4590f4e6d1c869079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b3afdc36c67aef353a89c918fd66f2') in 0.007616 seconds
-  Import took 0.022621 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/EffectExamples/Smoke & Steam Effects/Textures/WispySmokeNormal.tif
-  artifactKey: Guid(b7e9b138ba248a44f957941f56c3b0d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Smoke & Steam Effects/Textures/WispySmokeNormal.tif using Guid(b7e9b138ba248a44f957941f56c3b0d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e8edbca1f1ff924e7fe3192ed5be80e') in 0.008129 seconds
-  Import took 0.023457 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000289 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_glass_Normal.png
-  artifactKey: Guid(e70d566093293bb45881e102a8a70ab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_glass_Normal.png using Guid(e70d566093293bb45881e102a8a70ab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '458aa21d603cb93c382ef7f353c9cd44') in 0.007881 seconds
-  Import took 0.033866 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_railings_Metallic.png
-  artifactKey: Guid(2d0c5041bf3ae8f40a1ff2d3217ec13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_railings_Metallic.png using Guid(2d0c5041bf3ae8f40a1ff2d3217ec13c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd46ffe09a39daae78f0d7058a0374ebf') in 0.007638 seconds
-  Import took 0.011299 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_glass_Metallic.png
-  artifactKey: Guid(5a978ade4049c3c46b396a84df689af8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_glass_Metallic.png using Guid(5a978ade4049c3c46b396a84df689af8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c46ace66370ade401099d357bfb23a4') in 0.009561 seconds
-  Import took 0.013115 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/BrushTextures/white_square.tif
-  artifactKey: Guid(63c633526981fac49b5eb44c0212bf2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/BrushTextures/white_square.tif using Guid(63c633526981fac49b5eb44c0212bf2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1570b1629a6b6e247ae8edae88d4b6d') in 0.022735 seconds
-  Import took 0.033910 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_columns_BaseColor.png
-  artifactKey: Guid(cbde2915675ad2646ab49c875039eba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_columns_BaseColor.png using Guid(cbde2915675ad2646ab49c875039eba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9b2261a325667f14fe206b01b5d2765') in 0.009756 seconds
-  Import took 0.028608 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000278 seconds.
-  path: Assets/_GameAssets/3DModels/Slum Houses/Texture/wooden and metal support _DefaultMaterial_Normal.png
-  artifactKey: Guid(36267156c36c0f64eaae06ecdd244190) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Slum Houses/Texture/wooden and metal support _DefaultMaterial_Normal.png using Guid(36267156c36c0f64eaae06ecdd244190) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '443a31bfb2e40d7f558ee8fcbaee0d9d') in 0.011729 seconds
-  Import took 0.028523 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000213 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Textures/woodSplintersAlbedo.tif
-  artifactKey: Guid(477c430b429f1a24282dab34a73b4cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Textures/woodSplintersAlbedo.tif using Guid(477c430b429f1a24282dab34a73b4cca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08c6a2a662d7d741c8d14c50bb84d0ca') in 0.007965 seconds
-  Import took 0.030964 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_titles_BaseColor.png
-  artifactKey: Guid(5f524c8d81237514d9ad06e817b1cbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_titles_BaseColor.png using Guid(5f524c8d81237514d9ad06e817b1cbc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67caa47f702a1044dfe30905e2db02f4') in 0.008121 seconds
-  Import took 0.030630 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/_GameAssets/3DModels/Slum Houses/Texture/wooden and metal support _DefaultMaterial_MetallicSmoothness.png
-  artifactKey: Guid(e3a04f26abf2b374eb13b83db8643eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Slum Houses/Texture/wooden and metal support _DefaultMaterial_MetallicSmoothness.png using Guid(e3a04f26abf2b374eb13b83db8643eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7235862546eeb0137f5408ccd4cfcddd') in 0.019140 seconds
-  Import took 0.022444 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_balcony_Normal.png
-  artifactKey: Guid(8e0669c2d284c7646ad112d72bc9451e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_balcony_Normal.png using Guid(8e0669c2d284c7646ad112d72bc9451e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '117b84c7a600969e12569397cebdc784') in 0.007779 seconds
-  Import took 0.011450 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000233 seconds.
-  path: Assets/EasyRoads3D/images/wirefence-1.jpg
-  artifactKey: Guid(dbbbe4ccb93564b44ae56501c2252e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EasyRoads3D/images/wirefence-1.jpg using Guid(dbbbe4ccb93564b44ae56501c2252e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6bca35dc4d35fb4b8bcf437ceef5936') in 0.031382 seconds
-  Import took 0.048458 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_glass_BaseColor.png
-  artifactKey: Guid(3256441187d4f2c4b94b1966c9fc822c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/World_Market_glass_BaseColor.png using Guid(3256441187d4f2c4b94b1966c9fc822c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a623518d1ee01e3cde4e8b8a5df78ed9') in 0.009912 seconds
-  Import took 0.045902 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Textures/WoodBulletHoleDepth.tif
-  artifactKey: Guid(d911e33e4ef025e4ea1cc5a3503e4d42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Textures/WoodBulletHoleDepth.tif using Guid(d911e33e4ef025e4ea1cc5a3503e4d42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c29a51c083e9f690e330bbd03a3e76') in 0.007065 seconds
-  Import took 0.035377 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Textures/WoodBulletHoleNormal.tif
-  artifactKey: Guid(dc7c338db44c68b41aebbac57c5c28b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Textures/WoodBulletHoleNormal.tif using Guid(dc7c338db44c68b41aebbac57c5c28b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a6704fd20a4548ccd9178f736630e5f') in 0.010302 seconds
-  Import took 0.032403 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Textures/WoodAlbedo.tif
-  artifactKey: Guid(b81b746ea3b5a4f4ab92a152e3b0b01d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Textures/WoodAlbedo.tif using Guid(b81b746ea3b5a4f4ab92a152e3b0b01d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a9ec2cfe7c9b3696f46ef4d73c340bd') in 0.020287 seconds
-  Import took 0.034972 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/world_market_LightingMap.png
-  artifactKey: Guid(d53ec08172741f543b8ef23b18bb356e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Windridge City Assets/StaticObjects/Models/Buildings/World_Market/Textures/world_market_LightingMap.png using Guid(d53ec08172741f543b8ef23b18bb356e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '778bdfec40948db3fdf96b3da2f5cb60') in 0.008155 seconds
-  Import took 0.028121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000326 seconds.
-  path: Assets/EffectExamples/Weapon Effects/Textures/WoodBulletHoleAlbedo.tif
-  artifactKey: Guid(4c5f9569d875837419e6fb548cd8ad42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/EffectExamples/Weapon Effects/Textures/WoodBulletHoleAlbedo.tif using Guid(4c5f9569d875837419e6fb548cd8ad42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de6fc38cf9a7a98eecc187df293a5023') in 0.007781 seconds
-  Import took 0.021348 seconds .
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2448.
+Total: 3.153800 ms (FindLiveObjects: 0.299600 ms CreateObjectMapping: 0.058800 ms MarkObjects: 2.294700 ms  DeleteObjects: 0.499300 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
