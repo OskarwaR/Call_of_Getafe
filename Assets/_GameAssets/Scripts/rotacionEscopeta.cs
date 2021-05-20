@@ -27,7 +27,7 @@ public class rotacionEscopeta : MonoBehaviour
         cx = Camera.main.transform.localPosition.x;
         cy = Camera.main.transform.localPosition.x;
         cz = GameObject.FindGameObjectWithTag("Player").transform.position.z;
-        transform.localPosition = new Vector3((cx/2)+0.7f, (cy/2)-0.5f, z);
+        transform.localPosition = new Vector3((cx/2)+0.7f, (cy/4)-0.5f, z);
 
     }
 }
