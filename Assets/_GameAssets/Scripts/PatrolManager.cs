@@ -17,8 +17,7 @@ public class PatrolManager : MonoBehaviour
 
         foreach (Transform child in lista.transform)
         {
-            // do whatever you want with child transform object here
-            print("Foreach loop: " + child + " " + patrolList.Count);
+            //print("Foreach loop: " + child + " " + patrolList.Count);
             patrolList.Add(child);
         }
     }
