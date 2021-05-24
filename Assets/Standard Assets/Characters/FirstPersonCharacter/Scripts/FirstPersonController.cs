@@ -316,8 +316,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void OnTriggerExit(Collider other)
         {
-            Debug.Log("collide (name) : " + other.gameObject.name);
-            Debug.Log("collide (tag) : " + other.gameObject.tag);
+            //Debug.Log("collide (name) : " + other.gameObject.name);
+            //Debug.Log("collide (tag) : " + other.gameObject.tag);
             this.tipoSuelo = TipoSuelo.Ground;
 
         }

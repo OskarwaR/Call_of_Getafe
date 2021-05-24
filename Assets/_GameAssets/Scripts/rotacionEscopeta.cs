@@ -22,6 +22,7 @@ public class rotacionEscopeta : MonoBehaviour
     }
 
     // Update is called once per frame
+
     void Update()
     {
         cx = Camera.main.transform.localPosition.x;
