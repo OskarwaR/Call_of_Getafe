@@ -298,8 +298,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void OnTriggerStay(Collider other)
         {
-            Debug.Log("collide (name) : " + other.gameObject.name);
-            Debug.Log("collide (tag) : " + other.gameObject.tag);
+            //Debug.Log("collide (name) : " + other.gameObject.name);
+            //Debug.Log("collide (tag) : " + other.gameObject.tag);
             if(other.gameObject.tag=="Carretera")
             {
                 this.tipoSuelo = TipoSuelo.Asphalt;

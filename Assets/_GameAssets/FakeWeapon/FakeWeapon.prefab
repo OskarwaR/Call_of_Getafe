@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 5480581635734155969}
   - component: {fileID: 5480581635734155968}
   - component: {fileID: 5480581635734155971}
+  - component: {fileID: 8980723176773299883}
   m_Layer: 0
   m_Name: FakeWeapon
   m_TagString: Untagged
@@ -307,8 +308,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 5480581634815610372}
   bulletShellPoint: {fileID: 5480581634989419654}
-  prefabBullet: {fileID: 3081291665936339338, guid: db66784c8d34c294eb4993aa3ae726e1, type: 3}
-  prefabBulletShell: {fileID: 2092914442707757460, guid: eaeef803815700644bc9615b170f22f5, type: 3}
+  prefabBullet: {fileID: 3081291665936339338, guid: db66784c8d34c294eb4993aa3ae726e1,
+    type: 3}
+  prefabBulletShell: {fileID: 2092914442707757460, guid: eaeef803815700644bc9615b170f22f5,
+    type: 3}
   shootSound: {fileID: 8300000, guid: 8602b7d5cd15c1943a50aa53f171c8cf, type: 3}
   jammingSound: {fileID: 8300000, guid: a9646a6173bb6ad4b951ea60adaaa407, type: 3}
   shootForce: 50
@@ -410,3 +413,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8980723176773299883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5480581635734155974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3581df175972c4a943c6cc6290e292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

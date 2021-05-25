@@ -38,12 +38,12 @@ public abstract class EnemigoMovil : Enemigo
     }
     public override void Attack()
     {
-        if (distanceToPlayer<=distanceToExplosion)
+        /*if (distanceToPlayer<=distanceToExplosion)
         {
             print("EXPLOSION");
             Instantiate(prefabPSDeath, transform.position, transform.rotation);
             Destroy(gameObject);
-        }
+        }*/
     }
 
     //public abstract void Move();
