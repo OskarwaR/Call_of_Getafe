@@ -10,6 +10,8 @@ TagManager:
   - Madera
   - Enemigo
   - Linterna
+  - FxTemporaire
+  - Terreno
   layers:
   - Default
   - TransparentFX
