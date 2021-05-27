@@ -9,6 +9,7 @@ TagManager:
   - Carretera
   - Madera
   - Enemigo
+  - Linterna
   layers:
   - Default
   - TransparentFX
@@ -24,9 +25,9 @@ TagManager:
   - Reflejos
   - Terreno
   - MiniMap
-  - escopera
-  - 
-  - 
+  - Escopeta
+  - Linterna
+  - Brazos
   - 
   - 
   - 
