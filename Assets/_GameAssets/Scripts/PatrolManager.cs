@@ -5,19 +5,23 @@ using UnityEngine.AI;
 
 public class PatrolManager : MonoBehaviour
 {
+    public bool isPlayerDetected = false;
+
     public Transform[] patrolPoints;
     private List<Transform> patrolList = new List<Transform>();
     private NavMeshAgent nma;
     private GameObject lista;
     public int currentPoint = 0;
+    private Animator agentAnimator;
     private void Awake()
     {
+        
         lista = GameObject.Find("RutaPatruya");
         nma = GetComponent<NavMeshAgent>();
+        agentAnimator = GetComponentInChildren<Animator>();
 
         foreach (Transform child in lista.transform)
         {
-            //print("Foreach loop: " + child + " " + patrolList.Count);
             patrolList.Add(child);
         }
     }
