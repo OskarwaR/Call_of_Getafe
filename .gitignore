@@ -36,3 +36,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 Assets/_GameAssets/3DModels/Bar/juice_bar.blend
+Assets/_GameAssets/3DModels/Zombies/Modelos/Zombie_Romero.fbx
+Assets/_GameAssets/3DModels/Zombies/Modelos/Zombie_Romero.fbx.meta
