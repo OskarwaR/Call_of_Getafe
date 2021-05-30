@@ -15,10 +15,27 @@ public class PatrolManager : MonoBehaviour
     private Animator agentAnimator;
     private int n,n2;
     private bool destino = false;
+
+    private float distanceToPlayer;
+    private GameObject Player;
+    private Vector3 playerPosition;
+    public float viewDistance=15;
+    private float view;
+
+    public float walkSpeed = 1.7f;
+    public float detectSpeed = 2.5f;
+
+    private bool attack=false;
+
+    private AudioSource audioSource;
+
     private void Awake()
     {
         nma = GetComponent<NavMeshAgent>();
         agentAnimator = GetComponentInChildren<Animator>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+        view = viewDistance;
+        audioSource = GetComponent<AudioSource>();
 
         /*foreach (Transform child in Lista.transform)
         {
@@ -31,12 +48,17 @@ public class PatrolManager : MonoBehaviour
     void Start()
     {
         //nma.SetDestination(patrolPoints[currentPoint].transform.position);
+        float randomStartingTime = Random.Range(0, 240);
+        audioSource.time = randomStartingTime;
+        audioSource.pitch= Random.Range(1.8f, 2.2f);
+        audioSource.Play();
 
-        if(!destino)
+        if (!destino)
         {
             //print("primer destino");
             Invoke("Andar", Random.Range(0,10));
         }
+
     }
 
  
@@ -60,12 +82,49 @@ public class PatrolManager : MonoBehaviour
             print(n);
             
         }*/
+
+        Vista();
         Destino();
     }
 
+    //Deteccion del jugador
+    private void Vista()
+    {
+        playerPosition = Player.transform.position;
+        distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
+
+        if (distanceToPlayer <= viewDistance && !attack)
+        {
+            //print("player detectado");
+            //print(distanceToPlayer);
+            isPlayerDetected = true;
+            nma.SetDestination(playerPosition);
+            agentAnimator.SetBool("Detect", true);
+            viewDistance = view+15;
+            nma.speed = detectSpeed;
+            if(distanceToPlayer <= 5f)
+            {
+                agentAnimator.SetBool("Attack", true);
+                attack = true;
+                nma.SetDestination(transform.position);
+                nma.enabled = false;
+                var targetPosition = playerPosition;
+                targetPosition.y = transform.position.y;
+                transform.LookAt(targetPosition);
+            }
+        }
+        else
+        {
+            isPlayerDetected = false;
+            agentAnimator.SetBool("Detect", false);
+            viewDistance = view;
+        }
+    }
+
+    //Control de destinos
     private void Destino()
     {
-        if (destino)
+        if (destino && !isPlayerDetected && !attack)
         {
             if (!nma.pathPending)
             {
@@ -82,16 +141,17 @@ public class PatrolManager : MonoBehaviour
         }
     }
 
+    //Asignacion de destino
     private void Andar()
     {
         //print(this.name+": tiene nuevo destino");
         nma.SetDestination(RandomNavmeshLocation(50f));
         agentAnimator.SetBool("Walk", true);
         destino = true;
-        
+        nma.speed = walkSpeed;
     }
 
-
+    //Funcion que genera destinos aleatorios
     public Vector3 RandomNavmeshLocation(float radius)
     {
         Vector3 randomDirection = Random.insideUnitSphere * radius;
@@ -103,5 +163,12 @@ public class PatrolManager : MonoBehaviour
             finalPosition = hit.position;
         }
         return finalPosition;
+    }
+
+    public void stopAttack()
+    {
+        attack = false;
+        agentAnimator.SetBool("Attack", false);
+        nma.enabled = true;
     }
 }
