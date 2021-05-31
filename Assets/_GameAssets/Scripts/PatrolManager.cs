@@ -28,6 +28,7 @@ public class PatrolManager : MonoBehaviour
     private bool attack=false;
 
     private AudioSource audioSource;
+    private NavMeshObstacle meshObstacle;
 
     private void Awake()
     {
@@ -106,8 +107,9 @@ public class PatrolManager : MonoBehaviour
             {
                 agentAnimator.SetBool("Attack", true);
                 attack = true;
-                nma.SetDestination(transform.position);
-                nma.enabled = false;
+                //nma.SetDestination(transform.position);
+                //nma.enabled = false;
+                nma.ResetPath();
                 var targetPosition = playerPosition;
                 targetPosition.y = transform.position.y;
                 transform.LookAt(targetPosition);
@@ -133,7 +135,10 @@ public class PatrolManager : MonoBehaviour
                     if (!nma.hasPath || nma.velocity.sqrMagnitude == 0f)
                     {
                         destino = false;
+                        nma.ResetPath();
                         agentAnimator.SetBool("Walk", false);
+                        meshObstacle.enabled=true;
+
                         Invoke("Andar", Random.Range(0, 10));
                     }
                 }
@@ -145,10 +150,13 @@ public class PatrolManager : MonoBehaviour
     private void Andar()
     {
         //print(this.name+": tiene nuevo destino");
-        nma.SetDestination(RandomNavmeshLocation(50f));
-        agentAnimator.SetBool("Walk", true);
-        destino = true;
-        nma.speed = walkSpeed;
+        if(!attack)
+        { 
+            nma.SetDestination(RandomNavmeshLocation(50f));
+            agentAnimator.SetBool("Walk", true);
+            destino = true;
+            nma.speed = walkSpeed;
+        }
     }
 
     //Funcion que genera destinos aleatorios
@@ -169,6 +177,6 @@ public class PatrolManager : MonoBehaviour
     {
         attack = false;
         agentAnimator.SetBool("Attack", false);
-        nma.enabled = true;
+        //nma.enabled = true;
     }
 }

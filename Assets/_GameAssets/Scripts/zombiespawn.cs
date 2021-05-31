@@ -5,10 +5,11 @@ using UnityEngine;
 public class zombiespawn : MonoBehaviour
 {
     public GameObject Zombie;
+    private int n=0;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("invocar", 1, 1);
+        InvokeRepeating("invocar", 10, 10);
     }
 
     // Update is called once per frame
@@ -18,6 +19,8 @@ public class zombiespawn : MonoBehaviour
     }
     void invocar()
     {
+        if (n >= 10) return;
         Instantiate(Zombie, transform.position, transform.rotation);
+        n++;
     }
 }
