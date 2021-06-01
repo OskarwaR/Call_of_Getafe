@@ -9,7 +9,7 @@ public class zombiespawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("invocar", 10, 10);
+        InvokeRepeating("invocar",0.1f, 0.1f);
     }
 
     // Update is called once per frame

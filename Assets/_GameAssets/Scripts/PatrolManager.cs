@@ -26,9 +26,13 @@ public class PatrolManager : MonoBehaviour
     public float detectSpeed = 2.5f;
 
     private bool attack=false;
+    private bool ad=false;
 
-    private AudioSource audioSource;
-    private NavMeshObstacle meshObstacle;
+    private AudioSource audioLoop;
+    private AudioSource audioDetect;
+    private AudioSource audioGolpe;
+
+    int afk = 0;
 
     private void Awake()
     {
@@ -36,7 +40,13 @@ public class PatrolManager : MonoBehaviour
         agentAnimator = GetComponentInChildren<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player");
         view = viewDistance;
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
+        AudioSource[] audios = GetComponents<AudioSource>();
+        audioLoop = audios[0];
+        audioDetect = audios[1];
+        audioGolpe = audios[2];
+
+        nma.avoidancePriority = Random.Range(0,100);
 
         /*foreach (Transform child in Lista.transform)
         {
@@ -50,14 +60,14 @@ public class PatrolManager : MonoBehaviour
     {
         //nma.SetDestination(patrolPoints[currentPoint].transform.position);
         float randomStartingTime = Random.Range(0, 240);
-        audioSource.time = randomStartingTime;
-        audioSource.pitch= Random.Range(1.8f, 2.2f);
-        audioSource.Play();
+        audioLoop.time = randomStartingTime;
+        audioLoop.pitch= Random.Range(1.8f, 2.2f);
+        audioLoop.Play();
 
         if (!destino)
         {
             //print("primer destino");
-            Invoke("Andar", Random.Range(0,10));
+            Invoke("Andar", Random.Range(2,10));
         }
 
     }
@@ -99,7 +109,15 @@ public class PatrolManager : MonoBehaviour
             //print("player detectado");
             //print(distanceToPlayer);
             isPlayerDetected = true;
-            nma.SetDestination(playerPosition);
+            if (!ad)
+            {
+                audioDetect.pitch = Random.Range(0.8f, 1.2f);
+                audioDetect.Play();
+                ad = true;
+                //print("sonido deteccion");
+            }
+            Vector3 temp = new Vector3(Random.Range(-3, 3), 0, Random.Range(-3, 3));
+            nma.SetDestination(playerPosition+temp);
             agentAnimator.SetBool("Detect", true);
             viewDistance = view+15;
             nma.speed = detectSpeed;
@@ -113,6 +131,9 @@ public class PatrolManager : MonoBehaviour
                 var targetPosition = playerPosition;
                 targetPosition.y = transform.position.y;
                 transform.LookAt(targetPosition);
+
+                audioGolpe.pitch = Random.Range(0.8f, 1.2f);
+                audioGolpe.Play();
             }
         }
         else
@@ -120,6 +141,11 @@ public class PatrolManager : MonoBehaviour
             isPlayerDetected = false;
             agentAnimator.SetBool("Detect", false);
             viewDistance = view;
+        }
+
+        if(distanceToPlayer >= viewDistance)
+        {
+            ad = false;
         }
     }
 
@@ -137,9 +163,8 @@ public class PatrolManager : MonoBehaviour
                         destino = false;
                         nma.ResetPath();
                         agentAnimator.SetBool("Walk", false);
-                        meshObstacle.enabled=true;
 
-                        Invoke("Andar", Random.Range(0, 10));
+                        Invoke("Andar", Random.Range(2, 10));
                     }
                 }
             }
@@ -178,5 +203,24 @@ public class PatrolManager : MonoBehaviour
         attack = false;
         agentAnimator.SetBool("Attack", false);
         //nma.enabled = true;
+    }
+
+    public void afkCheck()
+    {
+        afk++;
+        if(afk>=2)
+        {
+            afk = 0;
+            agentAnimator.SetBool("Walk", false);
+            agentAnimator.SetBool("Detect", false);
+            agentAnimator.SetBool("Attack", false);
+            attack = false;
+            destino = false;
+            isPlayerDetected = false;
+            nma.ResetPath();
+            Invoke("Andar", Random.Range(2, 10));
+            Vista();
+            Destino(); 
+        }
     }
 }
