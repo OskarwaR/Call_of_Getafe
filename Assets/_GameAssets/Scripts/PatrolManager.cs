@@ -32,7 +32,7 @@ public class PatrolManager : MonoBehaviour
     private AudioSource audioDetect;
     private AudioSource audioGolpe;
 
-    int afk = 0;
+    private int afk = 0;
 
     private void Awake()
     {
