@@ -6,7 +6,12 @@ public class ShootController : MonoBehaviour
 {
     Ray ray;
     RaycastHit hit;
-    public GameObject Target;
+    private GameObject Target;
+
+    public int dañoPistola=30;
+    public int dañoEscopeta=50;
+    public int dañoCuchillo=10;
+    public int dañoRifle=20;
 
     void Start()
     {
@@ -23,11 +28,21 @@ public class ShootController : MonoBehaviour
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                //if (hit.collider.gameObject.tag == "Target")
-                //{
-                    Target = hit.collider.gameObject;
-                    Debug.Log("Hit: " + Target.tag + " (" + Target.name+ ")");
-                //}
+                Target = hit.collider.gameObject;
+                Debug.Log("Hit: " + Target.tag + " (" + Target.name + ")");
+                if (hit.collider.gameObject.tag == "Enemigo")
+                {
+                    Health enemigo = Target.GetComponentInParent<Health>();
+                    if (hit.collider.gameObject.name == "Head")
+                    {
+                        enemigo.setSalud(-dañoEscopeta*2);
+                    }
+                    else
+                    {
+                        enemigo.setSalud(-dañoEscopeta);
+                    }
+                            
+                }
 
             }
 

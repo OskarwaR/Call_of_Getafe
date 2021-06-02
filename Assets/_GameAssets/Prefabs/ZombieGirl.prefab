@@ -101,9 +101,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6076583477504685282}
+  - component: {fileID: 7481915391793648039}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +124,19 @@ Transform:
   m_Father: {fileID: 7882171724571504154}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7481915391793648039
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598521825110071864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0.06, z: 0}
 --- !u!1 &974128351460145944
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,9 +332,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4362631624143404707}
+  - component: {fileID: 8129347076244405097}
   m_Layer: 0
   m_Name: Spine
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -341,6 +356,20 @@ Transform:
   m_Father: {fileID: 4702652184165457168}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8129347076244405097
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731435832267195776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 1.75
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.35, z: 0}
 --- !u!1 &1732402338365642781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,14 +1370,14 @@ GameObject:
   - component: {fileID: 5093982321875191898}
   - component: {fileID: 5093982321875191897}
   - component: {fileID: 5093982321875191896}
-  - component: {fileID: 412102540}
   - component: {fileID: 412102541}
   - component: {fileID: 563924378}
   - component: {fileID: 1866942840}
   - component: {fileID: 563924387}
+  - component: {fileID: 2005052265}
   m_Layer: 0
   m_Name: ZombieGirl
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1450,20 +1479,6 @@ MonoBehaviour:
   viewDistance: 20
   walkSpeed: 1.7
   detectSpeed: 2.5
---- !u!136 &412102540
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5363818214427820195}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.35
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!82 &412102541
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1768,6 +1783,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2005052265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363818214427820195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ef14e6a4ff02f4ca36a891e9d54238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salud: 100
 --- !u!1 &5437818903790869490
 GameObject:
   m_ObjectHideFlags: 0
