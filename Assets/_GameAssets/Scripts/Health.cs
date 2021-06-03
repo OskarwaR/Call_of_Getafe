@@ -6,12 +6,13 @@ public class Health : MonoBehaviour
 {
     public int salud=100;
 
-    public void setSalud(int n)
+    public void setSalud(int daño)
     {
-        salud += n;
-        if(salud<=0)
-        {
-            //muerte
-        }
+        salud += daño;
+    }
+
+    public int getSalud()
+    {
+        return salud;
     }
 }

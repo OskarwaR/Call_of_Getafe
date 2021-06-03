@@ -8,28 +8,35 @@ public class ShootController : MonoBehaviour
     RaycastHit hit;
     private GameObject Target;
 
+    private string arma="escopeta";
     public int dañoPistola=30;
-    public int dañoEscopeta=50;
+    public int dañoEscopeta=0;
     public int dañoCuchillo=10;
     public int dañoRifle=20;
+
+    public GameObject sangreImpacto;
+    public float sangreImpactoSize;
+
+    public GameObject player;
 
     void Start()
     {
         // Initialise ray
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        player = this.gameObject;
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("MouseDown");
+            Debug.Log("MouseDown: "+arma);
             // Reset ray with new mouse position
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
                 Target = hit.collider.gameObject;
-                Debug.Log("Hit: " + Target.tag + " (" + Target.name + ")");
+                Debug.Log("Hit: " + Target.tag + " (" + Target.name + ") - " + hit.distance + " metros");
                 if (hit.collider.gameObject.tag == "Enemigo")
                 {
                     Health enemigo = Target.GetComponentInParent<Health>();
@@ -41,7 +48,10 @@ public class ShootController : MonoBehaviour
                     {
                         enemigo.setSalud(-dañoEscopeta);
                     }
-                            
+
+                    GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
+                    sangre.transform.localScale = new Vector3(sangreImpactoSize, sangreImpactoSize, sangreImpactoSize);
+                    sangre.transform.SetParent(Target.transform);
                 }
 
             }

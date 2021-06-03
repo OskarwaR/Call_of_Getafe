@@ -10,7 +10,7 @@ public class PatrolManager : MonoBehaviour
     //public Transform[] patrolPoints;
     private List<Transform> patrolList = new List<Transform>();
     private NavMeshAgent nma;
-    public GameObject Lista;
+    public GameObject lista;
     private int currentPoint = 0;
     private Animator agentAnimator;
     private int n,n2;
@@ -34,6 +34,9 @@ public class PatrolManager : MonoBehaviour
 
     private int afk = 0;
 
+    private int zombieSalud;
+    private Health salud;
+
     private void Awake()
     {
         nma = GetComponent<NavMeshAgent>();
@@ -47,6 +50,8 @@ public class PatrolManager : MonoBehaviour
         audioGolpe = audios[2];
 
         nma.avoidancePriority = Random.Range(0,100);
+
+        zombieSalud = GetComponentInParent<Health>().getSalud();
 
         /*foreach (Transform child in Lista.transform)
         {
@@ -94,8 +99,22 @@ public class PatrolManager : MonoBehaviour
             
         }*/
 
+        Vida();
+        if (zombieSalud <= 0) return;
         Vista();
         Destino();
+    }
+
+    //Comprovamos la vida del zombie
+    private void Vida()
+    {
+        zombieSalud = GetComponentInParent<Health>().getSalud();
+        if (zombieSalud <= 0)
+        {
+            agentAnimator.SetBool("Death", true);
+            nma.ResetPath();
+            audioLoop.Stop();
+        }
     }
 
     //Deteccion del jugador
