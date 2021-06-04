@@ -18,6 +18,7 @@ public class ShootController : MonoBehaviour
     public float sangreImpactoSize;
 
     public GameObject player;
+    private GameObject brazos;
     [SerializeField] private LayerMask layerMask;
 
 
@@ -26,6 +27,7 @@ public class ShootController : MonoBehaviour
         // Initialise ray
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         player = this.gameObject;
+        brazos = GameObject.FindGameObjectWithTag("Brazos");
     }
 
     void Update()
@@ -33,16 +35,17 @@ public class ShootController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("MouseDown: "+arma);
+            brazos.GetComponent<Animator>().SetTrigger("Disparo");
             // Reset ray with new mouse position
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit,1000, layerMask))
             {
                 Target = hit.collider.gameObject;
                 Debug.Log("Hit: " + Target.tag + " (" + Target.name + ") - " + hit.distance + " metros");
-                if (hit.collider.gameObject.tag == "Enemigo")
+                if (hit.collider.gameObject.tag == "Enemigo" || hit.collider.gameObject.tag == "Head")
                 {
                     Health enemigo = Target.GetComponentInParent<Health>();
-                    if (hit.collider.gameObject.name == "Head")
+                    if (hit.collider.gameObject.tag == "Head")
                     {
                         enemigo.setSalud(-dañoEscopeta*2, Target.name);
                     }

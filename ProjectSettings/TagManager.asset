@@ -13,6 +13,8 @@ TagManager:
   - FxTemporaire
   - Terreno
   - Sonido
+  - Head
+  - Brazos
   layers:
   - Default
   - TransparentFX

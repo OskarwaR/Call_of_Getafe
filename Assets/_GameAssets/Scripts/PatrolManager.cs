@@ -44,26 +44,10 @@ public class PatrolManager : MonoBehaviour
     public int ataqueGarra = 20;
 
     Health playerSalud;
-
-    private void Awake()
+ 
+    private void OnEnable()
     {
-        nma = GetComponent<NavMeshAgent>();
-        agentAnimator = GetComponentInChildren<Animator>();
-        Player = GameObject.FindGameObjectWithTag("Player");
-        view = viewDistance;
-        //audioSource = GetComponent<AudioSource>();
-        AudioSource[] audios = GetComponents<AudioSource>();
-        audioLoop = audios[0];
-        audioDetect = audios[1];
-        audioGolpe = audios[2];
-
-        nma.avoidancePriority = Random.Range(0,100);
-
-        salud = GetComponentInParent<Health>();
-        zombieSalud = salud.getSalud();
-        zombieImpacto = salud.getZona();
-
-        playerSalud = Player.GetComponent<Health>();
+        
 
         /*foreach (Transform child in Lista.transform)
         {
@@ -75,6 +59,23 @@ public class PatrolManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        nma = GetComponentInParent<NavMeshAgent>();
+        agentAnimator = GetComponentInChildren<Animator>();
+        Player = GameObject.FindGameObjectWithTag("Player");
+        view = viewDistance;
+        //audioSource = GetComponent<AudioSource>();
+        AudioSource[] audios = GetComponentsInParent<AudioSource>();
+        audioLoop = audios[0];
+        audioDetect = audios[1];
+        audioGolpe = audios[2];
+
+        nma.avoidancePriority = Random.Range(0, 100);
+
+        salud = GetComponentInParent<Health>();
+        zombieSalud = salud.getSalud();
+        zombieImpacto = salud.getZona();
+
+        playerSalud = Player.GetComponent<Health>();
         //nma.SetDestination(patrolPoints[currentPoint].transform.position);
         float randomStartingTime = Random.Range(0, 240);
         audioLoop.time = randomStartingTime;
