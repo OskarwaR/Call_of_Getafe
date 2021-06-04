@@ -1475,7 +1475,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerDetected: 0
-  Lista: {fileID: 0}
+  lista: {fileID: 0}
+  pfExplosionCabeza: {fileID: 1698979638433960, guid: 35f735ea8ab99424893b817d677b094d,
+    type: 3}
   viewDistance: 20
   walkSpeed: 1.7
   detectSpeed: 2.5

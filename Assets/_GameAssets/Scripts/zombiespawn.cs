@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class zombiespawn : MonoBehaviour
 {
-    public GameObject Zombie;
+    public GameObject[] Zombies;
     private int n=0;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class zombiespawn : MonoBehaviour
     void invocar()
     {
         if (n >= 10) return;
-        Instantiate(Zombie, transform.position, transform.rotation);
+        Instantiate(Zombies[Random.Range(0,Zombies.Length)], transform.position, transform.rotation);
         n++;
     }
 }

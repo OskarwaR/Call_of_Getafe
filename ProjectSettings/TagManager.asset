@@ -12,6 +12,7 @@ TagManager:
   - Linterna
   - FxTemporaire
   - Terreno
+  - Sonido
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Escopeta
   - Linterna
   - Brazos
-  - 
+  - noRay
   - 
   - 
   - 

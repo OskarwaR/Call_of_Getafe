@@ -11,6 +11,7 @@ public class PatrolManager : MonoBehaviour
     private List<Transform> patrolList = new List<Transform>();
     private NavMeshAgent nma;
     public GameObject lista;
+    public GameObject pfExplosionCabeza;
     private int currentPoint = 0;
     private Animator agentAnimator;
     private int n,n2;
@@ -35,7 +36,14 @@ public class PatrolManager : MonoBehaviour
     private int afk = 0;
 
     private int zombieSalud;
+    private string zombieImpacto;
     private Health salud;
+
+    private bool alive=true;
+
+    public int ataqueGarra = 20;
+
+    Health playerSalud;
 
     private void Awake()
     {
@@ -51,7 +59,11 @@ public class PatrolManager : MonoBehaviour
 
         nma.avoidancePriority = Random.Range(0,100);
 
-        zombieSalud = GetComponentInParent<Health>().getSalud();
+        salud = GetComponentInParent<Health>();
+        zombieSalud = salud.getSalud();
+        zombieImpacto = salud.getZona();
+
+        playerSalud = Player.GetComponent<Health>();
 
         /*foreach (Transform child in Lista.transform)
         {
@@ -104,16 +116,30 @@ public class PatrolManager : MonoBehaviour
         Vista();
         Destino();
     }
-
-    //Comprovamos la vida del zombie
+  
+    //Comprobamos la vida del zombie
     private void Vida()
     {
-        zombieSalud = GetComponentInParent<Health>().getSalud();
+        if (!alive) return;
+        zombieSalud = salud.getSalud();
+        zombieImpacto = salud.getZona();
+        //print(zombieImpacto);
         if (zombieSalud <= 0)
         {
             agentAnimator.SetBool("Death", true);
             nma.ResetPath();
+            nma.enabled = false;
             audioLoop.Stop();
+            alive = false;
+            //print(zombieImpacto);
+            if (zombieImpacto=="Head")
+            {
+                GameObject cabeza = transform.Find("Hips/Spine/Spine1/Spine2/Neck").gameObject;
+                GameObject gore = Instantiate(pfExplosionCabeza, cabeza.transform.position, cabeza.transform.rotation);
+                gore.transform.localScale = new Vector3(3, 3, 3);
+                cabeza.transform.localScale = new Vector3(0, 0, 0);
+                //print(cabeza);
+            }
         }
     }
 
@@ -217,6 +243,13 @@ public class PatrolManager : MonoBehaviour
         return finalPosition;
     }
 
+    public void attackImpact()
+    {
+        if(distanceToPlayer<=6)
+        { 
+            playerSalud.setSalud(-10);
+        }
+    }
     public void stopAttack()
     {
         attack = false;

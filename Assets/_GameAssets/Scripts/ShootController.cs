@@ -18,6 +18,8 @@ public class ShootController : MonoBehaviour
     public float sangreImpactoSize;
 
     public GameObject player;
+    [SerializeField] private LayerMask layerMask;
+
 
     void Start()
     {
@@ -33,7 +35,7 @@ public class ShootController : MonoBehaviour
             Debug.Log("MouseDown: "+arma);
             // Reset ray with new mouse position
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit,1000, layerMask))
             {
                 Target = hit.collider.gameObject;
                 Debug.Log("Hit: " + Target.tag + " (" + Target.name + ") - " + hit.distance + " metros");
@@ -42,16 +44,16 @@ public class ShootController : MonoBehaviour
                     Health enemigo = Target.GetComponentInParent<Health>();
                     if (hit.collider.gameObject.name == "Head")
                     {
-                        enemigo.setSalud(-dañoEscopeta*2);
+                        enemigo.setSalud(-dañoEscopeta*2, Target.name);
                     }
                     else
                     {
-                        enemigo.setSalud(-dañoEscopeta);
+                        enemigo.setSalud(-dañoEscopeta, Target.name);
                     }
 
                     GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
                     sangre.transform.localScale = new Vector3(sangreImpactoSize, sangreImpactoSize, sangreImpactoSize);
-                    sangre.transform.SetParent(Target.transform);
+                    //sangre.transform.SetParent(Target.transform);
                 }
 
             }
