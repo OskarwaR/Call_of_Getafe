@@ -19,6 +19,16 @@ public class ShootController : MonoBehaviour
 
     public GameObject player;
     private GameObject brazos;
+
+    public GameObject explosionPoint;
+    public GameObject explosionPointEscopeta;
+    public GameObject explosionPointM16;
+    public GameObject explosionPointPistola;
+    public GameObject explosionPointPF;
+    public GameObject explosionPointPFEscopeta;
+    public GameObject explosionPointPFM16;
+    public GameObject explosionPointPFPistola;
+
     [SerializeField] private LayerMask layerMask;
 
 
@@ -26,8 +36,10 @@ public class ShootController : MonoBehaviour
     {
         // Initialise ray
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        player = this.gameObject;
         brazos = GameObject.FindGameObjectWithTag("Brazos");
+        explosionPoint = explosionPointEscopeta;
+        explosionPointPF = explosionPointPFEscopeta;
+
     }
 
     void Update()
@@ -36,6 +48,11 @@ public class ShootController : MonoBehaviour
         {
             Debug.Log("MouseDown: "+arma);
             brazos.GetComponent<Animator>().SetTrigger("Disparo");
+            GameObject tempExplosion=Instantiate(explosionPointPF, explosionPoint.transform.position, explosionPoint.transform.rotation);
+            tempExplosion.transform.parent = explosionPoint.transform;
+            
+
+            //brazos.GetComponent<Animator>().SetBool("DisparoB",true);
             // Reset ray with new mouse position
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit,1000, layerMask))
@@ -60,6 +77,12 @@ public class ShootController : MonoBehaviour
                 }
 
             }
+
+            //Retroceso M16
+            //player.transform.Rotate(Random.Range(-1f,1f), Random.Range(-1f, 1f), 0);
+
+            //Retroceso Escopeta
+            player.transform.Rotate(-10, 0, 0);
 
             //multiples hits
             /*
