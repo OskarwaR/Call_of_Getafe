@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int salud=100;
+    [SerializeField] int salud=100;
+    [SerializeField] int maxSalud = 100;
     private string zona="";
 
     public void setSalud(int daño,string impacto=null)
     {
         salud += daño;
         zona = impacto;
+        if (salud > maxSalud) salud = maxSalud;
     }
 
     public int getSalud()

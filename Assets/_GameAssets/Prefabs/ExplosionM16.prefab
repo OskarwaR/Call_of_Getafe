@@ -4804,6 +4804,7 @@ GameObject:
   - component: {fileID: 505556674332407627}
   - component: {fileID: 417657756659195177}
   - component: {fileID: 418159946501186395}
+  - component: {fileID: 2510635156075090651}
   m_Layer: 0
   m_Name: ExplosionM16
   m_TagString: Untagged
@@ -9706,6 +9707,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2510635156075090651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508658816035088035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a0415f11f4ae241afe1262c59e7d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 1
 --- !u!1 &508775021898787897
 GameObject:
   m_ObjectHideFlags: 0
@@ -14625,7 +14639,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.401574, b: 0, a: 1}
   m_Intensity: 1
-  m_Range: 5
+  m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -14684,7 +14698,7 @@ Animator:
   m_GameObject: {fileID: 1763854556381931134}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ab424dc61135f394db86bddbcf1b7e1f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 752331e3337a7214eb347cbd647a8e54, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

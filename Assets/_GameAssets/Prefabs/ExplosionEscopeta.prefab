@@ -4804,6 +4804,7 @@ GameObject:
   - component: {fileID: 505556674332407627}
   - component: {fileID: 417657756659195177}
   - component: {fileID: 418159946501186395}
+  - component: {fileID: -6326684427880681173}
   m_Layer: 0
   m_Name: ExplosionEscopeta
   m_TagString: Untagged
@@ -9706,6 +9707,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-6326684427880681173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508658816035088035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a0415f11f4ae241afe1262c59e7d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 1
 --- !u!1 &508775021898787897
 GameObject:
   m_ObjectHideFlags: 0
@@ -9821,7 +9835,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -14625,7 +14639,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.401574, b: 0, a: 1}
   m_Intensity: 10
-  m_Range: 10
+  m_Range: 25
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

@@ -10,8 +10,8 @@ public class PatrolManager : MonoBehaviour
     //public Transform[] patrolPoints;
     private List<Transform> patrolList = new List<Transform>();
     private NavMeshAgent nma;
-    public GameObject lista;
-    public GameObject pfExplosionCabeza;
+    [SerializeField] GameObject lista;
+    [SerializeField] GameObject pfExplosionCabeza;
     private int currentPoint = 0;
     private Animator agentAnimator;
     private int n,n2;
@@ -20,11 +20,11 @@ public class PatrolManager : MonoBehaviour
     private float distanceToPlayer;
     private GameObject Player;
     private Vector3 playerPosition;
-    public float viewDistance=15;
+    [SerializeField] float viewDistance=15;
     private float view;
 
-    public float walkSpeed = 1.7f;
-    public float detectSpeed = 2.5f;
+    [SerializeField] float walkSpeed = 1.7f;
+    [SerializeField] float detectSpeed = 2.5f;
 
     private bool attack=false;
     private bool ad=false;
@@ -41,9 +41,9 @@ public class PatrolManager : MonoBehaviour
 
     private bool alive=true;
 
-    public int ataqueGarra = 20;
+    [SerializeField] int ataqueGarra = 20;
 
-    Health playerSalud;
+    private Health playerSalud;
  
     private void OnEnable()
     {
@@ -135,10 +135,11 @@ public class PatrolManager : MonoBehaviour
             //print(zombieImpacto);
             if (zombieImpacto=="Head")
             {
-                GameObject cabeza = transform.Find("Hips/Spine/Spine1/Spine2/Neck").gameObject;
+
+                /*GameObject cabeza = transform.Find("Hips/Spine/Spine1/Spine2/Neck").gameObject;
                 GameObject gore = Instantiate(pfExplosionCabeza, cabeza.transform.position, cabeza.transform.rotation);
                 gore.transform.localScale = new Vector3(3, 3, 3);
-                cabeza.transform.localScale = new Vector3(0, 0, 0);
+                cabeza.transform.localScale = new Vector3(0, 0, 0);*/
                 //print(cabeza);
             }
         }
@@ -162,7 +163,7 @@ public class PatrolManager : MonoBehaviour
                 ad = true;
                 //print("sonido deteccion");
             }
-            Vector3 temp = new Vector3(Random.Range(-3, 3), 0, Random.Range(-3, 3));
+            Vector3 temp = new Vector3(Random.Range(-2, 2), 0, Random.Range(-2, 2));
             nma.SetDestination(playerPosition+temp);
             agentAnimator.SetBool("Detect", true);
             viewDistance = view+15;
@@ -176,7 +177,7 @@ public class PatrolManager : MonoBehaviour
                 nma.ResetPath();
                 var targetPosition = playerPosition;
                 targetPosition.y = transform.position.y;
-                transform.LookAt(targetPosition);
+                transform.parent.gameObject.transform.LookAt(targetPosition);
 
                 audioGolpe.pitch = Random.Range(0.8f, 1.2f);
                 audioGolpe.Play();

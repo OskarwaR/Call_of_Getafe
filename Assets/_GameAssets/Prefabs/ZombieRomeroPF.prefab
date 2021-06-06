@@ -42,10 +42,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.94
+  m_Radius: 0.75
   m_Height: 5.1
   m_Direction: 1
-  m_Center: {x: 0, y: -1.2, z: 0}
+  m_Center: {x: 0, y: -1.2, z: -0.09}
 --- !u!1 &155547342993220090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,7 +1300,7 @@ GameObject:
   - component: {fileID: 9041606580043147304}
   m_Layer: 0
   m_Name: mixamorig5:Neck
-  m_TagString: Untagged
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

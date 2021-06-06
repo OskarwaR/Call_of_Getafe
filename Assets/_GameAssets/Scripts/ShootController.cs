@@ -8,94 +8,171 @@ public class ShootController : MonoBehaviour
     RaycastHit hit;
     private GameObject Target;
 
-    private string arma="escopeta";
-    public int dañoPistola=30;
-    public int dañoEscopeta=0;
-    public int dañoCuchillo=10;
-    public int dañoRifle=20;
+    private int arma;
 
-    public GameObject sangreImpacto;
-    public float sangreImpactoSize;
+    [SerializeField] int damagePistola = 35;
+    [SerializeField] int damageEscopeta = 50;
+    [SerializeField] int damageCuchillo = 15;
+    [SerializeField] int damageM16 = 25;
+    private int damage;
 
-    public GameObject player;
+    [SerializeField] float distanciaPistola = 50;
+    [SerializeField] float distanciaEscopeta = 25;
+    [SerializeField] float distanciaCuchillo = 1;
+    [SerializeField] float distanciaM16 = 75;
+    private float distancia;
+
+    [SerializeField] GameObject sangreImpacto;
+    [SerializeField] float sangreImpactoSize;
+
+    [SerializeField] GameObject player;
     private GameObject brazos;
 
-    public GameObject explosionPoint;
-    public GameObject explosionPointEscopeta;
-    public GameObject explosionPointM16;
-    public GameObject explosionPointPistola;
-    public GameObject explosionPointPF;
-    public GameObject explosionPointPFEscopeta;
-    public GameObject explosionPointPFM16;
-    public GameObject explosionPointPFPistola;
+    private GameObject explosionPoint;
+    [SerializeField] GameObject explosionPointEscopeta;
+    [SerializeField] GameObject explosionPointM16;
+    [SerializeField] GameObject explosionPointPistola;
+    private GameObject explosionPointPF;
+    [SerializeField] GameObject explosionPointPFEscopeta;
+    [SerializeField] GameObject explosionPointPFM16;
+    [SerializeField] GameObject explosionPointPFPistola;
 
-    [SerializeField] private LayerMask layerMask;
+    [SerializeField] LayerMask layerMask;
+    [SerializeField] SoundManager soundManager;
+
+    private bool disparando = false;
+
 
 
     void Start()
     {
-        // Initialise ray
+        //Inicializamos el rayo
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        brazos = GameObject.FindGameObjectWithTag("Brazos");
-        explosionPoint = explosionPointEscopeta;
-        explosionPointPF = explosionPointPFEscopeta;
 
+        //Comprobamos el arma actual
+        arma = GetComponentInParent<Inventario>().getArmaActual();
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("MouseDown: "+arma);
-            brazos.GetComponent<Animator>().SetTrigger("Disparo");
-            GameObject tempExplosion=Instantiate(explosionPointPF, explosionPoint.transform.position, explosionPoint.transform.rotation);
-            tempExplosion.transform.parent = explosionPoint.transform;
-            
-
-            //brazos.GetComponent<Animator>().SetBool("DisparoB",true);
-            // Reset ray with new mouse position
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit,1000, layerMask))
+            if (!disparando)
             {
-                Target = hit.collider.gameObject;
-                Debug.Log("Hit: " + Target.tag + " (" + Target.name + ") - " + hit.distance + " metros");
-                if (hit.collider.gameObject.tag == "Enemigo" || hit.collider.gameObject.tag == "Head")
+                arma = GetComponentInParent<Inventario>().getArmaActual();
+                Debug.Log("MouseDown: "+arma);
+                switch (arma)
                 {
-                    Health enemigo = Target.GetComponentInParent<Health>();
-                    if (hit.collider.gameObject.tag == "Head")
-                    {
-                        enemigo.setSalud(-dañoEscopeta*2, Target.name);
-                    }
-                    else
-                    {
-                        enemigo.setSalud(-dañoEscopeta, Target.name);
-                    }
-
-                    GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
-                    sangre.transform.localScale = new Vector3(sangreImpactoSize, sangreImpactoSize, sangreImpactoSize);
-                    //sangre.transform.SetParent(Target.transform);
+                    case 1:
+                        distancia = distanciaCuchillo;
+                        break;
+                    case 2:
+                        distancia = distanciaPistola;
+                        break;
+                    case 3:
+                        distancia = distanciaEscopeta;
+                        break;
+                    case 4:
+                        distancia = distanciaM16;
+                        break;
                 }
 
-            }
-
-            //Retroceso M16
-            //player.transform.Rotate(Random.Range(-1f,1f), Random.Range(-1f, 1f), 0);
-
-            //Retroceso Escopeta
-            player.transform.Rotate(-10, 0, 0);
-
-            //multiples hits
-            /*
-            RaycastHit[] hits = Physics.RaycastAll(ray);
-            foreach (RaycastHit hit in hits)
-            {
-                if (hit.collider.gameObject.tag == "Target")
+                // Reset ray with new mouse position
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, distancia, layerMask))
                 {
                     Target = hit.collider.gameObject;
-                    Debug.Log("Hit");
-                }
-            }*/
+                    Debug.Log("Hit: " + Target.tag + " (" + Target.name + ") - " + hit.distance + " metros");
+                    if (hit.collider.gameObject.tag == "Enemigo" || hit.collider.gameObject.tag == "Head")
+                    {
+                        Health enemigo = Target.GetComponentInParent<Health>();
+                        if (hit.collider.gameObject.tag == "Head")
+                        {
+                            enemigo.setSalud(-damage * 2, Target.name);
+                        }
+                        else
+                        {
+                            enemigo.setSalud(-damage, Target.name);
+                        }
 
+                        GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
+                        sangre.transform.localScale = new Vector3(sangreImpactoSize, sangreImpactoSize, sangreImpactoSize);
+                        //sangre.transform.SetParent(Target.transform);
+                    }
+
+                }
+
+
+                //Comprobamos el arma equipada
+
+                brazos = GameObject.FindGameObjectWithTag("Brazos");
+                brazos.GetComponent<Animator>().SetTrigger("Disparo");
+
+                switch (arma) {
+                    case 1:
+                        soundManager.PlaySound(3);
+                        player.transform.Rotate(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
+                        explosionPoint = null;
+                        explosionPointPF = null;
+                        damage = damageCuchillo;
+                        break;
+                    case 2:
+                        soundManager.PlaySound(2, true, 0.7f, 1.1f);
+                        player.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
+                        explosionPoint = explosionPointPistola;
+                        explosionPointPF = explosionPointPFPistola;
+                        damage = damageM16;
+                        break;
+                    case 3:
+                        soundManager.PlaySound(0);
+                        player.transform.Rotate(Random.Range(-11f, -9f), Random.Range(-1f, 1f), 0);
+                        explosionPoint = explosionPointEscopeta;
+                        explosionPointPF = explosionPointPFEscopeta;
+                        damage = damageEscopeta;
+                        break;
+                    case 4:
+                        soundManager.PlaySound(1);
+                        player.transform.Rotate(Random.Range(-1f, 1f), Random.Range(-1.5f, 1.5f), 0);
+                        explosionPoint = explosionPointM16;
+                        explosionPointPF = explosionPointPFM16;
+                        damage = damageM16;
+                        break; 
+                }
+
+                if (explosionPoint)
+                {
+                    GameObject tempExplosion = Instantiate(explosionPointPF, explosionPoint.transform.position, explosionPoint.transform.rotation);
+                    tempExplosion.transform.parent = explosionPoint.transform;
+                }
+
+                if (arma != 0) disparando = true;
+
+
+
+
+
+                //multiples hits
+                /*
+                RaycastHit[] hits = Physics.RaycastAll(ray);
+                foreach (RaycastHit hit in hits)
+                {
+                    if (hit.collider.gameObject.tag == "Target")
+                    {
+                        Target = hit.collider.gameObject;
+                        Debug.Log("Hit");
+                    }
+                }*/
+            }
         }
+    }
+
+    public void setDisparando(bool estado)
+    {
+        disparando = estado;
+    }
+
+    public bool getDisparando()
+    {
+        return disparando;
     }
 }
