@@ -41,8 +41,7 @@ public class ShootController : MonoBehaviour
     [SerializeField] SoundManager soundManager;
 
     private bool disparando = false;
-
-
+    private bool gatillo = false;
 
     void Start()
     {
@@ -55,7 +54,7 @@ public class ShootController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || gatillo)
         {
             if (!disparando)
             {
@@ -104,10 +103,9 @@ public class ShootController : MonoBehaviour
 
 
                 //Comprobamos el arma equipada
-
                 brazos = GameObject.FindGameObjectWithTag("Brazos");
                 brazos.GetComponent<Animator>().SetTrigger("Disparo");
-
+                
                 switch (arma) {
                     case 1:
                         soundManager.PlaySound(3);
@@ -147,9 +145,15 @@ public class ShootController : MonoBehaviour
 
                 if (arma != 0) disparando = true;
 
-
-
-
+                if (arma == 4)
+                {
+                    gatillo = true;
+                }
+                else
+                {
+                    gatillo = false;
+                }
+                
 
                 //multiples hits
                 /*
@@ -163,6 +167,11 @@ public class ShootController : MonoBehaviour
                     }
                 }*/
             }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            gatillo = false;
         }
     }
 
