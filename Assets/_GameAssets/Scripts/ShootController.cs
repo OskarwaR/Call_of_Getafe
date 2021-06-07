@@ -42,24 +42,44 @@ public class ShootController : MonoBehaviour
 
     private bool disparando = false;
     private bool gatillo = false;
+    private Inventario inventario;
 
     void Start()
     {
         //Inicializamos el rayo
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+        inventario = GetComponentInParent<Inventario>();
+        
         //Comprobamos el arma actual
-        arma = GetComponentInParent<Inventario>().getArmaActual();
+        arma = inventario.getArmaActual();
+        
     }
 
     void Update()
     {
+        Disparo();
+        Recarga();
+    }
+
+    private void Recarga()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            inventario.Recargar();
+        }
+    }
+
+    private void Disparo()
+    {
+        if (inventario.getArmaActual() <= 0) return; //No se puede disparar sin arma
+
         if (Input.GetMouseButtonDown(0) || gatillo)
         {
-            if (!disparando)
+            if (!disparando && inventario.getMunicion() > 0)
             {
-                arma = GetComponentInParent<Inventario>().getArmaActual();
-                Debug.Log("MouseDown: "+arma);
+                arma = inventario.getArmaActual();
+                Debug.Log("MouseDown: " + arma);
                 switch (arma)
                 {
                     case 1:
@@ -88,11 +108,15 @@ public class ShootController : MonoBehaviour
                         if (hit.collider.gameObject.tag == "Head")
                         {
                             enemigo.setSalud(-damage * 2, Target.name);
+                            print("daño: "+damage * 2);
                         }
                         else
                         {
                             enemigo.setSalud(-damage, Target.name);
+                            print("daño: "+damage);
                         }
+
+                        Target.GetComponentInParent<PatrolManager>().Hit();
 
                         GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
                         sangre.transform.localScale = new Vector3(sangreImpactoSize, sangreImpactoSize, sangreImpactoSize);
@@ -105,8 +129,10 @@ public class ShootController : MonoBehaviour
                 //Comprobamos el arma equipada
                 brazos = GameObject.FindGameObjectWithTag("Brazos");
                 brazos.GetComponent<Animator>().SetTrigger("Disparo");
-                
-                switch (arma) {
+
+                switch (arma)
+                {
+                    //cuchillo
                     case 1:
                         soundManager.PlaySound(3);
                         player.transform.Rotate(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
@@ -114,28 +140,33 @@ public class ShootController : MonoBehaviour
                         explosionPointPF = null;
                         damage = damageCuchillo;
                         break;
+                    //pistola
                     case 2:
                         soundManager.PlaySound(2, true, 0.7f, 1.1f);
-                        player.transform.Rotate(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
+                        player.transform.Rotate(Random.Range(-6f, 6f), Random.Range(-6f, 6f), 0);
                         explosionPoint = explosionPointPistola;
                         explosionPointPF = explosionPointPFPistola;
                         damage = damageM16;
                         break;
+                    //escopeta
                     case 3:
                         soundManager.PlaySound(0);
-                        player.transform.Rotate(Random.Range(-11f, -9f), Random.Range(-1f, 1f), 0);
+                        player.transform.Rotate(Random.Range(-11f, -9f), Random.Range(-2f, 2f), 0);
                         explosionPoint = explosionPointEscopeta;
                         explosionPointPF = explosionPointPFEscopeta;
                         damage = damageEscopeta;
                         break;
+                    //m16
                     case 4:
                         soundManager.PlaySound(1);
-                        player.transform.Rotate(Random.Range(-1f, 1f), Random.Range(-1.5f, 1.5f), 0);
+                        player.transform.Rotate(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f), 0);
                         explosionPoint = explosionPointM16;
                         explosionPointPF = explosionPointPFM16;
                         damage = damageM16;
-                        break; 
+                        break;
                 }
+
+                if(arma>1) inventario.setMunicion();
 
                 if (explosionPoint)
                 {
@@ -153,7 +184,7 @@ public class ShootController : MonoBehaviour
                 {
                     gatillo = false;
                 }
-                
+
 
                 //multiples hits
                 /*

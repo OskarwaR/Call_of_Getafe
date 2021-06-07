@@ -8,7 +8,7 @@ public class PatrolManager : MonoBehaviour
     public bool isPlayerDetected = false;
 
     //public Transform[] patrolPoints;
-    private List<Transform> patrolList = new List<Transform>();
+    //private List<Transform> patrolList = new List<Transform>();
     private NavMeshAgent nma;
     [SerializeField] GameObject lista;
     [SerializeField] GameObject pfExplosionCabeza;
@@ -32,6 +32,7 @@ public class PatrolManager : MonoBehaviour
     private AudioSource audioLoop;
     private AudioSource audioDetect;
     private AudioSource audioGolpe;
+    private AudioSource audioHitZombie;
 
     private int afk = 0;
 
@@ -40,6 +41,8 @@ public class PatrolManager : MonoBehaviour
     private Health salud;
 
     private bool alive=true;
+
+    private bool alerta = false;
 
     [SerializeField] int ataqueGarra = 20;
 
@@ -68,6 +71,7 @@ public class PatrolManager : MonoBehaviour
         audioLoop = audios[0];
         audioDetect = audios[1];
         audioGolpe = audios[2];
+        audioHitZombie = audios[3];
 
         nma.avoidancePriority = Random.Range(0, 100);
 
@@ -132,6 +136,8 @@ public class PatrolManager : MonoBehaviour
             nma.enabled = false;
             audioLoop.Stop();
             alive = false;
+            GetComponentInParent<CapsuleCollider>().enabled = false;
+            //GetComponentInChildren<CapsuleCollider>().enabled = false;
             //print(zombieImpacto);
             if (zombieImpacto=="Head")
             {
@@ -222,9 +228,11 @@ public class PatrolManager : MonoBehaviour
     private void Andar()
     {
         //print(this.name+": tiene nuevo destino");
-        if(!attack)
-        { 
-            nma.SetDestination(RandomNavmeshLocation(50f));
+        if (!alive) return;
+        if (!attack)
+        {
+            if (!alerta) nma.SetDestination(RandomNavmeshLocation(50f));
+            else nma.SetDestination(playerPosition);
             agentAnimator.SetBool("Walk", true);
             destino = true;
             nma.speed = walkSpeed;
@@ -276,5 +284,13 @@ public class PatrolManager : MonoBehaviour
             Vista();
             Destino(); 
         }
+    }
+
+    public void Hit()
+    {
+        alerta = true;
+        audioHitZombie.pitch = Random.Range(0.8f, 1.2f);
+        audioHitZombie.PlayOneShot(audioHitZombie.clip);
+        Andar();
     }
 }
