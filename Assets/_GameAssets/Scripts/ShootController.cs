@@ -10,10 +10,10 @@ public class ShootController : MonoBehaviour
 
     private int arma;
 
-    [SerializeField] int damagePistola = 35;
-    [SerializeField] int damageEscopeta = 50;
-    [SerializeField] int damageCuchillo = 15;
-    [SerializeField] int damageM16 = 25;
+    [SerializeField] int damagePistola;
+    [SerializeField] int damageEscopeta;
+    [SerializeField] int damageCuchillo;
+    [SerializeField] int damageM16;
     private int damage;
 
     [SerializeField] float distanciaPistola = 50;
@@ -53,7 +53,6 @@ public class ShootController : MonoBehaviour
         
         //Comprobamos el arma actual
         arma = inventario.getArmaActual();
-        
     }
 
     void Update()
@@ -80,62 +79,16 @@ public class ShootController : MonoBehaviour
             {
                 arma = inventario.getArmaActual();
                 Debug.Log("MouseDown: " + arma);
-                switch (arma)
-                {
-                    case 1:
-                        distancia = distanciaCuchillo;
-                        break;
-                    case 2:
-                        distancia = distanciaPistola;
-                        break;
-                    case 3:
-                        distancia = distanciaEscopeta;
-                        break;
-                    case 4:
-                        distancia = distanciaM16;
-                        break;
-                }
-
-                // Reset ray with new mouse position
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, distancia, layerMask))
-                {
-                    Target = hit.collider.gameObject;
-                    Debug.Log("Hit: " + Target.tag + " (" + Target.name + ") - " + hit.distance + " metros");
-                    if (hit.collider.gameObject.tag == "Enemigo" || hit.collider.gameObject.tag == "Head")
-                    {
-                        Health enemigo = Target.GetComponentInParent<Health>();
-                        if (hit.collider.gameObject.tag == "Head")
-                        {
-                            enemigo.setSalud(-damage * 2, Target.name);
-                            print("daño: "+damage * 2);
-                        }
-                        else
-                        {
-                            enemigo.setSalud(-damage, Target.name);
-                            print("daño: "+damage);
-                        }
-
-                        Target.GetComponentInParent<PatrolManager>().Hit();
-
-                        GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
-                        sangre.transform.localScale = new Vector3(sangreImpactoSize, sangreImpactoSize, sangreImpactoSize);
-                        //sangre.transform.SetParent(Target.transform);
-                    }
-
-                }
-
 
                 //Comprobamos el arma equipada
                 brazos = GameObject.FindGameObjectWithTag("Brazos");
                 brazos.GetComponent<Animator>().SetTrigger("Disparo");
-
                 switch (arma)
                 {
                     //cuchillo
                     case 1:
                         soundManager.PlaySound(3);
-                        player.transform.Rotate(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
+                        distancia = distanciaCuchillo;
                         explosionPoint = null;
                         explosionPointPF = null;
                         damage = damageCuchillo;
@@ -143,7 +96,7 @@ public class ShootController : MonoBehaviour
                     //pistola
                     case 2:
                         soundManager.PlaySound(2, true, 0.7f, 1.1f);
-                        player.transform.Rotate(Random.Range(-6f, 6f), Random.Range(-6f, 6f), 0);
+                        distancia = distanciaPistola;
                         explosionPoint = explosionPointPistola;
                         explosionPointPF = explosionPointPFPistola;
                         damage = damageM16;
@@ -151,7 +104,7 @@ public class ShootController : MonoBehaviour
                     //escopeta
                     case 3:
                         soundManager.PlaySound(0);
-                        player.transform.Rotate(Random.Range(-11f, -9f), Random.Range(-2f, 2f), 0);
+                        distancia = distanciaEscopeta;
                         explosionPoint = explosionPointEscopeta;
                         explosionPointPF = explosionPointPFEscopeta;
                         damage = damageEscopeta;
@@ -159,20 +112,67 @@ public class ShootController : MonoBehaviour
                     //m16
                     case 4:
                         soundManager.PlaySound(1);
-                        player.transform.Rotate(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f), 0);
+                        distancia = distanciaM16;
                         explosionPoint = explosionPointM16;
                         explosionPointPF = explosionPointPFM16;
                         damage = damageM16;
                         break;
                 }
 
-                if(arma>1) inventario.setMunicion();
+                if (arma==3)
+                {
+                    float variance = 150.0f;  // This much variance 
+                    float distance = 10.0f; // at this distance
 
+                    for (var i = 0; i < 30; i++)
+                    {
+                        Vector3 v3Offset = transform.up * Random.Range(0.0f, variance);
+                        v3Offset = Quaternion.AngleAxis(Random.Range(0.0f, 360.0f), transform.forward) * v3Offset;
+                        Vector3 v3Hit = transform.forward * distance + v3Offset;
+
+                        ray = Camera.main.ScreenPointToRay(Input.mousePosition + v3Hit);
+                        //Debug.DrawRay(ray.origin, ray.direction * 50, Color.red);
+                        RayImpact();
+                    }
+                }
+                else
+                {
+                    // Reset ray with new mouse position
+                    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    //Debug.DrawRay(ray.origin, ray.direction * 50, Color.red);
+                    RayImpact();
+                }
+
+                //fogonazo
                 if (explosionPoint)
                 {
                     GameObject tempExplosion = Instantiate(explosionPointPF, explosionPoint.transform.position, explosionPoint.transform.rotation);
                     tempExplosion.transform.parent = explosionPoint.transform;
                 }
+
+                //Movimiento de camara por retroceso
+                switch (arma)
+                {
+                    //cuchillo
+                    case 1:
+                        player.transform.Rotate(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
+                        break;
+                    //pistola
+                    case 2:
+                        player.transform.Rotate(Random.Range(-6f, 6f), Random.Range(-6f, 6f), 0);
+                        break;
+                    //escopeta
+                    case 3:
+                        player.transform.Rotate(Random.Range(-11f, -9f), Random.Range(-2f, 2f), 0);
+                        break;
+                    //m16
+                    case 4:
+                        player.transform.Rotate(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 1.5f), 0);
+                        break;
+                }
+
+                //restamos municion si no es el cuchillo
+                if (arma>1) inventario.setMunicion();
 
                 if (arma != 0) disparando = true;
 
@@ -184,25 +184,51 @@ public class ShootController : MonoBehaviour
                 {
                     gatillo = false;
                 }
-
-
-                //multiples hits
-                /*
-                RaycastHit[] hits = Physics.RaycastAll(ray);
-                foreach (RaycastHit hit in hits)
-                {
-                    if (hit.collider.gameObject.tag == "Target")
-                    {
-                        Target = hit.collider.gameObject;
-                        Debug.Log("Hit");
-                    }
-                }*/
             }
         }
 
         if (Input.GetMouseButtonUp(0))
         {
             gatillo = false;
+        }
+    }
+
+    private void RayImpact()
+    {
+        if (Physics.Raycast(ray, out hit, distancia, layerMask))
+        {
+            Target = hit.collider.gameObject;
+            Debug.Log("Hit: " + Target.tag + " (" + Target.name + ") - " + hit.distance + " metros");
+            if (hit.collider.gameObject.tag == "Enemigo" || hit.collider.gameObject.tag == "Head")
+            {
+
+                Health enemigo = Target.GetComponentInParent<Health>();
+                if (hit.collider.gameObject.tag == "Head")
+                {
+                    enemigo.setSalud(-damage * 2, Target.tag, Target);
+                    print("daño: " + damage * 2);
+                }
+                else
+                {
+                    enemigo.setSalud(-damage, Target.tag);
+                    print("daño: " + damage);
+                }
+
+                Target.GetComponentInParent<PatrolManager>().Hit();
+
+                GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
+                if(arma==3)
+                {
+                    sangre.transform.localScale = new Vector3(sangreImpactoSize-1.5f, sangreImpactoSize - 1.5f, sangreImpactoSize - 1.5f);
+                }
+                else
+                {
+                    sangre.transform.localScale = new Vector3(sangreImpactoSize, sangreImpactoSize, sangreImpactoSize);
+                }
+                
+                //sangre.transform.SetParent(Target.transform);
+            }
+
         }
     }
 
@@ -215,4 +241,27 @@ public class ShootController : MonoBehaviour
     {
         return disparando;
     }
+
+    //doble comprobacion del gatillo, para evitar el bug de que se quede pulsado
+    void FixedUpdate()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            gatillo = false;
+        }
+    }
 }
+
+
+
+//multiples hits
+/*
+RaycastHit[] hits = Physics.RaycastAll(ray);
+foreach (RaycastHit hit in hits)
+{
+    if (hit.collider.gameObject.tag == "Target")
+    {
+        Target = hit.collider.gameObject;
+        Debug.Log("Hit");
+    }
+}*/

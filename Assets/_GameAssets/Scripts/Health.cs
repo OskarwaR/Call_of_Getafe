@@ -8,11 +8,13 @@ public class Health : MonoBehaviour
     [SerializeField] int salud=100;
     [SerializeField] int maxSalud = 100;
     private string zona="";
+    GameObject target;
 
-    public void setSalud(int daño,string impacto=null)
+    public void setSalud(int daño,string impacto=null,GameObject cabeza=null)
     {
         salud += daño;
         zona = impacto;
+        target = cabeza;
         if (salud > maxSalud) salud = maxSalud;
     }
 
@@ -24,6 +26,11 @@ public class Health : MonoBehaviour
     public string getZona()
     {
         return zona;
+    }
+
+    public GameObject getPath()
+    {
+        return target;
     }
 
 }

@@ -350,10 +350,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8952403692944609262}
-  - component: {fileID: 5745491036790336171}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Head
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,19 +372,6 @@ Transform:
   m_Father: {fileID: 4974813667964032278}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &5745491036790336171
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2316943324599443764}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.15
-  m_Center: {x: 0, y: 0.06, z: 0}
 --- !u!1 &2733055311360049172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1710,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerDetected: 0
   lista: {fileID: 0}
-  pfExplosionCabeza: {fileID: 0}
+  pfExplosionCabeza: {fileID: 4616746343827678565, guid: cf10ae5a872c255438285ed5e7c67638,
+    type: 3}
   viewDistance: 15
   walkSpeed: 1.7
   detectSpeed: 2.5
@@ -1831,6 +1818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4974813667964032278}
+  - component: {fileID: 2519041093343871254}
   m_Layer: 0
   m_Name: Neck
   m_TagString: Head
@@ -1853,6 +1841,19 @@ Transform:
   m_Father: {fileID: 8689995180637097797}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2519041093343871254
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532586938205489238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.16
+  m_Center: {x: 0, y: 0.194, z: 0.02}
 --- !u!1 &7563119962564864939
 GameObject:
   m_ObjectHideFlags: 0

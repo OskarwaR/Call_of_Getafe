@@ -47,7 +47,9 @@ public class PatrolManager : MonoBehaviour
     [SerializeField] int ataqueGarra = 20;
 
     private Health playerSalud;
- 
+    private GameObject cabezaPath;
+
+
     private void OnEnable()
     {
         
@@ -128,6 +130,7 @@ public class PatrolManager : MonoBehaviour
         if (!alive) return;
         zombieSalud = salud.getSalud();
         zombieImpacto = salud.getZona();
+        cabezaPath = salud.getPath();
         //print(zombieImpacto);
         if (zombieSalud <= 0)
         {
@@ -141,12 +144,19 @@ public class PatrolManager : MonoBehaviour
             //print(zombieImpacto);
             if (zombieImpacto=="Head")
             {
-
-                /*GameObject cabeza = transform.Find("Hips/Spine/Spine1/Spine2/Neck").gameObject;
+                
+                string path = "/" + cabezaPath.name;
+                while (cabezaPath.transform.parent != null)
+                {
+                    cabezaPath = cabezaPath.transform.parent.gameObject;
+                    path = "/" + cabezaPath.name + path;
+                }
+                  
+                GameObject cabeza = transform.Find(path).gameObject;
                 GameObject gore = Instantiate(pfExplosionCabeza, cabeza.transform.position, cabeza.transform.rotation);
                 gore.transform.localScale = new Vector3(3, 3, 3);
-                cabeza.transform.localScale = new Vector3(0, 0, 0);*/
-                //print(cabeza);
+                cabeza.transform.localScale = new Vector3(0, 0, 0);
+                print(path);
             }
         }
     }
