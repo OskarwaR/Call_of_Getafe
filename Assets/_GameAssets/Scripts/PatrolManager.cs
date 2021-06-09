@@ -156,7 +156,7 @@ public class PatrolManager : MonoBehaviour
                 GameObject gore = Instantiate(pfExplosionCabeza, cabeza.transform.position, cabeza.transform.rotation);
                 gore.transform.localScale = new Vector3(3, 3, 3);
                 cabeza.transform.localScale = new Vector3(0, 0, 0);
-                print(path);
+                //print(path);
             }
         }
     }

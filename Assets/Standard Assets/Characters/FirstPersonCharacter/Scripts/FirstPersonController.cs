@@ -47,6 +47,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        [SerializeField] Transform impactPoint;
 
         // Use this for initialization
         private void Start()
@@ -87,6 +88,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            Crouch();
         }
 
 
@@ -275,6 +278,35 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void RotateView()
         {
             m_MouseLook.LookRotation (transform, m_Camera.transform);
+        }
+
+        bool crouching=false;
+        Vector3 cameraPosition;
+        Vector3 crouchPosition;
+        void Crouch()
+        {
+            cameraPosition = new Vector3(-0.1099928f, 2.189999f, -0.1499905f);
+            crouchPosition = new Vector3(-0.1099928f, -0.5f, -0.1499905f);
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                if (crouching)
+                {
+                    crouching = false;
+                }
+                else
+                {
+                    crouching = true;
+                }
+            }
+
+            if (crouching)
+            {
+                Camera.main.transform.localPosition = crouchPosition;
+            }
+            else
+            {
+                Camera.main.transform.localPosition = cameraPosition;
+            }
         }
 
 
