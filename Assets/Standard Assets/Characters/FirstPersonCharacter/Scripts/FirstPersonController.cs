@@ -62,6 +62,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            controller = GetComponent<CharacterController>();
         }
 
 
@@ -283,30 +285,29 @@ namespace UnityStandardAssets.Characters.FirstPerson
         bool crouching=false;
         Vector3 cameraPosition;
         Vector3 crouchPosition;
+        CharacterController controller;
+
         void Crouch()
         {
-            cameraPosition = new Vector3(-0.1099928f, 2.189999f, -0.1499905f);
-            crouchPosition = new Vector3(-0.1099928f, -0.5f, -0.1499905f);
-            if (Input.GetKeyDown(KeyCode.LeftControl))
-            {
-                if (crouching)
-                {
-                    crouching = false;
-                }
-                else
-                {
-                    crouching = true;
-                }
-            }
-
-            if (crouching)
+            cameraPosition = new Vector3(Camera.main.transform.localPosition.x, 2.189999f, -Camera.main.transform.localPosition.z);
+            crouchPosition = new Vector3(Camera.main.transform.localPosition.x, 1.3f, Camera.main.transform.localPosition.z);
+            if (Input.GetKey(KeyCode.LeftControl))
             {
                 Camera.main.transform.localPosition = crouchPosition;
+                m_WalkSpeed = 2.5f;
+                m_RunSpeed = 2.5f;
+                controller.height = 1;
             }
-            else
+            
+            if (Input.GetKeyUp(KeyCode.LeftControl))
             {
                 Camera.main.transform.localPosition = cameraPosition;
+                m_WalkSpeed = 5;
+                m_RunSpeed = 8;
+                controller.height = 5;
             }
+
+
         }
 
 
