@@ -214,7 +214,7 @@ public class ShootController : MonoBehaviour
                     print("daño: " + damage);
                 }
 
-                Target.GetComponentInParent<PatrolManager>().Hit();
+                Target.GetComponentInParent<SwatPatrolManager>().Hit();
 
                 GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
                 if(arma==3)
@@ -243,7 +243,7 @@ public class ShootController : MonoBehaviour
     }
 
     //doble comprobacion del gatillo, para evitar el bug de que se quede pulsado
-    void FixedUpdate()
+    void LateUpdate()
     {
         if (Input.GetMouseButtonUp(0))
         {
