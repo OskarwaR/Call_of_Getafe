@@ -214,7 +214,8 @@ public class ShootController : MonoBehaviour
                     print("daño: " + damage);
                 }
 
-                Target.GetComponentInParent<SwatPatrolManager>().Hit();
+                if (Target.GetComponentInParent<PatrolManager>()) Target.GetComponentInParent<PatrolManager>().Hit();
+                if (Target.GetComponentInParent<SwatPatrolManager>()) Target.GetComponentInParent<SwatPatrolManager>().Hit();
 
                 GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
                 if(arma==3)

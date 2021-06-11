@@ -27,7 +27,9 @@ public class SwatPatrolManager : MonoBehaviour
     [SerializeField] int impactChance = 80;
     [SerializeField] GameObject DisparoPF;
     private AudioSource audioM16;
-    [SerializeField]  int municion=20;
+    [SerializeField]  int municion=30;
+    int maxMunicion;
+    bool recargando = false;
 
 
     //retirada
@@ -51,6 +53,7 @@ public class SwatPatrolManager : MonoBehaviour
         salud = GetComponentInParent<Health>();
         AudioSource[] audios = GetComponentsInParent<AudioSource>();
         audioM16 = audios[0];
+        maxMunicion = municion;
     }
     private void Update()
     {
@@ -102,6 +105,7 @@ public class SwatPatrolManager : MonoBehaviour
 
     private void Retirada()
     {
+        //if (recargando) return;
         if (distanceToPlayer <= distanciaRetirada)
         {
             if (!retirada)
@@ -125,13 +129,22 @@ public class SwatPatrolManager : MonoBehaviour
                 }
             }
         }
+
+        if(retirada&&recargando)
+        {
+            //retirada = false;
+            retirada = false;
+            nma.ResetPath();
+            //agentAnimator.SetBool("Retirada", false);
+        }
+            
     }
 
     private void Vista()
     {
         if (distanceToPlayer <= viewDistance)
         {
-            
+            detect = true;
             viewDistance = 1000;
             var targetPosition = player.transform.position;
             targetPosition.y = transform.position.y;
@@ -164,6 +177,8 @@ public class SwatPatrolManager : MonoBehaviour
                             audioM16.PlayOneShot(audioM16.clip);
                             gatillo = true;
                             Invoke("Cadencia", Random.Range(0.10f, 0.30f));
+                            municion -= 1;
+                            if (municion <= 0) Recargar();
                         }
 
                     }
@@ -179,6 +194,8 @@ public class SwatPatrolManager : MonoBehaviour
                                 audioM16.PlayOneShot(audioM16.clip);
                                 gatillo = true;
                                 Invoke("Cadencia", Random.Range(0.10f, 0.30f));
+                                municion -= 1;
+                                if (municion <= 0) Recargar();
                             }
                         }
                     }
@@ -191,7 +208,22 @@ public class SwatPatrolManager : MonoBehaviour
 
     void Cadencia()
     {
+        if(!recargando) gatillo = false;
+    }
+
+    void Recargar()
+    {
+        gatillo = true;
+        recargando = true;
+        agentAnimator.SetBool("Reload", true);
+    }
+
+    public void EndRecargar()
+    {
         gatillo = false;
+        recargando = false;
+        municion = maxMunicion;
+        agentAnimator.SetBool("Reload", false);
     }
 
     public Vector3 RandomNavmeshLocation(float radius)

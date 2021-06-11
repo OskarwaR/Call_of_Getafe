@@ -1019,8 +1019,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  viewDistance: 70
-  shootDistance: 50
+  viewDistance: 60
+  shootDistance: 40
   shootTarget: {fileID: 0}
   shootPoint: {fileID: 3178892578783043334}
   layerMask:
@@ -1030,6 +1030,7 @@ MonoBehaviour:
   impactChance: 75
   DisparoPF: {fileID: 508658816035088035, guid: 334a755f099ac0e4d91fc9435f9662c3,
     type: 3}
+  municion: 20
   distanciaRetirada: 15
 --- !u!1 &2378111482991679808
 GameObject:

@@ -24,6 +24,6 @@ public class ControlVida : MonoBehaviour
         float tVida = 1 - ((float)vida.getSalud() / 100);
         //vignette.intensity.value = tVida/2;
 
-        print(vida.getSalud());
+        //print(vida.getSalud());
     }
 }
