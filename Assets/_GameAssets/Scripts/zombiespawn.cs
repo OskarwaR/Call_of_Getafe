@@ -6,6 +6,7 @@ public class zombiespawn : MonoBehaviour
 {
     public GameObject[] Zombies;
     private int n=0;
+    [SerializeField] float radius=15;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,9 @@ public class zombiespawn : MonoBehaviour
     }
     void invocar()
     {
+        Vector3 rVector = new Vector3(Random.Range(0, radius), transform.position.y, Random.Range(0, radius));
         if (n >= 10) return;
-        Instantiate(Zombies[Random.Range(0,Zombies.Length)], transform.position, transform.rotation);
+        Instantiate(Zombies[Random.Range(0,Zombies.Length)], transform.position + (Random.insideUnitSphere* radius), transform.rotation);
         n++;
     }
 }

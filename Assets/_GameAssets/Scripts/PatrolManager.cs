@@ -12,6 +12,7 @@ public class PatrolManager : MonoBehaviour
     private NavMeshAgent nma;
     [SerializeField] GameObject lista;
     [SerializeField] GameObject pfExplosionCabeza;
+    [SerializeField] GameObject huesoCabesa;
     private int currentPoint = 0;
     private Animator agentAnimator;
     private int n,n2;
@@ -145,17 +146,17 @@ public class PatrolManager : MonoBehaviour
             if (zombieImpacto=="Head")
             {
                 
-                string path = "/" + cabezaPath.name;
+                /*string path = "/" + cabezaPath.name;
                 while (cabezaPath.transform.parent != null)
                 {
                     cabezaPath = cabezaPath.transform.parent.gameObject;
                     path = "/" + cabezaPath.name + path;
-                }
+                }*/
                   
-                GameObject cabeza = transform.Find(path).gameObject;
-                GameObject gore = Instantiate(pfExplosionCabeza, cabeza.transform.position, cabeza.transform.rotation);
+                //GameObject cabeza = transform.Find(path).gameObject;
+                GameObject gore = Instantiate(pfExplosionCabeza, huesoCabesa.transform.position, huesoCabesa.transform.rotation);
                 gore.transform.localScale = new Vector3(3, 3, 3);
-                cabeza.transform.localScale = new Vector3(0, 0, 0);
+                huesoCabesa.transform.localScale = new Vector3(0, 0, 0);
                 //print(path);
             }
         }
