@@ -15,11 +15,11 @@ D:/Documentos/Proyectos/Unity/Call_of_Getafe
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-2611
+1686
 Successfully changed project path to: D:/Documentos/Proyectos/Unity/Call_of_Getafe
 D:/Documentos/Proyectos/Unity/Call_of_Getafe
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 100.43 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 106.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.10f1 (297d780c91bc)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -35,160 +35,400 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56708
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56300
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002364 seconds.
+Registered in 0.002583 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 99.41 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 118.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.107 seconds
+- Completed reload, in  2.199 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008162 seconds.
+Registered in 0.009129 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.23 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.330 seconds
+- Completed reload, in  2.553 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 1.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2573 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 292.4 MB.
-System memory in use after: 292.6 MB.
+Unloading 2579 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 295.5 MB.
+System memory in use after: 295.7 MB.
 
-Unloading 123 unused Assets to reduce memory usage. Loaded Objects now: 3166.
-Total: 4.755500 ms (FindLiveObjects: 0.348500 ms CreateObjectMapping: 0.091900 ms MarkObjects: 4.101000 ms  DeleteObjects: 0.212500 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainTextures/rock_albedo.tif
-  artifactKey: Guid(f7dd726c93b8f17418ea3be3f6768909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainTextures/rock_albedo.tif using Guid(f7dd726c93b8f17418ea3be3f6768909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fc39b315d5893a3f967456c50edc2da') in 0.166181 seconds
-  Import took 0.193698 seconds .
+Unloading 124 unused Assets to reduce memory usage. Loaded Objects now: 3172.
+Total: 4.379100 ms (FindLiveObjects: 0.310600 ms CreateObjectMapping: 0.077000 ms MarkObjects: 3.775600 ms  DeleteObjects: 0.214200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainTextures/moss_albedo.tif
-  artifactKey: Guid(43b54d39e0a4c4d47bef645abec127f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Terrain Tools/0.1.0-preview/Terrain Assets/TerrainTextures/moss_albedo.tif using Guid(43b54d39e0a4c4d47bef645abec127f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bdaa9967cb2d84e34651c18dda8b0db') in 0.077975 seconds
-  Import took 0.111234 seconds .
+  path: Assets/DBK/Models/Concrete/DBK_Concrete_Floor_Side_C.FBX
+  artifactKey: Guid(6246bd5088077d34d98f682a5533dd4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Concrete/DBK_Concrete_Floor_Side_C.FBX using Guid(6246bd5088077d34d98f682a5533dd4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37185e97cb89d8af7bd3ffd1649b2df5') in 0.262597 seconds
+  Import took 0.285630 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 780.284004 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblocks.FBX
-  artifactKey: Guid(5cde99097911863499da349ee58f6041) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblocks.FBX using Guid(5cde99097911863499da349ee58f6041) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4cfc0a7db14ba546026b07b22a85897') in 0.121185 seconds
-  Import took 0.161403 seconds .
+  Time since last request: 0.000215 seconds.
+  path: Assets/DBK/CombinedMesh/DBK_Demo_Building/Mesh_DBK_Rebar_-40714.asset
+  artifactKey: Guid(5d9ddeece2ecd3b4baa2eea5165e12a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/CombinedMesh/DBK_Demo_Building/Mesh_DBK_Rebar_-40714.asset using Guid(5d9ddeece2ecd3b4baa2eea5165e12a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '894dae6c73fc15853e83fb6c14940874') in 0.019391 seconds
+  Import took 0.036395 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.389159 seconds.
-  path: Assets/_GameAssets/3DModels/Barricada/barrier1.fbx
-  artifactKey: Guid(d965b2fc245db7e4ea3db2ea5b012a50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Barricada/barrier1.fbx using Guid(d965b2fc245db7e4ea3db2ea5b012a50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfc7a2d09d2523dfaa42fc866ef4a5ae') in 0.067413 seconds
-  Import took 0.081640 seconds .
+  Time since last request: 0.000236 seconds.
+  path: Assets/DBK/Prefabs/Demo/DBK_Demo_Building.prefab
+  artifactKey: Guid(b3c8fa66687e5274da97ab934765e942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Prefabs/Demo/DBK_Demo_Building.prefab using Guid(b3c8fa66687e5274da97ab934765e942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57595ef856da37f0d0b0d23705518cfe') in 0.156229 seconds
+  Import took 0.182276 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.668380 seconds.
-  path: Assets/_GameAssets/3DModels/Barricada/barrier2.fbx
-  artifactKey: Guid(d72785520d8d11b43bb4f12425e5eb5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/Barricada/barrier2.fbx using Guid(d72785520d8d11b43bb4f12425e5eb5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8bab4aca51081493a6b20e3a9ddb52b') in 0.020094 seconds
-  Import took 0.051311 seconds .
+  Time since last request: 0.000349 seconds.
+  path: Assets/DBK/CombinedMesh/DBK_Demo_Building/Mesh_DBK_Concrete_-40524.asset
+  artifactKey: Guid(47f886deeb9300b42860fbddc0d1aae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/CombinedMesh/DBK_Demo_Building/Mesh_DBK_Concrete_-40524.asset using Guid(47f886deeb9300b42860fbddc0d1aae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37501bb3941adb5457ef8f8361127cdb') in 0.030069 seconds
+  Import took 0.072086 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 346.829849 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.prefab
-  artifactKey: Guid(cb25e22dfa130a544bc3090f3f937eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.prefab using Guid(cb25e22dfa130a544bc3090f3f937eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d96b9ced6b6e3f46b8cb2127a9945de') in 0.027426 seconds
-  Import took 0.059629 seconds .
+  Time since last request: 0.000245 seconds.
+  path: Assets/DBK/Models/Concrete/DBK_Concrete_Floor_90_A.FBX
+  artifactKey: Guid(f7a84091a21aba24bb013bcc8d36fa41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Concrete/DBK_Concrete_Floor_90_A.FBX using Guid(f7a84091a21aba24bb013bcc8d36fa41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab3311539ea28e77ac81875108e8a41f') in 0.081365 seconds
+  Import took 0.107010 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.660408 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab
-  artifactKey: Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab using Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '799bce780931ad0298e2cd32a431ac64') in 0.009432 seconds
-  Import took 0.031308 seconds .
+  Time since last request: 0.000297 seconds.
+  path: Assets/DBK/Models/Concrete/DBK_Concrete_Pillar_B.FBX
+  artifactKey: Guid(f33f1ad6af82e964cb2db7cbec99bcb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Concrete/DBK_Concrete_Pillar_B.FBX using Guid(f33f1ad6af82e964cb2db7cbec99bcb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '655ebf0a14d0d6266e296ca826c4d655') in 0.061226 seconds
+  Import took 0.082182 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 14.600766 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab
-  artifactKey: Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab using Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba335ae28346e180f51c2fc94ed3fa3a') in 0.030453 seconds
-  Import took 0.035524 seconds .
+  Time since last request: 0.000301 seconds.
+  path: Assets/DBK/Models/Concrete/DBK_Concete_Floor_Full.FBX
+  artifactKey: Guid(ce476fc1f71634e4b81bfc5c10442615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Concrete/DBK_Concete_Floor_Full.FBX using Guid(ce476fc1f71634e4b81bfc5c10442615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a11aa9f6c9faadcba4536e2b9bedfa9e') in 0.063423 seconds
+  Import took 0.096314 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.609579 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab
-  artifactKey: Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab using Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a57d1c9c59428d8499095874ab699ac2') in 0.010902 seconds
-  Import took 0.038786 seconds .
+  Time since last request: 0.000241 seconds.
+  path: Assets/DBK/Models/Concrete/DBK_Concrete_Pillar_End_B.FBX
+  artifactKey: Guid(5c062eed01c5725478e829f224cbe54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Concrete/DBK_Concrete_Pillar_End_B.FBX using Guid(5c062eed01c5725478e829f224cbe54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '050efb1869027e51c958c690c8f5b366') in 0.080941 seconds
+  Import took 0.093396 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.844506 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab
-  artifactKey: Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab using Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '257c2b4d9dedabed8e30c92798ae3d6c') in 0.008846 seconds
-  Import took 0.029129 seconds .
+  Time since last request: 0.000269 seconds.
+  path: Assets/DBK/CombinedMesh/DBK_Demo_Building/Mesh_DBK_Concrete_-40984.asset
+  artifactKey: Guid(96a73e0e0f207a94e8dcdf9dad8d22e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/CombinedMesh/DBK_Demo_Building/Mesh_DBK_Concrete_-40984.asset using Guid(96a73e0e0f207a94e8dcdf9dad8d22e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76109d506f97afeef4de58dc10f21cb2') in 0.030309 seconds
+  Import took 0.072407 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.397077 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab
-  artifactKey: Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock2.prefab using Guid(55a915f1d140e3e4f8a2d171fecf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91c013eae237bac9bf4fe811bb742f22') in 0.009263 seconds
-  Import took 0.024027 seconds .
+  Time since last request: 0.000245 seconds.
+  path: Assets/DBK/Models/Concrete/DBK_Concete_Wall_Full.fbx
+  artifactKey: Guid(641088feff09d78469dc6f50b1089118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Concrete/DBK_Concete_Wall_Full.fbx using Guid(641088feff09d78469dc6f50b1089118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8715ac0cf6ad752f8b215f777d143e5f') in 0.045028 seconds
+  Import took 0.077725 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.973359 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.prefab
-  artifactKey: Guid(cb25e22dfa130a544bc3090f3f937eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.prefab using Guid(cb25e22dfa130a544bc3090f3f937eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c746e5073f550fb82d3662a23993280f') in 0.021878 seconds
-  Import took 0.038010 seconds .
+  Time since last request: 0.000305 seconds.
+  path: Assets/DBK/CombinedMesh/DBK_Demo_Building/Mesh_DBK_Concrete_-40202.asset
+  artifactKey: Guid(014ed7500d3602b488d4d26d2b1a7b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/CombinedMesh/DBK_Demo_Building/Mesh_DBK_Concrete_-40202.asset using Guid(014ed7500d3602b488d4d26d2b1a7b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d1fcd422b90e43c6ba7b48280e88a76') in 0.034502 seconds
+  Import took 0.063817 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.183989 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.prefab
-  artifactKey: Guid(cb25e22dfa130a544bc3090f3f937eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.prefab using Guid(cb25e22dfa130a544bc3090f3f937eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64dbbb9605e6883d5175f8af50e429c0') in 0.009056 seconds
-  Import took 0.049865 seconds .
+  Time since last request: 0.000244 seconds.
+  path: Assets/DBK/CombinedMesh/DBK_Demo_Building
+  artifactKey: Guid(d4ee5533e3f43604e8b2e12ddba2d6d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/CombinedMesh/DBK_Demo_Building using Guid(d4ee5533e3f43604e8b2e12ddba2d6d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8396fa5dffd5f742dcbd073c23c523') in 0.002326 seconds
+  Import took 0.021837 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.163841 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.prefab
-  artifactKey: Guid(cb25e22dfa130a544bc3090f3f937eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.prefab using Guid(cb25e22dfa130a544bc3090f3f937eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27f464dc61c0c83b5284c1f2982adc87') in 0.030436 seconds
-  Import took 0.044203 seconds .
+  Time since last request: 0.000358 seconds.
+  path: Assets/DBK/Models/Concrete/DBK_Concrete_Floor_End_B.FBX
+  artifactKey: Guid(050f69db51994254c900ac20c9fd6775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Concrete/DBK_Concrete_Floor_End_B.FBX using Guid(050f69db51994254c900ac20c9fd6775) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30edc6de18a9361aa01989100a8240ef') in 0.073848 seconds
+  Import took 0.089333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.535575 seconds.
+  path: Assets/DBK/Scenes/Demo_All_Parts.unity
+  artifactKey: Guid(fc9876f99d2453547af36324190093d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Scenes/Demo_All_Parts.unity using Guid(fc9876f99d2453547af36324190093d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55b2a102ffd5fe72200f528099543757') in 0.002955 seconds
+  Import took 0.049831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.938438 seconds.
+  path: Assets/DBK/Scenes/Demo_Building.unity
+  artifactKey: Guid(bf8f354452304f44b9c33ca44d0ef070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Scenes/Demo_Building.unity using Guid(bf8f354452304f44b9c33ca44d0ef070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24df680222bd7738b5543f575fab3430') in 0.002540 seconds
+  Import took 0.026674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 77.275045 seconds.
+  path: Assets/_GameAssets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac851b0d40863f6c724f5f50a82a411f') in 0.002745 seconds
+  Import took 0.020221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 85.456141 seconds.
+  path: Assets/DBK/Models/Rubble/Concrete/DBK_Concrete_Rubble_Big.fbx
+  artifactKey: Guid(b3ab048af98da574b802a5384a1b060c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Rubble/Concrete/DBK_Concrete_Rubble_Big.fbx using Guid(b3ab048af98da574b802a5384a1b060c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e2c25aca9c9cc4ae180ab8e7de06ea1') in 1.272545 seconds
+  Import took 1.352915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/DBK/Models/Rubble/Concrete/DBK_Concrete_Rubble_Small_C.fbx
+  artifactKey: Guid(5c5d67a091f81604089b6aae644bc219) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Rubble/Concrete/DBK_Concrete_Rubble_Small_C.fbx using Guid(5c5d67a091f81604089b6aae644bc219) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bb08d482ec6a5e3b8b49a1a1ca17956') in 0.104370 seconds
+  Import took 0.160981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2015.654275 seconds.
+  path: Assets/DBK/Textures/Concrete/DBK_Concrete_ColorTheme.tga
+  artifactKey: Guid(bf84d265e341525459ab1fd8a003c547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Concrete/DBK_Concrete_ColorTheme.tga using Guid(bf84d265e341525459ab1fd8a003c547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98869c2ef9ec854c14074a8b51b4fa85') in 0.028876 seconds
+  Import took 0.606837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/DBK/Textures/Drywall/DBK_Drywall_Damage_NM.tga
+  artifactKey: Guid(4ea5083d09e1aa747b5ad9a32ad2cb74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Drywall/DBK_Drywall_Damage_NM.tga using Guid(4ea5083d09e1aa747b5ad9a32ad2cb74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b878602a6dcd6e60dcbf93cc7aab791') in 0.027245 seconds
+  Import took 0.048508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/DBK/Textures/Concrete/DBK_Concrete_ColorTheme.tga
+  artifactKey: Guid(bf84d265e341525459ab1fd8a003c547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Concrete/DBK_Concrete_ColorTheme.tga using Guid(bf84d265e341525459ab1fd8a003c547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98869c2ef9ec854c14074a8b51b4fa85') in 0.006561 seconds
+  Import took 0.011427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/DBK/Textures/Rubble/Concrete/DBK_Concrete_Rubble_A_Mask.tga
+  artifactKey: Guid(3f36e0caf78aeca4f81e435486cde529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Rubble/Concrete/DBK_Concrete_Rubble_A_Mask.tga using Guid(3f36e0caf78aeca4f81e435486cde529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52a848840d9e3f1e40c1561345dc2a41') in 0.017282 seconds
+  Import took 0.052316 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/DBK/Textures/Rubble/Brick/DBK_Brick_Rubble_MaskB.tga
+  artifactKey: Guid(5b71a3cf759201643b7d66aa9084dbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Rubble/Brick/DBK_Brick_Rubble_MaskB.tga using Guid(5b71a3cf759201643b7d66aa9084dbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10f61055ef04b2c694bdcf9adce3945e') in 0.021408 seconds
+  Import took 0.056177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/DBK/Textures/Rubble/Concrete/DBK_Concrete_Rubble_A_NM.tga
+  artifactKey: Guid(e7e06dc793e3ae7449663a387c4f4933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Rubble/Concrete/DBK_Concrete_Rubble_A_NM.tga using Guid(e7e06dc793e3ae7449663a387c4f4933) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83eea85fd6d9e40a6d96e058a5a9ecc1') in 0.053862 seconds
+  Import took 0.112840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/DBK/Textures/Concrete/DBK_Concrete_NM.tga
+  artifactKey: Guid(e2f2024fc17d02a4cae64316bfc62502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Concrete/DBK_Concrete_NM.tga using Guid(e2f2024fc17d02a4cae64316bfc62502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdad1f5a5ed769011e3f61edc006be43') in 0.025422 seconds
+  Import took 0.096052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/DBK/Textures/Rubble/Concrete/DBK_Concrete_Rubble_A_Color.tga
+  artifactKey: Guid(89f871b5c2ed6704e9b783d5c11d09a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Rubble/Concrete/DBK_Concrete_Rubble_A_Color.tga using Guid(89f871b5c2ed6704e9b783d5c11d09a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e56743a4205e7559444f594b1f4080f') in 0.049772 seconds
+  Import took 0.071408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 187.281253 seconds.
+  path: Assets/_GameAssets/Prefabs/Blood_Burst_Directional.prefab
+  artifactKey: Guid(a8b1a61cf98243a4aad2cefc42f4bfb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/Blood_Burst_Directional.prefab using Guid(a8b1a61cf98243a4aad2cefc42f4bfb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bb661c6c76fccc305dbb504c33124e4') in 0.016733 seconds
+  Import took 0.037044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007319 seconds.
+  path: Assets/_GameAssets/Prefabs/Blood_Burst_Directional.prefab
+  artifactKey: Guid(a8b1a61cf98243a4aad2cefc42f4bfb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/Blood_Burst_Directional.prefab using Guid(a8b1a61cf98243a4aad2cefc42f4bfb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bb661c6c76fccc305dbb504c33124e4') in 0.005426 seconds
+  Import took 0.011875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.654535 seconds.
+  path: Assets/_GameAssets/Prefabs/ExplosionEscopeta.prefab
+  artifactKey: Guid(91c0c625444a2064bb950a2c35c7affa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/ExplosionEscopeta.prefab using Guid(91c0c625444a2064bb950a2c35c7affa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '346d92c08862ae96789df75c5003eae7') in 0.030985 seconds
+  Import took 0.279512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.458946 seconds.
+  path: Assets/_GameAssets/Prefabs/esferalod.prefab
+  artifactKey: Guid(908daf4d982e8a745a06ce055e36b158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/esferalod.prefab using Guid(908daf4d982e8a745a06ce055e36b158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe148e90bdc7c727cf04ffe96b4551cb') in 0.030217 seconds
+  Import took 0.079243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002982 seconds.
+  path: Assets/_GameAssets/Prefabs/esferalod.prefab
+  artifactKey: Guid(908daf4d982e8a745a06ce055e36b158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/esferalod.prefab using Guid(908daf4d982e8a745a06ce055e36b158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe148e90bdc7c727cf04ffe96b4551cb') in 0.007371 seconds
+  Import took 0.012010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 277.204661 seconds.
+  path: Assets/_GameAssets/Prefabs/DBK_Demo_Building_Merged.prefab
+  artifactKey: Guid(504d485e0fa3c4144b10be815d400180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/DBK_Demo_Building_Merged.prefab using Guid(504d485e0fa3c4144b10be815d400180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd66c49873a8c811a8582024c409daf') in 0.132221 seconds
+  Import took 0.181434 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 169.281737 seconds.
+  path: Assets/_GameAssets/Prefabs/DBK_Demo_Building_Merged 1.prefab
+  artifactKey: Guid(7b1214dee8b49984cabc37fd51e33dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/DBK_Demo_Building_Merged 1.prefab using Guid(7b1214dee8b49984cabc37fd51e33dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '647de9ca008e55a8fed808f6541021e5') in 0.119155 seconds
+  Import took 0.146581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.831169 seconds.
+  path: Assets/_GameAssets/Prefabs/DBK_Demo_Building_Merged 1.prefab
+  artifactKey: Guid(7b1214dee8b49984cabc37fd51e33dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/DBK_Demo_Building_Merged 1.prefab using Guid(7b1214dee8b49984cabc37fd51e33dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64ea82c83fded74c25d7b29cda288763') in 0.105127 seconds
+  Import took 0.131617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 133.809318 seconds.
+  path: Assets/_GameAssets/Prefabs/DBK_Demo_Building_Unmerged.prefab
+  artifactKey: Guid(fda8cc075e62bad4eadba12c58efbf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/DBK_Demo_Building_Unmerged.prefab using Guid(fda8cc075e62bad4eadba12c58efbf7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e26cbce3b888944b8b284f4cb04c6e7e') in 0.070087 seconds
+  Import took 0.102255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 127.809215 seconds.
+  path: Assets/_GameAssets/Prefabs/DBK_build.prefab
+  artifactKey: Guid(332642bf7d2ce7c4e94c3a667200cd6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/DBK_build.prefab using Guid(332642bf7d2ce7c4e94c3a667200cd6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cffae81c86f7061eb0ddb453d96925ca') in 0.098035 seconds
+  Import took 0.161170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 85.595029 seconds.
+  path: Assets/_GameAssets/Prefabs/DBK_build.prefab
+  artifactKey: Guid(332642bf7d2ce7c4e94c3a667200cd6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Prefabs/DBK_build.prefab using Guid(332642bf7d2ce7c4e94c3a667200cd6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '057f56e91eaea4bddad196208751eee4') in 0.099647 seconds
+  Import took 0.119382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.128264 seconds.
+  path: Assets/_GameAssets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_GameAssets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bec9bb8f9e5243aa90d9b7e5085a08bd') in 0.004411 seconds
+  Import took 0.040008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 247.102904 seconds.
+  path: Assets/DBK/Textures/Concrete/DBK_Concrete_Damage_NM.tga
+  artifactKey: Guid(381eef27937e5464e93f48a9a73d286d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Concrete/DBK_Concrete_Damage_NM.tga using Guid(381eef27937e5464e93f48a9a73d286d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6da246297f5b966bfda1f9e81669fa') in 0.128505 seconds
+  Import took 0.199018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/DBK/Textures/Concrete/DBK_Concrete_RGBA_Mask_A.tga
+  artifactKey: Guid(f6bcb3be2ffc7eb439937251e6b1e988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Concrete/DBK_Concrete_RGBA_Mask_A.tga using Guid(f6bcb3be2ffc7eb439937251e6b1e988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89d70127f286909e58dfe94d23acd53f') in 0.137793 seconds
+  Import took 0.192283 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/DBK/Textures/Concrete/DBK_Concrete_RGBA_Mask_B.tga
+  artifactKey: Guid(0cc5a2d9845f1c243a311cd5fe2d190e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Concrete/DBK_Concrete_RGBA_Mask_B.tga using Guid(0cc5a2d9845f1c243a311cd5fe2d190e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78250331785e0933010db3e40cc9f0f3') in 0.116276 seconds
+  Import took 0.144888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/DBK/Textures/Concrete/DBK_Concrete_Damage_NM.tga
+  artifactKey: Guid(381eef27937e5464e93f48a9a73d286d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Concrete/DBK_Concrete_Damage_NM.tga using Guid(381eef27937e5464e93f48a9a73d286d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6da246297f5b966bfda1f9e81669fa') in 0.011402 seconds
+  Import took 0.022710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/DBK/Textures/Concrete/DBK_Concrete_Damage_Color.tga
+  artifactKey: Guid(3920578cb267cd947bed7ce40996407b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Textures/Concrete/DBK_Concrete_Damage_Color.tga using Guid(3920578cb267cd947bed7ce40996407b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012694a4a28a902300627c2f9a7826e2') in 0.095595 seconds
+  Import took 0.137154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1002.370244 seconds.
+  path: Assets/DBK/Models/Concrete/DBK_Concrete_Pillar_A.FBX
+  artifactKey: Guid(0f4723795d62ce3499ef5af71b3d4419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DBK/Models/Concrete/DBK_Concrete_Pillar_A.FBX using Guid(0f4723795d62ce3499ef5af71b3d4419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad7c1d814cadb4f60b14fc8695f0cb5') in 1.240934 seconds
+  Import took 1.319897 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007773 seconds.
+Registered in 1.012052 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.02 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.45 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -200,346 +440,14 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.309 seconds
+- Completed reload, in  4.547 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.21 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.2 MB.
-System memory in use after: 283.4 MB.
+Unloading 2440 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 286.3 MB.
+System memory in use after: 286.5 MB.
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3214.
-Total: 3.169400 ms (FindLiveObjects: 0.321200 ms CreateObjectMapping: 0.075200 ms MarkObjects: 2.749000 ms  DeleteObjects: 0.022000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 355.170324 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.png
-  artifactKey: Guid(5048c9fadddf587488e342b020be56e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.png using Guid(5048c9fadddf587488e342b020be56e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5307ed1806d1f60f9d1a8cffe80c9f33') in 0.048204 seconds
-  Import took 0.080151 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002162 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.png
-  artifactKey: Guid(5048c9fadddf587488e342b020be56e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1.png using Guid(5048c9fadddf587488e342b020be56e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5307ed1806d1f60f9d1a8cffe80c9f33') in 0.025280 seconds
-  Import took 0.030806 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.808907 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1 1.png
-  artifactKey: Guid(7ee115d7678e64d438d6cdb0c013de5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblock1 1.png using Guid(7ee115d7678e64d438d6cdb0c013de5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '811c08e1ceaa25ea2cc53619864fddb4') in 0.006400 seconds
-  Import took 0.033839 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.088525 seconds.
-  path: Assets/_GameAssets/3DModels/BarricadaCiudad/roadblocknormal.png
-  artifactKey: Guid(7ee115d7678e64d438d6cdb0c013de5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_GameAssets/3DModels/BarricadaCiudad/roadblocknormal.png using Guid(7ee115d7678e64d438d6cdb0c013de5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc7c14f5133a23ac9610f393323a26fa') in 0.012559 seconds
-  Import took 0.035965 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009146 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.352 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.44 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.3 MB.
-System memory in use after: 283.5 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3218.
-Total: 3.154900 ms (FindLiveObjects: 0.321000 ms CreateObjectMapping: 0.069100 ms MarkObjects: 2.744300 ms  DeleteObjects: 0.018900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008651 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.437 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.02 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.4 MB.
-System memory in use after: 283.6 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3221.
-Total: 4.284400 ms (FindLiveObjects: 0.693200 ms CreateObjectMapping: 0.190200 ms MarkObjects: 3.373500 ms  DeleteObjects: 0.025300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007888 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.377 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.4 MB.
-System memory in use after: 283.6 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3224.
-Total: 3.674500 ms (FindLiveObjects: 0.315500 ms CreateObjectMapping: 0.083200 ms MarkObjects: 3.249600 ms  DeleteObjects: 0.023800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009596 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.52 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.443 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.61 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.4 MB.
-System memory in use after: 283.7 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3227.
-Total: 3.218000 ms (FindLiveObjects: 0.327400 ms CreateObjectMapping: 0.077000 ms MarkObjects: 2.790500 ms  DeleteObjects: 0.022200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010724 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.58 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.441 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.07 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.5 MB.
-System memory in use after: 283.7 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3230.
-Total: 3.763400 ms (FindLiveObjects: 0.324700 ms CreateObjectMapping: 0.073400 ms MarkObjects: 3.336200 ms  DeleteObjects: 0.027700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008835 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.79 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.435 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.24 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.5 MB.
-System memory in use after: 283.7 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3233.
-Total: 3.238100 ms (FindLiveObjects: 0.316700 ms CreateObjectMapping: 0.073300 ms MarkObjects: 2.823200 ms  DeleteObjects: 0.023600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008796 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.78 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.439 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.78 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.5 MB.
-System memory in use after: 283.7 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3236.
-Total: 3.639600 ms (FindLiveObjects: 0.403900 ms CreateObjectMapping: 0.095300 ms MarkObjects: 3.115800 ms  DeleteObjects: 0.023200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.224799 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.769 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.5 MB.
-System memory in use after: 283.7 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3239.
-Total: 5.073100 ms (FindLiveObjects: 0.585400 ms CreateObjectMapping: 0.195300 ms MarkObjects: 4.256400 ms  DeleteObjects: 0.034400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008626 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.520 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.51 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.5 MB.
-System memory in use after: 283.7 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3242.
-Total: 6.125400 ms (FindLiveObjects: 0.556500 ms CreateObjectMapping: 0.091400 ms MarkObjects: 5.422000 ms  DeleteObjects: 0.053300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.153883 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.25 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.241 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.10 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2437 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.5 MB.
-System memory in use after: 283.7 MB.
-
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3245.
-Total: 4.343500 ms (FindLiveObjects: 0.383200 ms CreateObjectMapping: 0.088300 ms MarkObjects: 3.836100 ms  DeleteObjects: 0.034200 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3191.
+Total: 4.198900 ms (FindLiveObjects: 0.299100 ms CreateObjectMapping: 0.082100 ms MarkObjects: 3.785500 ms  DeleteObjects: 0.030500 ms)
 
