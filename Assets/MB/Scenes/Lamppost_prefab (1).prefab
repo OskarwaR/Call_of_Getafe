@@ -44,7 +44,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.8803466, b: 0.6745283, a: 1}
   m_Intensity: 0.2
-  m_Range: 50
+  m_Range: 100
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 2096176684755862353}
   - component: {fileID: 4247997118436128667}
   - component: {fileID: 6183715357192168490}
+  - component: {fileID: 7864821503339666557}
   m_Layer: 8
   m_Name: Lamppost_prefab (1)
   m_TagString: Untagged
@@ -196,3 +197,17 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4247997118436128667}
   m_Enabled: 1
+--- !u!136 &7864821503339666557
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446323965177304654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4744959
+  m_Height: 8.396144
+  m_Direction: 1
+  m_Center: {x: 0.000007197261, y: 4.2470136, z: -0.0000023245816}
