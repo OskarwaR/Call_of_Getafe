@@ -144,7 +144,6 @@ public class SwatPatrolManager : MonoBehaviour
     {
         if (distanceToPlayer <= viewDistance)
         {
-            detect = true;
             viewDistance = 1000;
             var targetPosition = player.transform.position;
             targetPosition.y = transform.position.y;
@@ -163,6 +162,7 @@ public class SwatPatrolManager : MonoBehaviour
                     target = hit.collider.gameObject;
                     if (target.CompareTag("Player"))
                     {
+                        detect = true;
                         if (!gatillo)
                         {
                             //print("dispara");
@@ -184,7 +184,7 @@ public class SwatPatrolManager : MonoBehaviour
                     }
                     else
                     {
-                        if (!gatillo)
+                        if (!gatillo && detect)
                         {
                             float rRandomDisparo = Random.Range(0,100);
                             if (rRandomDisparo>=98)

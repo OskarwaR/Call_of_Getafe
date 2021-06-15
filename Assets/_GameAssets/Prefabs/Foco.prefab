@@ -271,6 +271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7328842068676039946}
+  - component: {fileID: 1533882361379370473}
   m_Layer: 0
   m_Name: Foco
   m_TagString: Untagged
@@ -295,3 +296,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180.079, z: 0}
+--- !u!205 &1533882361379370473
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997996721251520432}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.45586777, y: 0.13877052, z: -0.017220616}
+  m_Size: 0.28895754
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.004312412
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4357233588035595403}
+    - renderer: {fileID: 5769341437314982912}
+  m_Enabled: 1
