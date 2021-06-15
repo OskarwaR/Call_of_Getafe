@@ -8,6 +8,8 @@ public class ShootController : MonoBehaviour
     RaycastHit hit;
     private GameObject Target;
 
+    public GameObject bloodPool;
+
     private int arma;
 
     [SerializeField] int damagePistola;
@@ -217,14 +219,15 @@ public class ShootController : MonoBehaviour
                 if (Target.GetComponentInParent<PatrolManager>()) Target.GetComponentInParent<PatrolManager>().Hit();
                 if (Target.GetComponentInParent<SwatPatrolManager>()) Target.GetComponentInParent<SwatPatrolManager>().Hit();
 
-                GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
-                if(arma==3)
+                //GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));
+                bloodPool.GetComponent<BloodPool>().InstantiatePoolObject(hit.point, Quaternion.LookRotation(hit.normal));
+                if (arma==3)
                 {
-                    sangre.transform.localScale = new Vector3(sangreImpactoSize-1.5f, sangreImpactoSize - 1.5f, sangreImpactoSize - 1.5f);
+                    //sangre.transform.localScale = new Vector3(sangreImpactoSize-1.5f, sangreImpactoSize - 1.5f, sangreImpactoSize - 1.5f);
                 }
                 else
                 {
-                    sangre.transform.localScale = new Vector3(sangreImpactoSize, sangreImpactoSize, sangreImpactoSize);
+                    //sangre.transform.localScale = new Vector3(sangreImpactoSize, sangreImpactoSize, sangreImpactoSize);
                 }
                 
                 //sangre.transform.SetParent(Target.transform);

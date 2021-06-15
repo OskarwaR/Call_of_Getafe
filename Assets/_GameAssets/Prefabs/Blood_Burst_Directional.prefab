@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 198432185269766488}
   - component: {fileID: 199362710505120742}
   - component: {fileID: -2580217929640154264}
+  - component: {fileID: -1674036308992394335}
   m_Layer: 0
   m_Name: Blood_Burst_Directional
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4325701548312830
 Transform:
   m_ObjectHideFlags: 0
@@ -4885,12 +4886,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362321489287054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08a0415f11f4ae241afe1262c59e7d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 3
+--- !u!114 &-1674036308992394335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362321489287054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1cb93ffc3fc4cd4c826f2578f3f478e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDeactivate: 3
 --- !u!1 &1517738698151668
 GameObject:
   m_ObjectHideFlags: 0
