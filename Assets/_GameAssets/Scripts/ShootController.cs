@@ -71,6 +71,7 @@ public class ShootController : MonoBehaviour
         {
             if (inventario.cargador == inventario.capacidadCargador) return; //no se puede recargar con el cagador lleno
             if (inventario.municion<=0) return; //no se puede recargar sin balas
+            if (inventario.getArmaActual() == 1 || inventario.getArmaActual() == 0) return; //no se puede recargar con el cuchillo o la linterna
             inventario.Recargar();
             recarga = true;
             brazos.GetComponent<Animator>().SetTrigger("Recarga");
