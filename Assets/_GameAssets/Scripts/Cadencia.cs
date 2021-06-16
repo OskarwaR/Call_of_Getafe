@@ -11,4 +11,11 @@ public class Cadencia : MonoBehaviour
         shootController = GetComponentInParent<ShootController>();
         shootController.setDisparando(false);
     }
+
+    private void setRecargando()
+    {
+        shootController = GetComponentInParent<ShootController>();
+        shootController.setRecargando(false);
+    }
+    
 }

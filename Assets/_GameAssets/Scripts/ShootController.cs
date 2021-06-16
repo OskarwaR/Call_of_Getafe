@@ -44,6 +44,7 @@ public class ShootController : MonoBehaviour
 
     private bool disparando = false;
     private bool gatillo = false;
+    private bool recarga = false;
     private Inventario inventario;
 
     void Start()
@@ -52,7 +53,8 @@ public class ShootController : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         inventario = GetComponentInParent<Inventario>();
-        
+        brazos = GameObject.FindGameObjectWithTag("Brazos");
+
         //Comprobamos el arma actual
         arma = inventario.getArmaActual();
     }
@@ -65,15 +67,20 @@ public class ShootController : MonoBehaviour
 
     private void Recarga()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && !recarga)
         {
+            if (inventario.cargador == inventario.capacidadCargador) return; //no se puede recargar con el cagador lleno
+            if (inventario.municion<=0) return; //no se puede recargar sin balas
             inventario.Recargar();
+            recarga = true;
+            brazos.GetComponent<Animator>().SetTrigger("Recarga");
         }
     }
 
     private void Disparo()
     {
         if (inventario.getArmaActual() <= 0) return; //No se puede disparar sin arma
+        if (recarga) return; //No se puede disparar mientras recargas
 
         if (Input.GetMouseButtonDown(0) || gatillo)
         {
@@ -239,6 +246,11 @@ public class ShootController : MonoBehaviour
     public void setDisparando(bool estado)
     {
         disparando = estado;
+    }
+
+    public void setRecargando(bool estado)
+    {
+        recarga = estado;
     }
 
     public bool getDisparando()

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] int salud=100;
+    public int salud=100;
     [SerializeField] int maxSalud = 100;
     private string zona="";
     GameObject target;

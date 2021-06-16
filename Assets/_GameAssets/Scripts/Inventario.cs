@@ -29,9 +29,9 @@ public class Inventario : MonoBehaviour
     [SerializeField] int maxMunicionEscopeta;
     [SerializeField] int maxMunicionM16;
 
-    private int municion;
-    private int cargador;
-    private int capacidadCargador;
+    public int municion;
+    public int cargador;
+    public int capacidadCargador;
 
     [SerializeField] int armaActual=4;
     [SerializeField] int arma = 4;
@@ -47,6 +47,7 @@ public class Inventario : MonoBehaviour
         cargadorPistola = capacidadCargadorPistola;
         cargadorEscopeta = capacidadCargadorEscopeta;
         cargadorM16 = capacidadCargadorM16;
+        CambiarArma();
     }
     private void Update()
     {
@@ -191,5 +192,14 @@ public class Inventario : MonoBehaviour
                 cargadorM16 += tempCarga;
                 break;
         }
+    }
+    public void TakeMunicion(int mPistola, int mEscopeta, int mM16)
+    {
+        municionPistola += mPistola;
+        if (municionPistola > maxMunicionPistola) municionPistola = maxMunicionPistola;
+        municionEscopeta += mEscopeta;
+        if (municionEscopeta > maxMunicionEscopeta) municionEscopeta = maxMunicionEscopeta;
+        municionM16 += mM16;
+        if (municionM16 > maxMunicionM16) municionM16 = maxMunicionM16;
     }
 }
