@@ -22,7 +22,7 @@ public class ControlVida : MonoBehaviour
     void Update()
     {
         float tVida = 1 - ((float)vida.getSalud() / 100);
-        vignette.intensity.value = tVida/2;
+        //vignette.intensity.value = tVida/2;
         if (vida.getSalud()<=0)
         {
             vida.salud = 0;
