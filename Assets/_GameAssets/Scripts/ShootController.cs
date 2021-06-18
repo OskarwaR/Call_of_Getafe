@@ -44,7 +44,7 @@ public class ShootController : MonoBehaviour
 
     private bool disparando = false;
     private bool gatillo = false;
-    private bool recarga = false;
+    public bool recarga = false;
     private Inventario inventario;
 
     void Start()

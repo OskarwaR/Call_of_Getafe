@@ -1460,7 +1460,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: -0.05
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &5093982321875191896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,6 +1477,7 @@ MonoBehaviour:
   lista: {fileID: 0}
   pfExplosionCabeza: {fileID: 1698979638433960, guid: 35f735ea8ab99424893b817d677b094d,
     type: 3}
+  huesoCabesa: {fileID: 0}
   viewDistance: 20
   walkSpeed: 1.7
   detectSpeed: 2.5
@@ -1782,6 +1783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salud: 100
+  maxSalud: 100
 --- !u!1 &5437818903790869490
 GameObject:
   m_ObjectHideFlags: 0

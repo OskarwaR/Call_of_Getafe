@@ -87,6 +87,7 @@ public class Inventario : MonoBehaviour
     private void Controles()
     {
         if (GetComponentInParent<ShootController>().getDisparando()) return; //No se puede cambiar de arma mientras disparas
+        if (GetComponentInParent<ShootController>().recarga) return; //No se puede cambiar de arma mientras recargas
         if (Input.GetKeyDown(KeyCode.F) && armasOptenidas == 0) armaActual = 0; //La linterna solo se puede sacar si no tenemos armas
 
 
