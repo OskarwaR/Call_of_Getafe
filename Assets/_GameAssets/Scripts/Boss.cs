@@ -6,10 +6,11 @@ using UnityEngine.AI;
 public class Boss : MonoBehaviour
 {
     private NavMeshAgent nma;
-    private float distanceToPlayer;
+    public float distanceToPlayer;
     [SerializeField] GameObject player;
     [SerializeField] Animator animator;
     private Vector3 playerPosition;
+    private Vector3 forward;
 
     //acciones
     public bool jump = false;
@@ -18,6 +19,7 @@ public class Boss : MonoBehaviour
     public bool spawn = false;
     public bool punch = false;
     public bool rotate = false;
+    public bool dash = false;
 
     private Vector3 targetPoint;
     private Quaternion targetRotation;
@@ -29,8 +31,7 @@ public class Boss : MonoBehaviour
     }
     void Start()
     {
-        playerPosition = player.transform.position;
-        distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
+        Position();
     }
     private void Update()
     {
@@ -40,13 +41,14 @@ public class Boss : MonoBehaviour
         if (walk) Walk();
         if (punch) Punch();
         if (rotate) Rotate();
+        if (dash) Dash();
     }
 
     public void Position()
     {
         playerPosition = player.transform.position;
         distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
-        //nma.ResetPath();
+        forward = transform.forward * 20;
     }
     void Jump()
     {
@@ -86,16 +88,29 @@ public class Boss : MonoBehaviour
         distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
         nma.acceleration = 1000;
         nma.speed = 35;
-        nma.SetDestination(playerPosition);
+        nma.SetDestination(playerPosition + forward);
+        print(distanceToPlayer);
+        if (distanceToPlayer<=30)
+        {
+            print("dash");
+            dash = true;
+            embestida = false;
+            animator.SetBool("Embestida", false);
+        }
+    }
+
+    void Dash()
+    {
+        animator.SetBool("Dash", true);
         if (!nma.pathPending)
         {
             if (nma.remainingDistance <= nma.stoppingDistance)
             {
                 if (!nma.hasPath || nma.velocity.sqrMagnitude == 0f)
                 {
-                    embestida = false;
+                    dash = false;
                     nma.ResetPath();
-                    animator.SetBool("Embestida", false);
+                    animator.SetBool("Dash", false);
                 }
             }
         }

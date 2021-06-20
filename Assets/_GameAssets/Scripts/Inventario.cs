@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class Inventario : MonoBehaviour
 {
     [SerializeField] GameObject[] armas;
+    [SerializeField] ShootController shootController;
 
-    [SerializeField] bool equipoLinterna;
-    [SerializeField] bool equipoCuchillo;
-    [SerializeField] bool equipoPistola;
-    [SerializeField] bool equipoEscopeta;
-    [SerializeField] bool equipoM16;
+    public bool equipoLinterna;
+    public bool equipoCuchillo;
+    public bool equipoPistola;
+    public bool equipoEscopeta;
+    public bool equipoM16;
 
     [SerializeField] int municionPistola;
     [SerializeField] int municionEscopeta;
@@ -33,9 +34,9 @@ public class Inventario : MonoBehaviour
     public int cargador;
     public int capacidadCargador;
 
-    [SerializeField] int armaActual=4;
+    public int armaActual=4;
     [SerializeField] int arma = 4;
-    [SerializeField] int armasOptenidas = 4;
+    public int armasOptenidas = 4;
 
     private bool scrool=false;
     [SerializeField] Text UIMunicionText;
@@ -47,12 +48,12 @@ public class Inventario : MonoBehaviour
         cargadorPistola = capacidadCargadorPistola;
         cargadorEscopeta = capacidadCargadorEscopeta;
         cargadorM16 = capacidadCargadorM16;
-        CambiarArma();
+        if (armaActual != arma && armaActual >= 0) CambiarArma();
     }
     private void Update()
     {
         Controles();
-        if (armaActual != arma) CambiarArma();
+        if (armaActual != arma && armaActual>=0) CambiarArma();
         Municion();
     }
 
@@ -86,10 +87,9 @@ public class Inventario : MonoBehaviour
 
     private void Controles()
     {
-        if (GetComponentInParent<ShootController>().getDisparando()) return; //No se puede cambiar de arma mientras disparas
-        if (GetComponentInParent<ShootController>().recarga) return; //No se puede cambiar de arma mientras recargas
+        if (shootController.getDisparando()) return; //No se puede cambiar de arma mientras disparas
+        if (shootController.recarga) return; //No se puede cambiar de arma mientras recargas
         if (Input.GetKeyDown(KeyCode.F) && armasOptenidas == 0) armaActual = 0; //La linterna solo se puede sacar si no tenemos armas
-
 
         if (armasOptenidas == 0) return; //No se puede cambiar de arma si no tenemos armas
         if (Input.GetKeyDown(KeyCode.Alpha1) && equipoCuchillo)
@@ -127,6 +127,8 @@ public class Inventario : MonoBehaviour
         if (armaActual < 1) armaActual = 4;
         if (armaActual > armasOptenidas) armaActual--;
 
+        shootController.recarga = false;
+
     }
 
     private void CambiarArma()
@@ -140,6 +142,8 @@ public class Inventario : MonoBehaviour
 
         if (armaActual > 1) UIMunicion.SetActive(true);
         else UIMunicion.SetActive(false);
+
+        shootController.recarga = false;
     }
 
     public int getArmaActual()

@@ -88,7 +88,7 @@ public class ShootController : MonoBehaviour
             if (!disparando && inventario.getMunicion() > 0)
             {
                 arma = inventario.getArmaActual();
-                Debug.Log("MouseDown: " + arma);
+                //Debug.Log("MouseDown: " + arma);
 
                 //Comprobamos el arma equipada
                 brazos = GameObject.FindGameObjectWithTag("Brazos");
@@ -208,7 +208,7 @@ public class ShootController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, distancia, layerMask))
         {
             Target = hit.collider.gameObject;
-            Debug.Log("Hit: " + Target.tag + " (" + Target.name + ") - " + hit.distance + " metros");
+            //Debug.Log("Hit: " + Target.tag + " (" + Target.name + ") - " + hit.distance + " metros");
             if (hit.collider.gameObject.tag == "Enemigo" || hit.collider.gameObject.tag == "Head")
             {
 

@@ -8,13 +8,15 @@ public class BossActions : MonoBehaviour
     public void Actions()
     {
         int action = Random.Range(0, 3);
+        //int action = 1;
         switch(action)
         {
             case 0:
                 boss.jump = true;
                 break;
             case 1:
-                boss.embestida = true;
+                if (boss.distanceToPlayer >= 45) boss.embestida = true;
+                else Actions();
                 break;
             case 2:
                 boss.walk = true;

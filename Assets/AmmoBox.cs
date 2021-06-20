@@ -19,6 +19,7 @@ public class AmmoBox : MonoBehaviour
         {
             //print("cojo municion");
             inventario.TakeMunicion(mPistola,mEscopeta,mM16);
+            Destroy(this.gameObject);
         }
     }
 }
