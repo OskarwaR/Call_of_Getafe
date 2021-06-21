@@ -8,11 +8,17 @@ public class SoundManager : MonoBehaviour
     private AudioSource[] audios;
     private float pitchInincial;
 
-    /*
+    /* Armas
         0-Escopeta
         1-M16
         2-Pistola    
     */
+
+    /*Boss
+        0 - Rugido
+        1-4 - Pisadas
+        5 - Dash
+    */ 
 
     private void Awake()
     {

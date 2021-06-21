@@ -15,6 +15,7 @@ TagManager:
   - Sonido
   - Head
   - Brazos
+  - Garra
   layers:
   - Default
   - TransparentFX

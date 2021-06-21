@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Boss : MonoBehaviour
 {
-    private NavMeshAgent nma;
+    [SerializeField] NavMeshAgent nma;
     public float distanceToPlayer;
     [SerializeField] GameObject player;
     [SerializeField] Animator animator;
@@ -27,7 +27,7 @@ public class Boss : MonoBehaviour
 
     private void Awake()
     {
-        nma = GetComponentInParent<NavMeshAgent>();
+
     }
     void Start()
     {
@@ -89,10 +89,10 @@ public class Boss : MonoBehaviour
         nma.acceleration = 1000;
         nma.speed = 35;
         nma.SetDestination(playerPosition + forward);
-        print(distanceToPlayer);
+        //print(distanceToPlayer);
         if (distanceToPlayer<=30)
         {
-            print("dash");
+            //print("dash");
             dash = true;
             embestida = false;
             animator.SetBool("Embestida", false);

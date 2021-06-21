@@ -216,12 +216,12 @@ public class ShootController : MonoBehaviour
                 if (hit.collider.gameObject.tag == "Head")
                 {
                     enemigo.setSalud(-damage * 2, Target.tag, Target);
-                    print("daño: " + damage * 2);
+                    //print("daño: " + damage * 2);
                 }
                 else
                 {
                     enemigo.setSalud(-damage, Target.tag);
-                    print("daño: " + damage);
+                    //print("daño: " + damage);
                 }
 
                 if (Target.GetComponentInParent<PatrolManager>()) Target.GetComponentInParent<PatrolManager>().Hit();
