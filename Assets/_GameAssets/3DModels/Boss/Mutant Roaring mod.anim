@@ -58152,7 +58152,7 @@ AnimationClip:
     messageOptions: 0
   - time: 1.4833333
     functionName: Pisada
-    data: 
+    data: L
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
@@ -58166,13 +58166,6 @@ AnimationClip:
     messageOptions: 0
   - time: 4.9
     functionName: Position
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 5.266667
-    functionName: Pisada
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

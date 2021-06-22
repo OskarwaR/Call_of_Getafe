@@ -66299,7 +66299,7 @@ AnimationClip:
     messageOptions: 0
   - time: 1.2833333
     functionName: Pisada
-    data: 
+    data: L
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

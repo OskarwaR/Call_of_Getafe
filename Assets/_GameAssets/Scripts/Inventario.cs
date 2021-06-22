@@ -126,9 +126,6 @@ public class Inventario : MonoBehaviour
         if (armaActual > 4) armaActual = 1;
         if (armaActual < 1) armaActual = 4;
         if (armaActual > armasOptenidas) armaActual--;
-
-        shootController.recarga = false;
-
     }
 
     private void CambiarArma()
@@ -142,8 +139,6 @@ public class Inventario : MonoBehaviour
 
         if (armaActual > 1) UIMunicion.SetActive(true);
         else UIMunicion.SetActive(false);
-
-        shootController.recarga = false;
     }
 
     public int getArmaActual()

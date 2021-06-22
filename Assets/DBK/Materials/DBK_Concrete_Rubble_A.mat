@@ -129,7 +129,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _23: 1
-    - _AODirt: 0.21943645
+    - _AODirt: 0.708
     - _BrightnessAdd: 0.030428972
     - _BumpScale: 1
     - _Color: 0
@@ -167,7 +167,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.235
     - _GlossyReflections: 1
-    - _MainSmoothness: 0.22412397
+    - _MainSmoothness: 0.356
     - _MainSmoothness1: 0.22412397
     - _Metallic: 0
     - _Mode: 0
