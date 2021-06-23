@@ -13,8 +13,16 @@ public class SubText : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            manager.ShowSub(texto);
-            Destroy(this.gameObject);
+            if (!alerta)
+            {
+                manager.ShowSub(texto);
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                manager.ShowSubAlerta(texto);
+                Destroy(this.gameObject);
+            }
         }
     }
 }

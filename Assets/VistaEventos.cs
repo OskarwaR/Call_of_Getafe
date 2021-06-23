@@ -12,6 +12,10 @@ public class VistaEventos : MonoBehaviour
     [SerializeField] GameObject[] zombiesZona1;
     [SerializeField] GameObject[] zombiesRestaurante1;
     [SerializeField] GameObject[] zombiesRestaurante2;
+    [SerializeField] GameObject[] swatsTunel;
+    [SerializeField] GameObject[] preCiudad;
+    [SerializeField] GameObject[] ciudad;
+    [SerializeField] GameObject[] ciudadSwats;
     void Start()
     {
         
@@ -20,10 +24,11 @@ public class VistaEventos : MonoBehaviour
     void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(ray.origin, ray.direction * 5, Color.red);
+        //Debug.DrawRay(ray.origin, ray.direction * 5, Color.red);
         if (Physics.Raycast(ray, out hit,5,layerMask))
         {
             target = hit.collider.gameObject;
+            //print(target.name);
             switch (target.name)
             {
                 case "ActivadorZombie1":
@@ -44,6 +49,30 @@ public class VistaEventos : MonoBehaviour
                     foreach (GameObject zombie in zombiesRestaurante2)
                     {
                         zombie.SetActive(true);
+                    }
+                    break;
+                case "ActivadorSwats":
+                    foreach (GameObject swat in swatsTunel)
+                    {
+                        swat.SetActive(true);
+                    }
+                    break;
+                case "PreCiudad":
+                    foreach (GameObject zombie in preCiudad)
+                    {
+                        zombie.SetActive(true);
+                    }
+                    break;
+                case "Ciudad":
+                    foreach (GameObject zombie in ciudad)
+                    {
+                        zombie.SetActive(true);
+                    }
+                    break;
+                case "CiudadSwats":
+                    foreach (GameObject swat in ciudadSwats)
+                    {
+                        swat.SetActive(true);
                     }
                     break;
             }
