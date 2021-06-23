@@ -16,6 +16,7 @@ TagManager:
   - Head
   - Brazos
   - Garra
+  - Event
   layers:
   - Default
   - TransparentFX
@@ -37,7 +38,7 @@ TagManager:
   - noRay
   - Player
   - noLighting
-  - 
+  - Event
   - 
   - 
   - 

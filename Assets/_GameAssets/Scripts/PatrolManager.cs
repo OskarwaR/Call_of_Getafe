@@ -301,7 +301,7 @@ public class PatrolManager : MonoBehaviour
     {
         alerta = true;
         audioHitZombie.pitch = Random.Range(0.8f, 1.2f);
-        audioHitZombie.PlayOneShot(audioHitZombie.clip);
+        //audioHitZombie.PlayOneShot(audioHitZombie.clip);
         Andar();
     }
 }

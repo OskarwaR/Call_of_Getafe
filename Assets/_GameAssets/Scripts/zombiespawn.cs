@@ -5,24 +5,24 @@ using UnityEngine;
 public class zombiespawn : MonoBehaviour
 {
     public GameObject[] Zombies;
+    [SerializeField] int max=10;
     private int n=0;
-    [SerializeField] float radius=15;
-    // Start is called before the first frame update
+    [SerializeField] float radius=10;
+    [SerializeField] float time = 10;
+    [SerializeField] GameObject parent;
+
     void Start()
     {
-        InvokeRepeating("invocar",0.1f, 0.1f);
+        InvokeRepeating("invocar", time, time);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void invocar()
     {
-        Vector3 rVector = new Vector3(Random.Range(0, radius), transform.position.y, Random.Range(0, radius));
-        if (n >= 10) return;
-        Instantiate(Zombies[Random.Range(0,Zombies.Length)], transform.position + (Random.insideUnitSphere* radius), transform.rotation);
+        if (n == max) Destroy(this.gameObject);
+        Vector3 rVector = new Vector3(Random.Range(0, radius), transform.position.y, Random.Range(0, radius));   
+        GameObject tZombie=Instantiate(Zombies[Random.Range(0,Zombies.Length)], transform.position + (Random.insideUnitSphere* radius), transform.rotation);
+        tZombie.SetActive(true);
+        tZombie.transform.SetParent(parent.transform);
         n++;
     }
 }
