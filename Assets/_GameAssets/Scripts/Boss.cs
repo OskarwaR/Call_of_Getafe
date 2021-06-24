@@ -49,25 +49,26 @@ public class Boss : MonoBehaviour
         playerPosition = player.transform.position;
         distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
         forward = transform.forward * 20;
+        nma.ResetPath();
     }
     void Jump()
     {
         nma.speed = distanceToPlayer;
         nma.acceleration = 200;
-        animator.SetTrigger("Jump");
         nma.SetDestination(playerPosition);
+        animator.SetTrigger("Jump");
         jump = false;
     }
 
     void Walk()
     {
-        animator.SetBool("Walk", true);
         playerPosition = player.transform.position;
         distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
         nma.speed = 9;
         nma.acceleration = 1000;
         nma.SetDestination(playerPosition);
-        if(distanceToPlayer<=20)
+        animator.SetBool("Walk", true);
+        if (distanceToPlayer<=25)
         {
             nma.ResetPath();
             walk = false;
@@ -84,11 +85,11 @@ public class Boss : MonoBehaviour
 
     void Embestida()
     {
-        animator.SetBool("Embestida", true);
         distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
         nma.acceleration = 1000;
         nma.speed = 35;
         nma.SetDestination(playerPosition + forward);
+        animator.SetBool("Embestida", true);
         //print(distanceToPlayer);
         if (distanceToPlayer<=30)
         {

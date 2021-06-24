@@ -14,17 +14,17 @@ public class Inventario : MonoBehaviour
     public bool equipoEscopeta;
     public bool equipoM16;
 
-    [SerializeField] int municionPistola;
-    [SerializeField] int municionEscopeta;
-    [SerializeField] int municionM16;
+    public int municionPistola;
+    public int municionEscopeta;
+    public int municionM16;
 
     [SerializeField] int capacidadCargadorPistola;
     [SerializeField] int capacidadCargadorEscopeta;
     [SerializeField] int capacidadCargadorM16;
 
-    private int cargadorPistola;
-    private int cargadorEscopeta;
-    private int cargadorM16;
+    public int cargadorPistola;
+    public int cargadorEscopeta;
+    public int cargadorM16;
 
     [SerializeField] int maxMunicionPistola;
     [SerializeField] int maxMunicionEscopeta;
@@ -44,11 +44,9 @@ public class Inventario : MonoBehaviour
 
     private void Awake()
     {
-        arma = armaActual;
         cargadorPistola = capacidadCargadorPistola;
         cargadorEscopeta = capacidadCargadorEscopeta;
         cargadorM16 = capacidadCargadorM16;
-        if (armaActual != arma && armaActual >= 0) CambiarArma();
     }
     private void Update()
     {
@@ -130,7 +128,6 @@ public class Inventario : MonoBehaviour
 
     private void CambiarArma()
     {
-        arma = armaActual;
         foreach(GameObject arma in armas)
         {
             arma.SetActive(false);
@@ -139,6 +136,7 @@ public class Inventario : MonoBehaviour
 
         if (armaActual > 1) UIMunicion.SetActive(true);
         else UIMunicion.SetActive(false);
+        arma = armaActual;
     }
 
     public int getArmaActual()

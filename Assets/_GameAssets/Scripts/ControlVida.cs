@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 
 public class ControlVida : MonoBehaviour
@@ -22,10 +23,11 @@ public class ControlVida : MonoBehaviour
     void Update()
     {
         float tVida = 1 - ((float)vida.getSalud() / 100);
-        //vignette.intensity.value = tVida/2;
+        vignette.intensity.value = tVida/1.5f;
         if (vida.getSalud()<=0)
         {
             vida.salud = 0;
+            SceneManager.LoadScene(0);
         }
 
         //print(vida.getSalud());
