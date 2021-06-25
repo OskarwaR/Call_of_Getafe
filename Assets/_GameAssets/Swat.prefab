@@ -1019,8 +1019,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  viewDistance: 60
-  shootDistance: 40
+  viewDistance: 45
+  shootDistance: 45
   shootTarget: {fileID: 0}
   shootPoint: {fileID: 3178892578783043334}
   layerMask:

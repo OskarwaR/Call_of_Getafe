@@ -27,7 +27,7 @@ public class ControlVida : MonoBehaviour
         if (vida.getSalud()<=0)
         {
             vida.salud = 0;
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
         }
 
         //print(vida.getSalud());

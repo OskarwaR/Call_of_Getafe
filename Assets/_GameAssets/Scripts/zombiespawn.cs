@@ -18,7 +18,12 @@ public class zombiespawn : MonoBehaviour
 
     void invocar()
     {
-        if (n == max) Destroy(this.gameObject);
+        if (n == max)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+            
         Vector3 rVector = new Vector3(Random.Range(0, radius), transform.position.y, Random.Range(0, radius));   
         GameObject tZombie=Instantiate(Zombies[Random.Range(0,Zombies.Length)], transform.position + (Random.insideUnitSphere* radius), transform.rotation);
         tZombie.SetActive(true);

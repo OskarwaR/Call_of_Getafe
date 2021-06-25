@@ -11,6 +11,7 @@ public class FPS : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = target;
+        QualitySettings.vSyncCount = 0;
     }
 
     void Update()

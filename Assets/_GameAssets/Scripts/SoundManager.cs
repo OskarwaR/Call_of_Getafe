@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    public static SoundManager soundManagerInstance;
+
+    [SerializeField] AudioClip[] hurt;
     private AudioSource reproductor;
     private AudioSource[] audios;
     private float pitchInincial;
@@ -11,8 +14,11 @@ public class SoundManager : MonoBehaviour
     /* Armas
         0-Escopeta
         1-M16
-        2-Pistola    
+        2-Pistola
+        3-Cuchillo
     */
+
+    //4 - Hurt
 
     /*Boss
         0 - Rugido
@@ -22,6 +28,7 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
+        soundManagerInstance = this;
         audios = GetComponentsInParent<AudioSource>();
     }
 
@@ -38,5 +45,13 @@ public class SoundManager : MonoBehaviour
         pitchInincial = reproductor.pitch;
         if (pitch) reproductor.pitch = Random.Range(pitchMin, pitchMax);
         reproductor.PlayOneShot(reproductor.clip);
+    }
+
+    public void PlaySoundHurt()
+    {
+        reproductor = audios[4];
+        pitchInincial = reproductor.pitch;
+        reproductor.pitch = Random.Range(0.9f, 1.1f);
+        reproductor.PlayOneShot(hurt[Random.Range(0,hurt.Length)]);
     }
 }

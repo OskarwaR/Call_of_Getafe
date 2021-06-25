@@ -51,17 +51,6 @@ public class PatrolManager : MonoBehaviour
     private GameObject cabezaPath;
 
 
-    private void OnEnable()
-    {
-        
-
-        /*foreach (Transform child in Lista.transform)
-        {
-            patrolList.Add(child);
-        }
-
-        n = -1;*/
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +72,7 @@ public class PatrolManager : MonoBehaviour
         zombieImpacto = salud.getZona();
 
         playerSalud = Player.GetComponent<Health>();
+        
         //nma.SetDestination(patrolPoints[currentPoint].transform.position);
         float randomStartingTime = Random.Range(0, 240);
         audioLoop.time = randomStartingTime;
@@ -159,6 +149,11 @@ public class PatrolManager : MonoBehaviour
                 huesoCabesa.transform.localScale = new Vector3(0, 0, 0);
                 //print(path);
             }
+            foreach(Collider collider in GetComponentsInChildren<Collider>())
+            {
+                collider.isTrigger=true;
+            }
+
         }
     }
 

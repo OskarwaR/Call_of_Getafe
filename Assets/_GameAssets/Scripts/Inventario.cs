@@ -7,6 +7,7 @@ public class Inventario : MonoBehaviour
 {
     [SerializeField] GameObject[] armas;
     [SerializeField] ShootController shootController;
+    [SerializeField] GameObject[] cross;
 
     public bool equipoLinterna;
     public bool equipoCuchillo;
@@ -124,6 +125,16 @@ public class Inventario : MonoBehaviour
         if (armaActual > 4) armaActual = 1;
         if (armaActual < 1) armaActual = 4;
         if (armaActual > armasOptenidas) armaActual--;
+
+        foreach (GameObject mira in cross) mira.SetActive(false);
+        if (armaActual==2 || armaActual == 4)
+        {
+            cross[1].SetActive(true);
+        }
+        else if(armaActual == 3)
+        {
+            cross[0].SetActive(true);
+        }
     }
 
     private void CambiarArma()

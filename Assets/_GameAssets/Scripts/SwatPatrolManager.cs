@@ -81,25 +81,10 @@ public class SwatPatrolManager : MonoBehaviour
             nma.enabled = false;
             //audioLoop.Stop();
             alive = false;
-            GetComponentInParent<CapsuleCollider>().enabled = false;
-            //GetComponentInChildren<CapsuleCollider>().enabled = false;
-            //print(zombieImpacto);
-            /*if (zombieImpacto == "Head")
+            foreach (Collider collider in GetComponentsInChildren<Collider>())
             {
-
-                string path = "/" + cabezaPath.name;
-                while (cabezaPath.transform.parent != null)
-                {
-                    cabezaPath = cabezaPath.transform.parent.gameObject;
-                    path = "/" + cabezaPath.name + path;
-                }
-
-                GameObject cabeza = transform.Find(path).gameObject;
-                GameObject gore = Instantiate(pfExplosionCabeza, cabeza.transform.position, cabeza.transform.rotation);
-                gore.transform.localScale = new Vector3(3, 3, 3);
-                cabeza.transform.localScale = new Vector3(0, 0, 0);
-                //print(path);
-            }*/
+                collider.isTrigger = true;
+            }
         }
     }
 
@@ -144,7 +129,7 @@ public class SwatPatrolManager : MonoBehaviour
     {
         if (distanceToPlayer <= viewDistance)
         {
-            viewDistance = 1000;
+            viewDistance = 100;
             var targetPosition = player.transform.position;
             targetPosition.y = transform.position.y;
             transform.parent.gameObject.transform.LookAt(targetPosition);

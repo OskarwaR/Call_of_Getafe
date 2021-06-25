@@ -49,12 +49,12 @@ public class Boss : MonoBehaviour
         playerPosition = player.transform.position;
         distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
         forward = transform.forward * 20;
-        nma.ResetPath();
+        //nma.ResetPath();
     }
     void Jump()
     {
         nma.speed = distanceToPlayer;
-        nma.acceleration = 200;
+        nma.acceleration = 500;
         nma.SetDestination(playerPosition);
         animator.SetTrigger("Jump");
         jump = false;

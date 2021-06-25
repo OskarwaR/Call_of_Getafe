@@ -115,7 +115,7 @@ Material:
     - _AlphaClipMin: 1.53
     - _AlphaClipSoft: 0.37
     - _AlphaMin: 0.1
-    - _AlphaSoft: 0.022
+    - _AlphaSoft: 0.116
     - _BumpScale: 1
     - _Columns: 1
     - _Cutoff: 0.5
@@ -125,7 +125,7 @@ Material:
     - _Fall: 0
     - _FallOffset: 0
     - _FallRandomness: 0
-    - _FlattenNormal: 1
+    - _FlattenNormal: 17.05
     - _FlipU: 1
     - _FlipV: 1
     - _FlipbookX: 1
@@ -146,7 +146,7 @@ Material:
     - _ParticleToggle: 1
     - _ProcMask: 1
     - _Randomize: 0.9
-    - _ReflectionSat: 0.5
+    - _ReflectionSat: 3.62
     - _Rows: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -156,7 +156,7 @@ Material:
     - _ZWrite: 1
     - __NormalStr: 1
     m_Colors:
-    - _BaseColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 0.23529412}
+    - _BaseColor: {r: 0.49056602, g: 0, b: 0, a: 0.23529412}
     - _BloodSpecHighlightColor: {r: 1, g: 1, b: 1, a: 0}
     - _ChannelMask: {r: 1, g: 0, b: 0, a: 0}
     - _ChannelMask2: {r: 1, g: 0, b: 0, a: 0}
