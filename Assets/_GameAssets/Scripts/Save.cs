@@ -116,7 +116,7 @@ public class Save : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F9))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         if (Input.GetKeyDown(KeyCode.F12))
         {

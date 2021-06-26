@@ -16,7 +16,7 @@ public class UIscript : MonoBehaviour
     
     void Start()
     {
-        
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -52,14 +52,14 @@ public class UIscript : MonoBehaviour
     public void LoadGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void NewGame()
     {
         Time.timeScale = 1f;
         PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Continue()

@@ -17,6 +17,7 @@ public class DashAttack : MonoBehaviour
         {
             //print("Dash impacta");
             other.GetComponentInParent<Health>().setSalud(-damage);
+            this.enabled = false;
         }
     }
 }

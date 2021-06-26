@@ -15,8 +15,9 @@ public class JumpAttack : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            //print("salto impacta");
+            print("salto impacta");
             other.GetComponentInParent<Health>().setSalud(-damage);
+            this.enabled = false;
         }
     }
 

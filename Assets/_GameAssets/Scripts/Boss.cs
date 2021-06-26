@@ -8,11 +8,14 @@ public class Boss : MonoBehaviour
     [SerializeField] NavMeshAgent nma;
     public float distanceToPlayer;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject mesh;
     [SerializeField] Animator animator;
+    [SerializeField] Health salud;
     private Vector3 playerPosition;
     private Vector3 forward;
 
     //acciones
+    public bool muerto = false;
     public bool jump = false;
     public bool embestida = false;
     public bool walk = false;
@@ -25,17 +28,28 @@ public class Boss : MonoBehaviour
     private Quaternion targetRotation;
     private NavMeshPath path;
 
+    //Ragdoll
+    Collider[] colliders;
+    Rigidbody[] rigidbodys;
+    Rigidbody rg;
+
 
     private void Awake()
     {
         path = new NavMeshPath();
+        //ragdoll
+        colliders = GetComponentsInChildren<Collider>();
+        rigidbodys = GetComponentsInChildren<Rigidbody>();
     }
     void Start()
     {
         //Position();
+        mesh.SetActive(true);
     }
     private void Update()
     {
+        Vida();
+        if (muerto) return;
         if (jump) Jump();
         if (embestida) Embestida();
         if (spawn) Spawn();
@@ -43,6 +57,19 @@ public class Boss : MonoBehaviour
         if (punch) Punch();
         if (rotate) Rotate();
         if (dash) Dash();
+    }
+
+    void Vida()
+    {
+        if (salud.salud<=0)
+        {
+            muerto = true;
+            nma.enabled = false;
+            animator.SetBool("Muerto", true);
+            //foreach (Rigidbody rig in rigidbodys) rig.isKinematic = false;
+            //animator.enabled = false;
+
+        }
     }
 
     public void Position()

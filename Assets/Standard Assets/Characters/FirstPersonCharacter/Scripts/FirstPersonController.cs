@@ -291,7 +291,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             cameraPosition = new Vector3(Camera.main.transform.localPosition.x, 2.189999f, -Camera.main.transform.localPosition.z);
             crouchPosition = new Vector3(Camera.main.transform.localPosition.x, 1.3f, Camera.main.transform.localPosition.z);
-            if (Input.GetKey(KeyCode.LeftControl))
+            if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.C))
             {
                 Camera.main.transform.localPosition = crouchPosition;
                 m_WalkSpeed = 2.5f;
@@ -299,7 +299,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 controller.height = 1;
             }
             
-            if (Input.GetKeyUp(KeyCode.LeftControl))
+            if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.C))
             {
                 Camera.main.transform.localPosition = cameraPosition;
                 m_WalkSpeed = 5;

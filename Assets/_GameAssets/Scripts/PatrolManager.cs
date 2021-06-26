@@ -98,28 +98,8 @@ public class PatrolManager : MonoBehaviour
 
     }
 
- 
-    // Update is called once per frame
     void Update()
     {
-        /*if (nma.remainingDistance <= nma.stoppingDistance)
-        {
-            //currentPoint++;
-            //if (currentPoint == patrolList.Count) currentPoint = 0;
-            //nma.SetDestination(patrolPoints[currentPoint].transform.position);
-            //nma.SetDestination(patrolPoints[Random.Range(0,patrolPoints.Length)].transform.position);
-            if(n!=-1)
-            {
-                n2 = n;
-            }
-            n = Random.Range(0, patrolList.Count);
-            if (n==n2) Random.Range(0, patrolList.Count);
-
-            nma.SetDestination(patrolList[n].transform.position);
-            print(n);
-            
-        }*/
-
         Vida();
         if (zombieSalud <= 0) return;
         Vista();
@@ -152,9 +132,8 @@ public class PatrolManager : MonoBehaviour
             }
             
             foreach (Rigidbody rig in rigidbodys) rig.isKinematic = false;
-            rg.AddForceAtPosition(direction.normalized * 4000, rdHit.point);
+            rg.AddForceAtPosition(direction.normalized * 3000, rdHit.point);
             StartCoroutine(DisableZombie());
-            //Invoke("DisableZombie", 15);
         }
     }
 
@@ -310,7 +289,9 @@ public class PatrolManager : MonoBehaviour
         yield return new WaitForSeconds(15);
         foreach (Collider collider in GetComponentsInChildren<Collider>()) collider.isTrigger = true;
         foreach (Rigidbody rig in rigidbodys) rig.isKinematic = true;
-        //yield return new WaitForSeconds(5);
-        //Destroy(this.gameObject);
+        yield return new WaitForSeconds(60);
+        foreach (Rigidbody rig in rigidbodys) rig.isKinematic = false;
+        yield return new WaitForSeconds(5);
+        Destroy(this.gameObject);
     }
 }

@@ -17,6 +17,7 @@ public class GarraAttack : MonoBehaviour
         {
             //print("garra impacta");
             other.GetComponentInParent<Health>().setSalud(-damage);
+            this.enabled = false;
         }
     }
 }

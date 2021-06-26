@@ -43,6 +43,13 @@ public class SwatPatrolManager : MonoBehaviour
     private Health salud;
     bool alive = true;
 
+    //Ragdoll
+    Collider[] colliders;
+    Rigidbody[] rigidbodys;
+    Rigidbody rg;
+    Vector3 direction;
+    RaycastHit rdHit;
+
     //GameObject shootTarget;
     private void Awake()
     {
@@ -55,6 +62,14 @@ public class SwatPatrolManager : MonoBehaviour
         audioM16 = audios[0];
         maxMunicion = municion;
     }
+
+    private void Start()
+    {
+        //ragdoll
+        colliders = GetComponentsInChildren<Collider>();
+        rigidbodys = GetComponentsInChildren<Rigidbody>();
+    }
+
     private void Update()
     {
         
@@ -76,15 +91,14 @@ public class SwatPatrolManager : MonoBehaviour
         //print(zombieImpacto);
         if (salud.getSalud() <= 0)
         {
-            agentAnimator.SetBool("Death", true);
-            nma.ResetPath();
+            //agentAnimator.SetBool("Death", true);
+            agentAnimator.enabled = false;
             nma.enabled = false;
-            //audioLoop.Stop();
             alive = false;
-            foreach (Collider collider in GetComponentsInChildren<Collider>())
-            {
-                collider.isTrigger = true;
-            }
+            
+            foreach (Rigidbody rig in rigidbodys) rig.isKinematic = false;
+            rg.AddForceAtPosition(direction.normalized * 1000, rdHit.point);
+            StartCoroutine(DisableZombie());
         }
     }
 
@@ -224,11 +238,23 @@ public class SwatPatrolManager : MonoBehaviour
         return randomDirection;
     }
 
-    public void Hit()
+    public void Hit(Rigidbody tRig, Vector3 tDirection, RaycastHit tHit)
     {
-        /*alerta = true;
-        audioHitZombie.pitch = Random.Range(0.8f, 1.2f);
-        audioHitZombie.PlayOneShot(audioHitZombie.clip);
-        Andar();*/
+        rg = tRig;
+        direction = tDirection;
+        rdHit = tHit;
+        if (salud.getSalud() <= 0)
+            rg.AddForceAtPosition(direction.normalized * 1000, rdHit.point);
+    }
+
+    IEnumerator DisableZombie()
+    {
+        yield return new WaitForSeconds(15);
+        foreach (Collider collider in GetComponentsInChildren<Collider>()) collider.isTrigger = true;
+        foreach (Rigidbody rig in rigidbodys) rig.isKinematic = true;
+        yield return new WaitForSeconds(60);
+        foreach (Rigidbody rig in rigidbodys) rig.isKinematic = false;
+        yield return new WaitForSeconds(5);
+        Destroy(this.gameObject);
     }
 }

@@ -16,11 +16,12 @@ public class BossActions : MonoBehaviour
     [SerializeField] GameObject triggerJump;
     [SerializeField] GameObject triggerDash;
     [SerializeField] GameObject triggerGarra;
+    [SerializeField] AudioSource musica;
     private GameObject dash;
     public void Actions()
     {
-        int action = Random.Range(0, 3);
-        //int action = 0;
+        //int action = Random.Range(0, 3);
+        int action = 2;
         switch(action)
         {
             case 0:
