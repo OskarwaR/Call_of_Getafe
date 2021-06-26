@@ -6,6 +6,10 @@ public class ZombieGenerator : MonoBehaviour
 {
     [SerializeField] GameObject[] zombies;
 
+    private void Start()
+    {
+        
+    }
     private void Awake()
     {
         GameObject newZombie = Instantiate(zombies[Random.Range(0, zombies.Length)], transform.position, transform.rotation);

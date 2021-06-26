@@ -225,7 +225,9 @@ public class ShootController : MonoBehaviour
                     //print("daño: " + damage);
                 }
 
-                if (Target.GetComponentInParent<PatrolManager>()) Target.GetComponentInParent<PatrolManager>().Hit();
+                Rigidbody rg = hit.collider.gameObject.GetComponent<Rigidbody>();
+                Vector3 direction = hit.collider.transform.position - transform.position;
+                if (Target.GetComponentInParent<PatrolManager>()) Target.GetComponentInParent<PatrolManager>().Hit(rg,direction,hit);
                 if (Target.GetComponentInParent<SwatPatrolManager>()) Target.GetComponentInParent<SwatPatrolManager>().Hit();
 
                 //GameObject sangre = Instantiate(sangreImpacto, hit.point, Quaternion.LookRotation(hit.normal));

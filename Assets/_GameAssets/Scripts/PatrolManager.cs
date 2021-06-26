@@ -50,6 +50,13 @@ public class PatrolManager : MonoBehaviour
     private Health playerSalud;
     private GameObject cabezaPath;
 
+    //Ragdoll
+    Collider[] colliders;
+    Rigidbody[] rigidbodys;
+    Rigidbody rg;
+    Vector3 direction;
+    RaycastHit rdHit;
+
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +85,10 @@ public class PatrolManager : MonoBehaviour
         audioLoop.time = randomStartingTime;
         audioLoop.pitch= Random.Range(1.8f, 2.2f);
         audioLoop.Play();
+
+        //ragdoll
+        colliders = GetComponentsInChildren<Collider>();
+        rigidbodys = GetComponentsInChildren<Rigidbody>();
 
         if (!destino)
         {
@@ -125,35 +136,25 @@ public class PatrolManager : MonoBehaviour
         //print(zombieImpacto);
         if (zombieSalud <= 0)
         {
-            agentAnimator.SetBool("Death", true);
-            nma.ResetPath();
+            //agentAnimator.SetBool("Death", true);
+            //nma.ResetPath();
+            agentAnimator.enabled = false;
             nma.enabled = false;
             audioLoop.Stop();
             alive = false;
-            GetComponentInParent<CapsuleCollider>().enabled = false;
-            //GetComponentInChildren<CapsuleCollider>().enabled = false;
+
             //print(zombieImpacto);
             if (zombieImpacto=="Head")
-            {
-                
-                /*string path = "/" + cabezaPath.name;
-                while (cabezaPath.transform.parent != null)
-                {
-                    cabezaPath = cabezaPath.transform.parent.gameObject;
-                    path = "/" + cabezaPath.name + path;
-                }*/
-                  
-                //GameObject cabeza = transform.Find(path).gameObject;
+            { 
                 GameObject gore = Instantiate(pfExplosionCabeza, huesoCabesa.transform.position, huesoCabesa.transform.rotation);
                 gore.transform.localScale = new Vector3(3, 3, 3);
                 huesoCabesa.transform.localScale = new Vector3(0, 0, 0);
-                //print(path);
             }
-            foreach(Collider collider in GetComponentsInChildren<Collider>())
-            {
-                collider.isTrigger=true;
-            }
-
+            
+            foreach (Rigidbody rig in rigidbodys) rig.isKinematic = false;
+            rg.AddForceAtPosition(direction.normalized * 4000, rdHit.point);
+            StartCoroutine(DisableZombie());
+            //Invoke("DisableZombie", 15);
         }
     }
 
@@ -180,13 +181,12 @@ public class PatrolManager : MonoBehaviour
             agentAnimator.SetBool("Detect", true);
             viewDistance = view+15;
             nma.speed = detectSpeed;
-            if(distanceToPlayer <= 5f)
+            if(distanceToPlayer <= 6f)
             {
                 agentAnimator.SetBool("Attack", true);
-                attack = true;
-                //nma.SetDestination(transform.position);
-                //nma.enabled = false;
+                attack = true;                
                 nma.ResetPath();
+                //nma.enabled = false;
                 var targetPosition = playerPosition;
                 targetPosition.y = transform.position.y;
                 transform.parent.gameObject.transform.LookAt(targetPosition);
@@ -285,18 +285,32 @@ public class PatrolManager : MonoBehaviour
             attack = false;
             destino = false;
             isPlayerDetected = false;
-            nma.ResetPath();
+            if(nma) nma.ResetPath();
             Invoke("Andar", Random.Range(2, 10));
             Vista();
             Destino(); 
         }
     }
 
-    public void Hit()
+    public void Hit(Rigidbody tRig, Vector3 tDirection, RaycastHit tHit)
     {
         alerta = true;
         audioHitZombie.pitch = Random.Range(0.8f, 1.2f);
         //audioHitZombie.PlayOneShot(audioHitZombie.clip);
+        rg = tRig;
+        direction = tDirection;
+        rdHit= tHit;
+        if (zombieSalud <= 0)
+            rg.AddForceAtPosition(direction.normalized * 1000, rdHit.point);
         Andar();
+    }
+
+    IEnumerator DisableZombie()
+    {
+        yield return new WaitForSeconds(15);
+        foreach (Collider collider in GetComponentsInChildren<Collider>()) collider.isTrigger = true;
+        foreach (Rigidbody rig in rigidbodys) rig.isKinematic = true;
+        //yield return new WaitForSeconds(5);
+        //Destroy(this.gameObject);
     }
 }

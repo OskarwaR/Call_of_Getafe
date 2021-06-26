@@ -375,9 +375,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombies:
-  - {fileID: 7068703076437916591, guid: b877892e7d65de84392fedd81d39e468, type: 3}
-  - {fileID: 9053245559544334527, guid: 17c376658efa74043aaf11ae96186ec1, type: 3}
-  - {fileID: 5003860255216099892, guid: 63dbd6797bca2be46809af28bf087b46, type: 3}
+  - {fileID: 7186877027675741758, guid: 3085d2d1e41f2944c8b5e7d30c76c9c4, type: 3}
+  - {fileID: 4029440580074985254, guid: 811b90c509beb4d4d8ee16ca99bc1141, type: 3}
+  - {fileID: 2040077421616440083, guid: f1dd32412e1566d4686d3f47778d880b, type: 3}
 --- !u!136 &4598404676984598661
 CapsuleCollider:
   m_ObjectHideFlags: 0
