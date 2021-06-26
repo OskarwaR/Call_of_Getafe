@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 1491695451604308002}
   - component: {fileID: 1491695451585959266}
   - component: {fileID: 1491695451585998018}
+  - component: {fileID: 8283881742704982325}
   m_Layer: 0
   m_Name: PisadaHumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1491695451604308002
 Transform:
@@ -4708,3 +4709,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &8283881742704982325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491695451604732930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a0415f11f4ae241afe1262c59e7d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 10

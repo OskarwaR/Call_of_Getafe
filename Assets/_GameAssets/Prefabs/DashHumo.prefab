@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 1749412963117190838}
   - component: {fileID: 1749412963136588790}
   - component: {fileID: 1749412963136696918}
+  - component: {fileID: 5899894666712886094}
   m_Layer: 0
   m_Name: DashHumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1749412963117190838
 Transform:
@@ -35,8 +36,7 @@ Transform:
 --- !u!198 &1749412963136588790
 ParticleSystem:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1491695451585959266, guid: ad51fae058f6856438e42adb0c9c8160,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749412963117683350}
@@ -4709,3 +4709,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5899894666712886094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749412963117683350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a0415f11f4ae241afe1262c59e7d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 20

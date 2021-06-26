@@ -10,9 +10,13 @@ public class HealthBox : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            health.setSalud(vida);
-            Destroy(this.gameObject);
-            //print("player coge vida");
+            if(health.salud<100)
+            {
+                health.setSalud(vida);
+                Destroy(this.gameObject);
+                //print("player coge vida");
+            }
+
         }
     }
 }

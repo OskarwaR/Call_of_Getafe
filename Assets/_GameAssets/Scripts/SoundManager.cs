@@ -19,6 +19,12 @@ public class SoundManager : MonoBehaviour
     */
 
     //4 - Hurt
+    
+    /*Recarga
+     * 5 - Pistola
+     * 6 - Escopeta
+     * 7 - M16
+    */
 
     /*Boss
         0 - Rugido

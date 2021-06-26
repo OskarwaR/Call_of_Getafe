@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cadencia : MonoBehaviour
 {
     private ShootController shootController;
+    [SerializeField] SoundManager soundManager;
 
     private void setDisparando()
     {
@@ -17,5 +18,10 @@ public class Cadencia : MonoBehaviour
         shootController = GetComponentInParent<ShootController>();
         shootController.setRecargando(false);
     }
-    
+
+    public void SoundRecarga(int n)
+    {
+        soundManager.PlaySound(n);
+    }
+
 }

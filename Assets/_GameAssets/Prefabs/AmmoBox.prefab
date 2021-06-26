@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventario: {fileID: 0}
-  mPistola: 12
-  mEscopeta: 6
-  mM16: 40
+  mPistola: 24
+  mEscopeta: 18
+  mM16: 100
 --- !u!65 &7245037
 BoxCollider:
   m_ObjectHideFlags: 0

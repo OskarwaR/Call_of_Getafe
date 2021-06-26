@@ -23,15 +23,16 @@ public class Boss : MonoBehaviour
 
     private Vector3 targetPoint;
     private Quaternion targetRotation;
+    private NavMeshPath path;
 
 
     private void Awake()
     {
-
+        path = new NavMeshPath();
     }
     void Start()
     {
-        Position();
+        //Position();
     }
     private void Update()
     {
@@ -46,16 +47,17 @@ public class Boss : MonoBehaviour
 
     public void Position()
     {
+        nma.speed = 0;
+        nma.acceleration = 0;
         playerPosition = player.transform.position;
         distanceToPlayer = Vector3.Distance(playerPosition, transform.position);
         forward = transform.forward * 20;
-        //nma.ResetPath();
+        nma.SetDestination(playerPosition);
     }
     void Jump()
     {
         nma.speed = distanceToPlayer;
-        nma.acceleration = 500;
-        nma.SetDestination(playerPosition);
+        nma.acceleration = 100;
         animator.SetTrigger("Jump");
         jump = false;
     }

@@ -19,8 +19,8 @@ public class BossActions : MonoBehaviour
     private GameObject dash;
     public void Actions()
     {
-        //int action = Random.Range(0, 3);
-        int action = 0;
+        int action = Random.Range(0, 3);
+        //int action = 0;
         switch(action)
         {
             case 0:
