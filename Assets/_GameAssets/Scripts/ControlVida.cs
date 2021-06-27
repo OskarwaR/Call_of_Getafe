@@ -18,6 +18,7 @@ public class ControlVida : MonoBehaviour
     [SerializeField] UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
     [SerializeField] Animator animator;
     [SerializeField] GameObject mira;
+    [SerializeField] SoundManager soundManager;
 
 
     bool muerto=false;
@@ -40,6 +41,7 @@ public class ControlVida : MonoBehaviour
         {
             vida.salud = 0;
             StartCoroutine(Muerte());
+            soundManager.audios[4].volume = 0;
         }
 
         if (muerto)

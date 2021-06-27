@@ -8,7 +8,7 @@ public class Save : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] Inventario inventario;
     [SerializeField] Health health;
-    private void Awake()
+    void Start()
     {
         LoadData();
     }
@@ -44,7 +44,8 @@ public class Save : MonoBehaviour
 
         //ARMAS
         //Disponibles
-        if(!PlayerPrefs.HasKey("armasOptenidas")) PlayerPrefs.SetInt("armasOptenidas", 0);
+        if (!PlayerPrefs.HasKey("armasOptenidas")) PlayerPrefs.SetInt("armasOptenidas", 0);
+        else inventario.armasOptenidas = PlayerPrefs.GetInt("armasOptenidas");
 
         if (!PlayerPrefs.HasKey("equipoCuchillo")) PlayerPrefs.SetInt("equipoCuchillo", 0);
         if (!PlayerPrefs.HasKey("equipoPistola")) PlayerPrefs.SetInt("equipoPistola", 0);
@@ -107,16 +108,13 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetFloat("fog", RenderSettings.fogDensity);
     }
 
-    void Start()
-    {
-        
-    }
+    
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.F9))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         if (Input.GetKeyDown(KeyCode.F12))
         {

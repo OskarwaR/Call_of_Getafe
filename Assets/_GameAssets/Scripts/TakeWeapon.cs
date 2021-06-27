@@ -26,6 +26,7 @@ public class TakeWeapon : MonoBehaviour
             inventario.armasOptenidas += numArmas;
 
             Destroy(armaPF);
+            Destroy(this.gameObject);
         }
     }
 }

@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] AudioClip[] hurt;
     private AudioSource reproductor;
-    private AudioSource[] audios;
+    public AudioSource[] audios;
     private float pitchInincial;
 
     /* Armas
