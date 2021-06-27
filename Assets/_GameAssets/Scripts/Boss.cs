@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+using UnityStandardAssets.CrossPlatformInput;
+using UnityStandardAssets.Utility;
 
 public class Boss : MonoBehaviour
 {
@@ -11,8 +14,15 @@ public class Boss : MonoBehaviour
     [SerializeField] GameObject mesh;
     [SerializeField] Animator animator;
     [SerializeField] Health salud;
+    [SerializeField] SoundManager soundManager;
     private Vector3 playerPosition;
     private Vector3 forward;
+    [SerializeField] GameObject helicoptero;
+    [SerializeField] GameObject cartelEnd;
+    [SerializeField] ShootController shootController;
+    [SerializeField] Inventario inventario;
+    [SerializeField] CharacterController characterController;
+    [SerializeField] UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
 
     //acciones
     public bool muerto = false;
@@ -61,11 +71,21 @@ public class Boss : MonoBehaviour
 
     void Vida()
     {
-        if (salud.salud<=0)
+        if (salud.salud <= 0 && !muerto)
+        {
+            soundManager.PlaySound(9);
+            StartCoroutine(Final());
+        }
+            
+
+        if (salud.salud<=0) 
         {
             muerto = true;
             nma.enabled = false;
             animator.SetBool("Muerto", true);
+            float tvolumen = soundManager.audios[10].volume;
+            soundManager.audios[10].volume = Mathf.Lerp(tvolumen, 0, Time.deltaTime/2);
+            //audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
             //foreach (Rigidbody rig in rigidbodys) rig.isKinematic = false;
             //animator.enabled = false;
 
@@ -157,5 +177,21 @@ public class Boss : MonoBehaviour
         targetPoint = new Vector3(playerPosition.x, transform.position.y, playerPosition.z) - transform.position;
         targetRotation = Quaternion.LookRotation(targetPoint, Vector3.up);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 2f);
+    }
+
+    IEnumerator Final()
+    {
+        yield return new WaitForSeconds(10);
+        helicoptero.SetActive(true);
+
+        yield return new WaitForSeconds(45);
+        cartelEnd.SetActive(true);
+        shootController.enabled = false;
+        inventario.enabled = false;
+        characterController.enabled = false;
+        firstPersonController.enabled = false;
+
+        yield return new WaitForSeconds(25);
+        SceneManager.LoadScene(0);
     }
 }

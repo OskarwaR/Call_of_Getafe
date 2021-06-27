@@ -20,8 +20,8 @@ public class BossActions : MonoBehaviour
     private GameObject dash;
     public void Actions()
     {
-        //int action = Random.Range(0, 3);
-        int action = 2;
+        int action = Random.Range(0, 3);
+        //int action = 2;
         switch(action)
         {
             case 0:
@@ -120,5 +120,10 @@ public class BossActions : MonoBehaviour
     {
         if (estado == 1) triggerGarra.SetActive(true);
         else triggerGarra.SetActive(false);
+    }
+
+    public void Musica()
+    {
+        soundManager.PlaySound(10,false);
     }
 }

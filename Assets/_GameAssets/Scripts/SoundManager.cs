@@ -30,6 +30,11 @@ public class SoundManager : MonoBehaviour
         0 - Rugido
         1-4 - Pisadas
         5 - Dash
+        6 - jumpS
+        7 - jumpE
+        8 - Golpe
+        9 - Die
+        10 - Musica
     */ 
 
     private void Awake()

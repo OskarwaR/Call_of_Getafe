@@ -9,9 +9,8 @@ public class FPS : MonoBehaviour
 
     void Awake()
     {
-        QualitySettings.vSyncCount = 0;
+        QualitySettings.vSyncCount = 1;
         Application.targetFrameRate = target;
-        QualitySettings.vSyncCount = 0;
     }
 
     void Update()
