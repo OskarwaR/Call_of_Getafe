@@ -303,7 +303,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 Camera.main.transform.localPosition = cameraPosition;
                 m_WalkSpeed = 5;
-                m_RunSpeed = 8;
+                m_RunSpeed = 8.5f;
                 controller.height = 5;
             }
 
